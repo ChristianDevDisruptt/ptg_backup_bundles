@@ -1,0 +1,24 @@
+<customlist scriptid="customlist_ptg_usodevehiculo_">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>PTG - Uso de vehiculo</name>
+  <customvalues>
+    <customvalue scriptid="val_416716_5298967_sb1_886">
+      <isinactive>F</isinactive>
+      <value>Normal</value>
+    </customvalue>
+    <customvalue scriptid="val_416717_5298967_sb1_902">
+      <isinactive>F</isinactive>
+      <value>Relevo</value>
+    </customvalue>
+    <customvalue scriptid="val_416718_5298967_sb1_214">
+      <isinactive>F</isinactive>
+      <value>Apoyo</value>
+    </customvalue>
+    <customvalue scriptid="val_416719_5298967_sb1_494">
+      <isinactive>F</isinactive>
+      <value>Otro</value>
+    </customvalue>
+  </customvalues>
+</customlist>

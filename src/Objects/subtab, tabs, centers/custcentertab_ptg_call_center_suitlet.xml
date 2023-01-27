@@ -1,0 +1,10 @@
+<centertab scriptid="custcentertab_ptg_call_center_suitlet">
+  <allcustomers>F</allcustomers>
+  <allemployees>F</allemployees>
+  <allpartners>F</allpartners>
+  <allroles>F</allroles>
+  <allvendors>F</allvendors>
+  <audslctrole></audslctrole>
+  <center>ALL</center>
+  <label>PTG - Call Center</label>
+</centertab>

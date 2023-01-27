@@ -1,0 +1,23 @@
+<restlet scriptid="customscript_ptg_preliquidacion_mp_rs">
+  <description>Script que enlista los métodos de pago y agrupa las oportunidades</description>
+  <isinactive>F</isinactive>
+  <name>PTG - Preliquidacion MP rs</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteScripts/SCRIPTS POTOGAS/ptg_preliquidacion_metodo_pago_rs.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_ptg_preliquidacion_mp_rs">
+      <allemployees>F</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>F</allroles>
+      <audslctrole>ADMINISTRATOR|[scriptid=customrole1162_2]|[scriptid=customrole1213]|[scriptid=customrole1167]|[scriptid=customrole1165_2]</audslctrole>
+      <audsubsidiary>[ACCOUNT_SPECIFIC_VALUE]|[ACCOUNT_SPECIFIC_VALUE]|[ACCOUNT_SPECIFIC_VALUE]</audsubsidiary>
+      <isdeployed>T</isdeployed>
+      <loglevel>AUDIT</loglevel>
+      <status>RELEASED</status>
+      <title>PTG - Preliquidacion MP rs</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</restlet>

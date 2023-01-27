@@ -1,0 +1,25 @@
+<scheduledscript scriptid="customscript_drt_clientes_schedule">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>DRT - Customer Schedule</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <scriptfile>[/SuiteScripts/drt_clientes_schedule.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_drt_clientes_schedule">
+      <isdeployed>F</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <status>TESTING</status>
+      <title>DRT - Customer Schedule</title>
+      <recurrence>
+        <daily>
+          <everyxdays>1</everyxdays>
+          <repeat>PT15M</repeat>
+          <startdate>2022-06-28</startdate>
+          <starttime>10:00:00Z</starttime>
+        </daily>
+      </recurrence>
+    </scriptdeployment>
+  </scriptdeployments>
+</scheduledscript>

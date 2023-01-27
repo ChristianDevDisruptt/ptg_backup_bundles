@@ -1,0 +1,40 @@
+<customlist scriptid="customlist_ptg_tiposdearticulos__2">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>PTG - Tipos de artículos</name>
+  <customvalues>
+    <customvalue scriptid="val_400730_5298967_sb1_925">
+      <isinactive>F</isinactive>
+      <value>Cilindro</value>
+    </customvalue>
+    <customvalue scriptid="val_400731_5298967_sb1_787">
+      <isinactive>F</isinactive>
+      <value>Estacionarios</value>
+    </customvalue>
+    <customvalue scriptid="val_421834_5298967_sb1_908">
+      <isinactive>F</isinactive>
+      <value>Refacciones</value>
+    </customvalue>
+    <customvalue scriptid="val_438642_5298967_sb1_985">
+      <isinactive>F</isinactive>
+      <value>Diesel</value>
+    </customvalue>
+    <customvalue scriptid="val_461490_5298967_sb1_645">
+      <isinactive>F</isinactive>
+      <value>Envase Cilindro</value>
+    </customvalue>
+    <customvalue scriptid="val_466992_5298967_sb1_453">
+      <isinactive>F</isinactive>
+      <value>Envase Estacionario</value>
+    </customvalue>
+    <customvalue scriptid="val_466805_5298967_sb1_144">
+      <isinactive>F</isinactive>
+      <value>servicio</value>
+    </customvalue>
+    <customvalue scriptid="val_2516024_5298967_sb1_817">
+      <isinactive>F</isinactive>
+      <value>Gas</value>
+    </customvalue>
+  </customvalues>
+</customlist>

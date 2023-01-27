@@ -1,0 +1,48 @@
+<customlist scriptid="customlistptg_employee_list_rol_2">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>F</isordered>
+  <name>Ptg-Roles</name>
+  <customvalues>
+    <customvalue scriptid="val_457247_5298967_sb1_980">
+      <isinactive>T</isinactive>
+      <value>Administrador</value>
+    </customvalue>
+    <customvalue scriptid="val_2065300_5298967_sb1_679">
+      <isinactive>T</isinactive>
+      <value>Agente de Dotación</value>
+    </customvalue>
+    <customvalue scriptid="val_457252_5298967_sb1_474">
+      <isinactive>T</isinactive>
+      <value>Calidad</value>
+    </customvalue>
+    <customvalue scriptid="val_457246_5298967_sb1_152">
+      <isinactive>T</isinactive>
+      <value>Call Center</value>
+    </customvalue>
+    <customvalue scriptid="val_78933_5298967_sb1_410">
+      <isinactive>T</isinactive>
+      <value>Inspector</value>
+    </customvalue>
+    <customvalue scriptid="val_457253_5298967_sb1_238">
+      <isinactive>F</isinactive>
+      <value>Monitor Cilindros</value>
+    </customvalue>
+    <customvalue scriptid="val_457254_5298967_sb1_741">
+      <isinactive>T</isinactive>
+      <value>Monitor Estacionario</value>
+    </customvalue>
+    <customvalue scriptid="val_78932_5298967_sb1_620">
+      <isinactive>T</isinactive>
+      <value>Supervisor</value>
+    </customvalue>
+    <customvalue scriptid="val_415594_5298967_sb1_761">
+      <isinactive>F</isinactive>
+      <value>Técnico en Fugas</value>
+    </customvalue>
+    <customvalue scriptid="val_78931_5298967_sb1_636">
+      <isinactive>F</isinactive>
+      <value>Vendedor</value>
+    </customvalue>
+  </customvalues>
+</customlist>

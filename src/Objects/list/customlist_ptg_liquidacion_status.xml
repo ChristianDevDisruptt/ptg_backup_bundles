@@ -1,0 +1,24 @@
+<customlist scriptid="customlist_ptg_liquidacion_status">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>PTG - Liquidación Status</name>
+  <customvalues>
+    <customvalue scriptid="val_446072_5298967_sb1_566">
+      <isinactive>F</isinactive>
+      <value>Preliquidación</value>
+    </customvalue>
+    <customvalue scriptid="val_446073_5298967_sb1_584">
+      <isinactive>F</isinactive>
+      <value>Liquidación</value>
+    </customvalue>
+    <customvalue scriptid="val_446074_5298967_sb1_487">
+      <isinactive>F</isinactive>
+      <value>Ejecutado</value>
+    </customvalue>
+    <customvalue scriptid="val_463667_5298967_sb1_975">
+      <isinactive>F</isinactive>
+      <value>Facturación</value>
+    </customvalue>
+  </customvalues>
+</customlist>

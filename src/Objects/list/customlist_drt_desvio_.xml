@@ -1,0 +1,28 @@
+<customlist scriptid="customlist_drt_desvio_">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>DRT - Desvio Planta/Cliente/In</name>
+  <customvalues>
+    <customvalue scriptid="val_5424350_5298967_992">
+      <isinactive>F</isinactive>
+      <value>Planta</value>
+    </customvalue>
+    <customvalue scriptid="val_5424351_5298967_525">
+      <isinactive>F</isinactive>
+      <value>Cliente</value>
+    </customvalue>
+    <customvalue scriptid="val_5424352_5298967_966">
+      <isinactive>F</isinactive>
+      <value>Ninguna</value>
+    </customvalue>
+    <customvalue scriptid="val_5424353_5298967_192">
+      <isinactive>F</isinactive>
+      <value>Interco</value>
+    </customvalue>
+    <customvalue scriptid="val_6155298_5298967_230">
+      <isinactive>F</isinactive>
+      <value>Venta Especial</value>
+    </customvalue>
+  </customvalues>
+</customlist>

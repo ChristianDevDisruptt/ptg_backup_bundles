@@ -1,0 +1,44 @@
+<customlist scriptid="customlistptg_codigosdemovimiento_">
+  <description>Lista de códigos de movimiento para registro de movimientos</description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>PTG - Códigos de Movimiento</name>
+  <customvalues>
+    <customvalue scriptid="val_461577_5298967_sb1_924">
+      <isinactive>F</isinactive>
+      <value>CIDA - Cilindro Dañado</value>
+    </customvalue>
+    <customvalue scriptid="val_461578_5298967_sb1_685">
+      <isinactive>F</isinactive>
+      <value>PRCL - Prestamo a Cliente</value>
+    </customvalue>
+    <customvalue scriptid="val_461579_5298967_sb1_747">
+      <isinactive>F</isinactive>
+      <value>PREC - Prestamo entre camiones</value>
+    </customvalue>
+    <customvalue scriptid="val_461580_5298967_sb1_220">
+      <isinactive>F</isinactive>
+      <value>RECP - Recargas desde planta</value>
+    </customvalue>
+    <customvalue scriptid="val_461581_5298967_sb1_157">
+      <isinactive>F</isinactive>
+      <value>REIN - Recargas desde Estc C donde sale</value>
+    </customvalue>
+    <customvalue scriptid="val_461582_5298967_sb1_365">
+      <isinactive>F</isinactive>
+      <value>TRES - Traspaso desde Est de Carburación</value>
+    </customvalue>
+    <customvalue scriptid="val_461583_5298967_sb1_874">
+      <isinactive>F</isinactive>
+      <value>TVAP - Traspaso desde Veh de Apoyo</value>
+    </customvalue>
+    <customvalue scriptid="val_461584_5298967_sb1_915">
+      <isinactive>F</isinactive>
+      <value>VDES - Traspaso por Veh Descompuesto</value>
+    </customvalue>
+    <customvalue scriptid="val_461585_5298967_sb1_589">
+      <isinactive>F</isinactive>
+      <value>VTAA - Venta por litros(anfora)</value>
+    </customvalue>
+  </customvalues>
+</customlist>

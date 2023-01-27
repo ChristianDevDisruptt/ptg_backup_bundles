@@ -1,0 +1,27 @@
+<suitelet scriptid="customscript_ptg_sl_callcenter_monito_sl">
+  <description>Desarrollo de CallCenter y Monitor desplegado desde un RL</description>
+  <isinactive>F</isinactive>
+  <name>PTG|SL|CALL CENTER MONITOR SL</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteBundles/Bundle 426900/ptg_sl_callcenter_monitor_view.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_ptg_sl_callcenter_monito_sl">
+      <allemployees>F</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>F</allroles>
+      <audemployee>[ACCOUNT_SPECIFIC_VALUE]|[ACCOUNT_SPECIFIC_VALUE]</audemployee>
+      <audslctrole>ADMINISTRATOR|[scriptid=customrole1162_2]|[scriptid=customrole1181]|[scriptid=customrole1213]|[scriptid=customrole1167]|[scriptid=customrole1165_2]|[scriptid=customrole1203]</audslctrole>
+      <audsubsidiary>[ACCOUNT_SPECIFIC_VALUE]|[ACCOUNT_SPECIFIC_VALUE]|[ACCOUNT_SPECIFIC_VALUE]</audsubsidiary>
+      <eventtype></eventtype>
+      <isdeployed>T</isdeployed>
+      <isonline>F</isonline>
+      <loglevel>DEBUG</loglevel>
+      <runasrole>ADMINISTRATOR</runasrole>
+      <status>RELEASED</status>
+      <title>PTG|SL|CALL CENTER MONITOR SL</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</suitelet>

@@ -1,0 +1,23 @@
+<restlet scriptid="customscript_ptg_rl_get_cases_filter_v2">
+  <description>Servicio que permite obtener los casos para monitor con o sin filtros</description>
+  <isinactive>F</isinactive>
+  <name>PTG|RL|GET CASES FILTER V2</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteScripts/ptg_call_center_monitor_suitlet/ptg_rl_get_cases_filters_v2.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_ptg_rl_get_cases_filter_v2">
+      <allemployees>F</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>F</allroles>
+      <audslctrole>ADMINISTRATOR|[scriptid=customrole1162_2]|[scriptid=customrole1213]|[scriptid=customrole1167]|[scriptid=customrole1165_2]</audslctrole>
+      <audsubsidiary>[ACCOUNT_SPECIFIC_VALUE]|[ACCOUNT_SPECIFIC_VALUE]|[ACCOUNT_SPECIFIC_VALUE]</audsubsidiary>
+      <isdeployed>T</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <status>RELEASED</status>
+      <title>PTG|RL|GET CASES FILTER V2</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</restlet>

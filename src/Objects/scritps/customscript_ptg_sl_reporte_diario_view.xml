@@ -1,0 +1,26 @@
+<suitelet scriptid="customscript_ptg_sl_reporte_diario_view">
+  <description>Vista para reporte diario de pedidos</description>
+  <isinactive>F</isinactive>
+  <name>PTG|SL|REPORTE DIARIO VIEW</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteScripts/ptg_call_center_monitor_suitlet/ptg_sl_reporte_diario_view.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_ptg_sl_reporte_diario_view">
+      <allemployees>F</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>F</allroles>
+      <audslctrole>ADMINISTRATOR|[scriptid=customrole1162_2]|[scriptid=customrole1213]|[scriptid=customrole1167]|[scriptid=customrole1165_2]</audslctrole>
+      <audsubsidiary>[ACCOUNT_SPECIFIC_VALUE]|[ACCOUNT_SPECIFIC_VALUE]|[ACCOUNT_SPECIFIC_VALUE]</audsubsidiary>
+      <eventtype></eventtype>
+      <isdeployed>T</isdeployed>
+      <isonline>F</isonline>
+      <loglevel>DEBUG</loglevel>
+      <runasrole>ADMINISTRATOR</runasrole>
+      <status>RELEASED</status>
+      <title>PTG|SL|REPORTE DIARIO VIEW</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</suitelet>

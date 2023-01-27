@@ -1,0 +1,40 @@
+<customlist scriptid="customlist_ptg_tipodecliente_">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>PTG - Tipo de cliente</name>
+  <customvalues>
+    <customvalue scriptid="val_415751_5298967_sb1_723">
+      <isinactive>F</isinactive>
+      <value>INDUSTRIAL</value>
+    </customvalue>
+    <customvalue scriptid="val_415752_5298967_sb1_240">
+      <isinactive>F</isinactive>
+      <value>INTERCOMPAÑIA</value>
+    </customvalue>
+    <customvalue scriptid="val_415753_5298967_sb1_628">
+      <isinactive>F</isinactive>
+      <value>DOMESTICO</value>
+    </customvalue>
+    <customvalue scriptid="val_415754_5298967_sb1_637">
+      <isinactive>F</isinactive>
+      <value>OTRAS COMPAÑIAS</value>
+    </customvalue>
+    <customvalue scriptid="val_2064731_5298967_sb1_998">
+      <isinactive>F</isinactive>
+      <value>COMERCIAL</value>
+    </customvalue>
+    <customvalue scriptid="val_2156353_5298967_sb1_861">
+      <isinactive>F</isinactive>
+      <value>DD</value>
+    </customvalue>
+    <customvalue scriptid="val_2156354_5298967_sb1_228">
+      <isinactive>F</isinactive>
+      <value>DG</value>
+    </customvalue>
+    <customvalue scriptid="val_2156355_5298967_sb1_410">
+      <isinactive>F</isinactive>
+      <value>FYE</value>
+    </customvalue>
+  </customvalues>
+</customlist>

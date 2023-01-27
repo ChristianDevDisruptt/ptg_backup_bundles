@@ -1,0 +1,9 @@
+<advancedpdftemplate scriptid="custtmpl_121_5298967_sb1_861" standard="STDTMPLEMPTY">
+  <description></description>
+  <displaysourcecode>T</displaysourcecode>
+  <isinactive>F</isinactive>
+  <preferred>F</preferred>
+  <printtype>TRANSACTION</printtype>
+  <title>PTG - ORDEN DE COMPRA</title>
+  <trantype>PURCHORD</trantype>
+</advancedpdftemplate>

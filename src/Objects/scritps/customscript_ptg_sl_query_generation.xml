@@ -1,0 +1,27 @@
+<suitelet scriptid="customscript_ptg_sl_query_generation">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>PTG|SL|QUERY GENERATION</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteScripts/ptg_call_center_monitor_suitlet/suiteql-query-tool.v20211027.suitelet.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_ptg_sl_query_generation">
+      <allemployees>F</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>F</allroles>
+      <audemployee>[ACCOUNT_SPECIFIC_VALUE]</audemployee>
+      <audslctrole>ADMINISTRATOR|[scriptid=customrole1162_2]|[scriptid=customrole1213]|[scriptid=customrole1167]|[scriptid=customrole1165_2]</audslctrole>
+      <audsubsidiary>[ACCOUNT_SPECIFIC_VALUE]|[ACCOUNT_SPECIFIC_VALUE]|[ACCOUNT_SPECIFIC_VALUE]|[ACCOUNT_SPECIFIC_VALUE]|[ACCOUNT_SPECIFIC_VALUE]</audsubsidiary>
+      <eventtype></eventtype>
+      <isdeployed>T</isdeployed>
+      <isonline>F</isonline>
+      <loglevel>DEBUG</loglevel>
+      <runasrole></runasrole>
+      <status>RELEASED</status>
+      <title>PTG|SL|QUERY GENERATION</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</suitelet>

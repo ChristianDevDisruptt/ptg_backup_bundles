@@ -1,0 +1,24 @@
+<restlet scriptid="customscript_ptg_post_note_message_rl">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>PTG - Post Notas Mensjajes rl</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteScripts/SCRIPTS POTOGAS/ptg_post_notes_message_rl.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_ptg_post_note_message_rl">
+      <allemployees>F</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>F</allroles>
+      <audemployee>[ACCOUNT_SPECIFIC_VALUE]</audemployee>
+      <audslctrole>ADMINISTRATOR|[scriptid=customrole1162_2]|[scriptid=customrole1213]|[scriptid=customrole1167]|[scriptid=customrole1165_2]</audslctrole>
+      <audsubsidiary>[ACCOUNT_SPECIFIC_VALUE]|[ACCOUNT_SPECIFIC_VALUE]|[ACCOUNT_SPECIFIC_VALUE]</audsubsidiary>
+      <isdeployed>T</isdeployed>
+      <loglevel>AUDIT</loglevel>
+      <status>RELEASED</status>
+      <title>PTG - Post Notas Mensjajes rl</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</restlet>

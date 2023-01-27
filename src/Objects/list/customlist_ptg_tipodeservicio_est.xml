@@ -1,0 +1,20 @@
+<customlist scriptid="customlist_ptg_tipodeservicio_est">
+  <description>Lista de tipos de servicios para estacionarios</description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>PTG - Tipo de Servicio Est</name>
+  <customvalues>
+    <customvalue scriptid="val_467099_5298967_sb1_158">
+      <isinactive>F</isinactive>
+      <value>D - Servicio de Venta</value>
+    </customvalue>
+    <customvalue scriptid="val_467100_5298967_sb1_380">
+      <isinactive>F</isinactive>
+      <value>J - Servicio de Jarreo</value>
+    </customvalue>
+    <customvalue scriptid="val_467101_5298967_sb1_731">
+      <isinactive>F</isinactive>
+      <value>A - Servicio de AutoJarreo</value>
+    </customvalue>
+  </customvalues>
+</customlist>

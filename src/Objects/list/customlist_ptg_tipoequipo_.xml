@@ -1,0 +1,16 @@
+<customlist scriptid="customlist_ptg_tipoequipo_">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>PTG - Tipo Equipo</name>
+  <customvalues>
+    <customvalue scriptid="val_2462272_5298967_sb1_846">
+      <isinactive>F</isinactive>
+      <value>V - Vehículos</value>
+    </customvalue>
+    <customvalue scriptid="val_4029153_5298967_271">
+      <isinactive>F</isinactive>
+      <value>O - Otros</value>
+    </customvalue>
+  </customvalues>
+</customlist>

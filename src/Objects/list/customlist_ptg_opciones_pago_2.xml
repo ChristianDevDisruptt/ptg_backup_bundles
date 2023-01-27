@@ -1,0 +1,152 @@
+<customlist scriptid="customlist_ptg_opciones_pago_2">
+  <description>lista de opciones de pago para potoGas</description>
+  <isinactive>F</isinactive>
+  <isordered>F</isordered>
+  <name>PTG OPCIONES DE PAGO</name>
+  <customvalues>
+    <customvalue scriptid="val_2477575_5298967_sb1_476">
+      <isinactive>F</isinactive>
+      <value>Bonificación</value>
+    </customvalue>
+    <customvalue scriptid="val_2493918_5298967_sb1_848">
+      <isinactive>F</isinactive>
+      <value>Cancelado</value>
+    </customvalue>
+    <customvalue scriptid="val_2513910_5298967_sb1_464">
+      <isinactive>F</isinactive>
+      <value>Cheque BANAMEX</value>
+    </customvalue>
+    <customvalue scriptid="val_2513911_5298967_sb1_774">
+      <isinactive>F</isinactive>
+      <value>Cheque BANORTE</value>
+    </customvalue>
+    <customvalue scriptid="val_2479173_5298967_sb1_160">
+      <isinactive>F</isinactive>
+      <value>Cheque BBVA</value>
+    </customvalue>
+    <customvalue scriptid="val_2513909_5298967_sb1_182">
+      <isinactive>F</isinactive>
+      <value>Cheque HSBC</value>
+    </customvalue>
+    <customvalue scriptid="val_2513907_5298967_sb1_251">
+      <isinactive>F</isinactive>
+      <value>Cheque SANTANDER</value>
+    </customvalue>
+    <customvalue scriptid="val_2513908_5298967_sb1_445">
+      <isinactive>F</isinactive>
+      <value>Cheque SCOTIABANK</value>
+    </customvalue>
+    <customvalue scriptid="val_2112880_5298967_sb1_832">
+      <isinactive>F</isinactive>
+      <value>Consumo Interno</value>
+    </customvalue>
+    <customvalue scriptid="val_165736_5298967_sb1_133">
+      <isinactive>F</isinactive>
+      <value>Cortesia</value>
+    </customvalue>
+    <customvalue scriptid="val_2092594_5298967_sb1_150">
+      <isinactive>F</isinactive>
+      <value>Crédito del Cliente</value>
+    </customvalue>
+    <customvalue scriptid="val_82142_5298967_sb1_119">
+      <isinactive>F</isinactive>
+      <value>Efectivo</value>
+    </customvalue>
+    <customvalue scriptid="val_479375_5298967_sb1_729">
+      <isinactive>F</isinactive>
+      <value>Múltiple</value>
+    </customvalue>
+    <customvalue scriptid="val_479598_5298967_sb1_110">
+      <isinactive>F</isinactive>
+      <value>Prepago</value>
+    </customvalue>
+    <customvalue scriptid="val_2115273_5298967_sb1_972">
+      <isinactive>F</isinactive>
+      <value>Prepago Terminal BANAMEX</value>
+    </customvalue>
+    <customvalue scriptid="val_82143_5298967_sb1_580">
+      <isinactive>F</isinactive>
+      <value>Prepago Terminal BANORTE</value>
+    </customvalue>
+    <customvalue scriptid="val_2115271_5298967_sb1_328">
+      <isinactive>F</isinactive>
+      <value>Prepago Terminal BBVA</value>
+    </customvalue>
+    <customvalue scriptid="val_2115272_5298967_sb1_817">
+      <isinactive>F</isinactive>
+      <value>Prepago Terminal HSBC</value>
+    </customvalue>
+    <customvalue scriptid="val_2115274_5298967_sb1_586">
+      <isinactive>F</isinactive>
+      <value>Prepago Terminal SANTANDER</value>
+    </customvalue>
+    <customvalue scriptid="val_2115275_5298967_sb1_703">
+      <isinactive>F</isinactive>
+      <value>Prepago Terminal SCOTIABANK</value>
+    </customvalue>
+    <customvalue scriptid="val_2490889_5298967_sb1_345">
+      <isinactive>F</isinactive>
+      <value>Pruebas de Recirculación</value>
+    </customvalue>
+    <customvalue scriptid="val_2493919_5298967_sb1_737">
+      <isinactive>F</isinactive>
+      <value>Relleno de manguera</value>
+    </customvalue>
+    <customvalue scriptid="val_2092652_5298967_sb1_201">
+      <isinactive>F</isinactive>
+      <value>Reposición por Queja</value>
+    </customvalue>
+    <customvalue scriptid="val_2097072_5298967_sb1_457">
+      <isinactive>F</isinactive>
+      <value>Saldo a Favor del Cliente</value>
+    </customvalue>
+    <customvalue scriptid="val_4164699_5298967_378">
+      <isinactive>F</isinactive>
+      <value>Tarjeta de Crédito Banamex</value>
+    </customvalue>
+    <customvalue scriptid="val_4164697_5298967_916">
+      <isinactive>F</isinactive>
+      <value>Tarjeta de Crédito Bancomer</value>
+    </customvalue>
+    <customvalue scriptid="val_444847_5298967_sb1_954">
+      <isinactive>F</isinactive>
+      <value>Tarjeta de Crédito Banorte</value>
+    </customvalue>
+    <customvalue scriptid="val_4164698_5298967_104">
+      <isinactive>F</isinactive>
+      <value>Tarjeta de Crédito Hsbc</value>
+    </customvalue>
+    <customvalue scriptid="val_444848_5298967_sb1_290">
+      <isinactive>F</isinactive>
+      <value>Tarjeta de Debito Banorte</value>
+    </customvalue>
+    <customvalue scriptid="val_4164700_5298967_538">
+      <isinactive>F</isinactive>
+      <value>Tarjeta de Débito Banamex</value>
+    </customvalue>
+    <customvalue scriptid="val_4164718_5298967_885">
+      <isinactive>F</isinactive>
+      <value>Tarjeta de Débito Bancomer</value>
+    </customvalue>
+    <customvalue scriptid="val_4164719_5298967_201">
+      <isinactive>F</isinactive>
+      <value>Tarjeta de Débito Hsbc</value>
+    </customvalue>
+    <customvalue scriptid="val_2479172_5298967_sb1_250">
+      <isinactive>F</isinactive>
+      <value>Ticket Card</value>
+    </customvalue>
+    <customvalue scriptid="val_2493920_5298967_sb1_383">
+      <isinactive>F</isinactive>
+      <value>Transferencia</value>
+    </customvalue>
+    <customvalue scriptid="val_2512530_5298967_sb1_325">
+      <isinactive>F</isinactive>
+      <value>Traspaso</value>
+    </customvalue>
+    <customvalue scriptid="val_82144_5298967_sb1_100">
+      <isinactive>F</isinactive>
+      <value>Vale</value>
+    </customvalue>
+  </customvalues>
+</customlist>

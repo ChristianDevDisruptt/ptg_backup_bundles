@@ -1,0 +1,24 @@
+<customlist scriptid="customlist_ptg_tipo_combustible_equipo">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>PTG - Tipo de combustible Equi</name>
+  <customvalues>
+    <customvalue scriptid="val_2462248_5298967_sb1_495">
+      <isinactive>F</isinactive>
+      <value>Diesel</value>
+    </customvalue>
+    <customvalue scriptid="val_2462249_5298967_sb1_276">
+      <isinactive>F</isinactive>
+      <value>Regular sin plomo</value>
+    </customvalue>
+    <customvalue scriptid="val_2462250_5298967_sb1_910">
+      <isinactive>F</isinactive>
+      <value>Otro</value>
+    </customvalue>
+    <customvalue scriptid="val_4029166_5298967_952">
+      <isinactive>F</isinactive>
+      <value>Gas</value>
+    </customvalue>
+  </customvalues>
+</customlist>

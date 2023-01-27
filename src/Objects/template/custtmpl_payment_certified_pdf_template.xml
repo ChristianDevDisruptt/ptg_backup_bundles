@@ -1,0 +1,9 @@
+<advancedpdftemplate scriptid="custtmpl_payment_certified_pdf_template" standard="STDTMPLEMPTY">
+  <description></description>
+  <displaysourcecode>T</displaysourcecode>
+  <isinactive>F</isinactive>
+  <preferred>F</preferred>
+  <printtype>TRANSACTION</printtype>
+  <title>Mexico Certified Customer Payment PDF template</title>
+  <trantype>CUSTPYMT</trantype>
+</advancedpdftemplate>

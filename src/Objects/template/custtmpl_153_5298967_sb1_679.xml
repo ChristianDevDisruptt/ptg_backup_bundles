@@ -1,0 +1,9 @@
+<advancedpdftemplate scriptid="custtmpl_153_5298967_sb1_679" standard="STDTMPLEMPTY">
+  <description></description>
+  <displaysourcecode>T</displaysourcecode>
+  <isinactive>F</isinactive>
+  <preferred>F</preferred>
+  <printtype>PACKINGSLIP</printtype>
+  <title>PTG - Carta porte</title>
+  <trantype>CUSTINVC</trantype>
+</advancedpdftemplate>

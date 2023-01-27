@@ -1,0 +1,23 @@
+<restlet scriptid="customscript_ptg_consulta_casos_com_rs">
+  <description>Script que expone los casos por empleado y que esten completados</description>
+  <isinactive>F</isinactive>
+  <name>PTG - Consulta Casos Completados rs</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteScripts/SCRIPTS POTOGAS/ptg_consulta_casos_completados_rs.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_ptg_consulta_casos_com_rs">
+      <allemployees>F</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>F</allroles>
+      <audslctrole>ADMINISTRATOR|[scriptid=customrole1162_2]|[scriptid=customrole1213]|[scriptid=customrole1167]|[scriptid=customrole1165_2]</audslctrole>
+      <audsubsidiary>[ACCOUNT_SPECIFIC_VALUE]|[ACCOUNT_SPECIFIC_VALUE]|[ACCOUNT_SPECIFIC_VALUE]</audsubsidiary>
+      <isdeployed>T</isdeployed>
+      <loglevel>AUDIT</loglevel>
+      <status>RELEASED</status>
+      <title>PTG - Consulta Casos Completados rs</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</restlet>

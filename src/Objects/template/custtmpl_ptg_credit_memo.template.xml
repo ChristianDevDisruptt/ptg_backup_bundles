@@ -1,0 +1,377 @@
+<?xml version="1.0"?><!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd">
+<pdf>
+<#assign "certData" = ''>
+<#if custom?has_content && custom.certData?has_content>
+	<#assign "certData" = custom.certData>
+<#else>
+	<#assign "certData" = record>
+</#if>
+<head>
+	<link name="NotoSans" type="font" subtype="truetype" src="${nsfont.NotoSans_Regular}" src-bold="${nsfont.NotoSans_Bold}" src-italic="${nsfont.NotoSans_Italic}" src-bolditalic="${nsfont.NotoSans_BoldItalic}" bytes="2" />
+	<#if .locale == "zh_CN">
+		<link name="NotoSansCJKsc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKsc_Regular}" src-bold="${nsfont.NotoSansCJKsc_Bold}" bytes="2" />
+	<#elseif .locale == "zh_TW">
+		<link name="NotoSansCJKtc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKtc_Regular}" src-bold="${nsfont.NotoSansCJKtc_Bold}" bytes="2" />
+	<#elseif .locale == "ja_JP">
+		<link name="NotoSansCJKjp" type="font" subtype="opentype" src="${nsfont.NotoSansCJKjp_Regular}" src-bold="${nsfont.NotoSansCJKjp_Bold}" bytes="2" />
+	<#elseif .locale == "ko_KR">
+		<link name="NotoSansCJKkr" type="font" subtype="opentype" src="${nsfont.NotoSansCJKkr_Regular}" src-bold="${nsfont.NotoSansCJKkr_Bold}" bytes="2" />
+	<#elseif .locale == "th_TH">
+		<link name="NotoSansThai" type="font" subtype="opentype" src="${nsfont.NotoSansThai_Regular}" src-bold="${nsfont.NotoSansThai_Bold}" bytes="2" />
+	</#if>
+    <macrolist>
+        <macro id="nlfooter">
+            <table class="footer" style="width: 100%;"><tr>
+	<td>&nbsp;</td>
+	<td align="right"><pagenumber/> de <totalpages/></td>
+	</tr></table>
+        </macro>
+    </macrolist>
+    <style type="text/css">* {
+		<#if .locale == "zh_CN">
+			font-family: NotoSans, NotoSansCJKsc, sans-serif;
+		<#elseif .locale == "zh_TW">
+			font-family: NotoSans, NotoSansCJKtc, sans-serif;
+		<#elseif .locale == "ja_JP">
+			font-family: NotoSans, NotoSansCJKjp, sans-serif;
+		<#elseif .locale == "ko_KR">
+			font-family: NotoSans, NotoSansCJKkr, sans-serif;
+		<#elseif .locale == "th_TH">
+			font-family: NotoSans, NotoSansThai, sans-serif;
+		<#else>
+			font-family: NotoSans, sans-serif;
+		</#if>
+		}
+		table {
+			font-size: 8pt;
+			table-layout: fixed;
+		}
+        th {
+            font-weight: bold;
+            font-size: 8pt;
+            vertical-align: middle;
+            padding: 2px 2px 2px;
+            background-color: #888d8fd3;
+            color: #FFFFFF;
+        }
+        td {
+            padding: 2px 2px 2px;
+        }
+		td p { align:left }
+        b {
+            font-weight: bold;
+            color: #333333;
+        }
+        table.header td {
+            padding: 0px;
+            font-size: 8pt;
+        }
+        table.footer td {
+            padding: 0px;
+            font-size: 8pt;
+        }
+        table.itemtable th {
+            padding-bottom: 2px;
+            padding-top: 2px;
+        }
+        table.body td {
+            padding-top: 2px;
+        }
+        table.total {
+            page-break-inside: avoid;
+        }
+        tr.totalrow {
+            line-height: 200%;
+        }
+        td.totalboxtop {
+            font-size: 8pt;
+            background-color: #e3e3e3;
+        }
+        td.addressheader {
+            font-size: 8pt;
+            padding-top: 6px;
+            padding-bottom: 2px;
+        }
+        td.address {
+            padding-top: 0px;
+        }
+        td.totalboxmid {
+            font-size: 8pt;
+            padding-top: 20px;
+            background-color: #e3e3e3;
+        }
+        table.borderbox {
+			border: black;
+			border-color: #000000;
+			border-style: solid;
+        }
+        span.title {
+            font-size: 8pt;
+        }
+        span.number {
+            font-size: 8pt;
+        }
+        span.itemname {
+            font-weight: bold;
+            line-height: 150%;
+        }
+        hr {
+            width: 100%;
+            color: #d3d3d3;
+            background-color: #d3d3d3;
+            height: 1px;
+          	padding: 0px;
+        }
+      .pagare{
+        background-image:url("http://5298967-sb1.shop.netsuite.com/core/media/media.nl?id=30637&amp;c=5298967_SB1&amp;h=P83yehVAhn6pYMTxnrFP62u9ecIn2KsrvMn4l_CYVzkSOnNf");
+        width: 100%;
+        height: 150px;
+      }
+      td.txtpagare{
+        padding-top: 35px;
+        font-size: 8pt;
+      }
+      .watermark {
+		background-image:url("http://5298967.shop.netsuite.com/core/media/media.nl?id=4279&amp;c=5298967&amp;h=GLedMj33ZT5WTOrEptyh00lKqWO4jBTf0MXKGqFcsO0_Mom5");
+		opacity: 0.5;
+		color: BLACK;
+	  }
+</style>
+</head>
+<body header="nlheader" header-height="8%" footer="nlfooter" footer-height="20pt" padding="0.2in 0.5in 0.2in 0.5in" size="Letter">
+    <table cellpadding="1" cellspacing="1" style="width:100%;"><tr>
+	<td align="center" colspan="3" style="vertical-align:middle;"><#if subsidiary.logo?length != 0><img src="http://5298967-sb1.shop.netsuite.com/core/media/media.nl?id=40351&amp;c=5298967_SB1&amp;h=Dvpn2qh7fdsRcOxaC9Bb0QiBove-S75SHTVJqhOMQ6uQqNlx" style="width:80%; height:80%;" /><#else><#if companyInformation.logoUrl?length != 0><img class="imgtest" src="http://5298967-sb1.shop.netsuite.com/core/media/media.nl?id=40351&amp;c=5298967_SB1&amp;h=Dvpn2qh7fdsRcOxaC9Bb0QiBove-S75SHTVJqhOMQ6uQqNlx" style="width:80%; height:80%;" /></#if></#if></td>
+	<td align="left" colspan="7" style="vertical-align:middle;"><table style="width:100%;">
+      <tr><td align="left"><span style="font-size:10px;"><strong>DISTRIBUIDORA POTOSINA DE GAS S.A. DE C.V.</strong></span></td></tr>
+      <tr><td align="left"><span style="font-size:10px;"><strong>R.F.C: DPG840301KFA</strong></span></td></tr>
+      <tr><td align="left"><span style="font-size:10px;"><strong>DIRECCION:</strong> PERIFERICO PTE #KM 36+205 COL: LAS JULIAS C.P: 78139</span></td></tr>
+      <tr><td align="left"><span style="font-size:10px;"><strong>CIUDAD:</strong> ,</span></td></tr>
+      <tr><td align="left"><span style="font-size:10px;"><strong>SUCURSAL:</strong> PERIFERICO PTE #KM 36+205 COL: LAS JULIAS C.P: 78139</span></td></tr>
+      <tr><td align="left"><span style="font-size:10px;"><strong>REGIMEN FISCAL:</strong> General de Ley Personas Morales</span></td></tr>
+      <tr><td align="left"><span style="font-size:10px;"><strong>Metodo de pago:</strong> PPD - Pago en parcialidades o diferido</span></td></tr>
+      </table>
+    </td>
+	</tr></table>
+	<table cellspacing="1" style="margin-top:2px;width:100%;">
+	<tr>
+	<th align="center" colspan="6"><strong>C L I E N T E:</strong></th>
+	<th align="center" colspan="7"><strong>N O T A  D E  C R &EACUTE; D I T O:</strong></th>
+	</tr>
+	<tr>
+	<td colspan="6" cellpadding="0">
+	<table style="width: 100%;" cellspacing="0"><tr>
+		<td border="1">
+		<table style="width: 100%;"><tr>
+			<td>${record.entity}</td>
+			</tr>
+			<tr>
+			<th>Direcci&oacute;n Facturaci&oacute;n</th>
+			</tr>
+			<tr>
+			<td><#if record.billaddress??>${((record.billaddress?keep_before("MONTO"))?keep_before("DISA_PM"))?replace("<br />"," ")}</#if></td>
+			</tr>
+			<tr>
+			<th>Direcci&oacute;n Env&iacute;o</th>
+			</tr>
+			<tr>
+			<td><#if record.shipaddress??>${((record.shipaddress?keep_before("MONTO"))?keep_before("DISA_PM"))?replace("<br />"," ")}</#if></td>
+			</tr>
+			<tr>
+			<td>RFC: ${record.custbody_mx_customer_rfc}</td>
+			</tr></table>
+		</td>
+		</tr>
+		<tr>
+		<td rowspan="2">
+		<p>SUCURSAL: <#if record.salesrep.custentity_disa_oficina_ventas??>${record.salesrep.custentity_disa_oficina_ventas}</#if><br />DIRECCION: <#if record.custbody_drt_addres_location??>${((record.custbody_drt_addres_location?keep_before("MONTO"))?keep_before("DISA_PM"))?replace("<br />"," ")}</#if></p>
+		</td>
+		</tr></table>
+	</td>
+	<td colspan="7">
+	<table cellspacing="1" style="width: 100%;"><tr>
+		<td align="left" style="padding: 0px 0px 0px;">Serie:</td>
+		<td align="left" style="padding: 0px 0px 0px;">Folio:</td >
+		<td align="left" colspan="5" style="padding: 0px 0px 0px;">Folio Fiscal</td>
+		</tr>
+		<tr>
+		<td align="center" border="1"><#if record.location.tranprefix??>${record.location.tranprefix}<#else>&nbsp;</#if></td>
+		<td align="center" border="1"><#if record.tranid??>${record.tranid?keep_after(record.location.tranprefix)}<#else>&nbsp;</#if></td>
+		<td align="center" border="1" colspan="5"><#if certData.custbody_mx_cfdi_uuid??>${certData.custbody_mx_cfdi_uuid}</#if></td>
+		</tr>
+		<tr>
+		<td colspan="4" style="padding: 0px 0px 0px;">Lugar y Fecha de Emisi&oacute;n:</td>
+		<td colspan="3" style="padding: 0px 0px 0px;">Tipo comprobante:</td>
+		</tr>
+		<tr>
+		<td align="center">${record.location.address.zip}</td>
+		<td align="center" colspan="3"><#if certData.custbody_mx_cfdi_certify_timestamp??>${certData.custbody_mx_cfdi_certify_timestamp}</#if></td>
+		<td align="center">I</td>
+		<td align="center" colspan="2">Ingreso</td>
+		</tr>
+		<tr>
+		<td colspan="3" style="padding: 0px 0px 0px;">Fecha y hora de certificaci&oacute;n</td>
+		<td colspan="4" style="padding: 0px 0px 0px;">Cond. de pago</td>
+		</tr>
+		<tr>
+		<td border="1" colspan="3">${record.custbody_mx_cfdi_certify_timestamp}</td>
+		<td border="1" colspan="4">${record.terms}</td>
+		</tr>
+		<tr>
+		<td colspan="2" style="padding: 0px 0px 0px;">No. Certificado SAT</td>
+        <td colspan="2" style="padding: 0px 0px 0px;">O. Compra</td>
+		<td colspan="3" style="padding: 0px 0px 0px;">O. Venta</td>
+		</tr>
+		<tr>
+		<td border="1" colspan="2" style="font-size:8px"><#if certData.custbody_mx_cfdi_sat_serial??>${certData.custbody_mx_cfdi_sat_serial}<#else>&nbsp;</#if></td>
+        <td border="1" colspan="2" style="font-size:8px"><#if record.createdfrom?has_content>${record.createdfrom.otherrefnum}<#else>&nbsp;</#if></td>
+		<td border="1" colspan="3" style="font-size:8px"><#if record.createdfrom?has_content>${record.createdfrom?keep_after("Orden de venta ")} (${record.createdfrom.transactionnumber})<#else>&nbsp;</#if></td>
+		</tr>
+		<tr>
+		<td colspan="7" style="padding: 0px 0px 0px;">Uso CFDI: ${record.custbody_mx_cfdi_usage}</td>
+		</tr></table>
+	</td>
+	</tr></table>
+<table style="width: 100%;padding: 0px 0px 0px;"><tr>
+	<td colspan="7">
+	<table style="width: 100%;"><tr>
+		<td width="14%">No. Cuenta Pago</td>
+		<td border="1" width="16%">${record.accountnumber}</td>
+		<td width="9%">Vendedor</td>
+		<td border="1" width="26%">${record.salesrep}</td>
+		<td width="15%">Vencimiento</td>
+		<td border="1" width="20%">${record.duedate}</td>
+		</tr>
+		<tr>
+		<td colspan="2">Moneda - Tipo de Cambio</td>
+		<td colspan="4"><b>Forma Pago:</b> <#if record.custbody_mx_payment_method == "CONDONACION" >15 CONDONACI&Oacute;N<#else> ${record.custbody_mx_txn_sat_payment_method}</#if></td>
+		</tr>
+		<tr>
+		<td colspan="2">${record.currency} &nbsp; ${record.exchangerate}</td>
+		<td colspan="4"><b>M&eacute;todo Pago:</b>${record.custbody_mx_txn_sat_payment_term}</td>
+		</tr></table>
+	</td>
+	</tr></table>
+<#if record.item?has_content><#assign objLoteLong={}><#if (record.custbody_drt_serie_lote_obj?eval)??><#assign objLoteLong=record.custbody_drt_serie_lote_obj?eval><#else>&nbsp;</#if>
+<table class="itemtable" style="width: 100%; margin-top: 8px;"><!-- start items --><#list record.item as item><#if item_index==0>
+<thead>
+	<tr>
+	<th align="center" colspan="4">ClaveProdServ</th>
+	<th align="center" colspan="4">C&oacute;digo</th>
+	<th align="center" colspan="4">Clave</th>
+	<th align="center" colspan="4">Unidad</th>
+	<th align="center" colspan="4">Cant.</th>
+	<th align="center" colspan="4">Descripci&oacute;n</th>
+	<th align="center" colspan="4">Valor Unitario</th>
+	<th align="center" colspan="4">Importe</th>
+	</tr>
+</thead>
+</#if><#if item.quantity gt 0><tr>
+	<td align="left" colspan="4"><#if item.custcol_drt_sat_clave_roducto??>${item.custcol_drt_sat_clave_roducto?keep_before(" ")}</#if></td>
+	<td align="center" colspan="4"><#if item.item??>${item.item?keep_before(" ")}<#else></#if></td>
+	<td align="center" colspan="4">H87</td>
+	<td align="center" colspan="4">${item.units}</td>
+	<td align="center" colspan="4">${item.quantity}</td>
+	<td align="center" colspan="4">&nbsp;</td>
+	<td align="right" colspan="4">${item.rate}</td>
+	<td align="right" colspan="4">${item.grossamt}</td>
+	</tr>
+	<tr>
+	<td align="left" colspan="32" style="font-size:8px">${item.description}</td>
+	</tr>
+	<tr>
+	<td align="right" colspan="3" style="font-weight:bold">Base:</td>
+	<td align="right" colspan="3">${item.rate}</td>
+	<td align="right" colspan="3" style="font-weight:bold">Impuesto:</td>
+	<td align="center" colspan="3">002 IVA</td>
+	<td align="right" colspan="4" style="font-weight:bold">TipoFactor</td>
+	<td align="center" colspan="3">Tasa</td>
+	<td align="right" colspan="4" style="font-weight:bold">TasaOCuota</td>
+	<td align="center" colspan="3">${item.taxrate1}</td>
+	<td align="right" colspan="3" style="font-weight:bold">Importe</td>
+	<td align="center" colspan="3">${item.tax1amt}</td>
+	</tr>
+	<tr>
+	<td align="left" colspan="31"><#if item.lineuniquekey??><#assign objPedimento=''><#if objLoteLong[item.lineuniquekey]??><#assign objPedimento=objLoteLong[item.lineuniquekey]><#if objPedimento?has_content><#list objPedimento as pedimento><#if pedimento.lote?has_content><strong>-Lote:</strong> ${pedimento.lote} </#if> <#if pedimento.quantity?has_content> (${pedimento.quantity})<br /></#if> <#if pedimento.aduana?has_content> <strong>-Aduana:</strong> ${pedimento.aduana}<br /></#if> <#if pedimento.num_pedimento?has_content> <strong>-Pedimento:</strong> ${pedimento.num_pedimento}<br /></#if> <#if pedimento.fechaped?has_content> <strong>-Fecha Pedimento:</strong> ${pedimento.fechaped}
+	<hr /> </#if> </#list> </#if> </#if> </#if></td>
+	</tr>
+	</#if></#list><!-- end items --></table>
+<hr /></#if>
+<table cellspacing="1" class="total" style="width: 100%; margin-top: 3px;"><tr>
+	<td align="left" colspan="5" style="padding: 0px 0px 0px;">Cantidad con Letra:</td>
+	<td align="right">&nbsp;</td>
+	<th align="center" colspan="2">I M P O R T E</th>
+	</tr>
+	<tr>
+	<td align="left" border="1" colspan="5" rowspan="3"><b>${record.custbody_disa_monto_letras}</b></td>
+	<td align="right">&nbsp;</td>
+	<td align="right" style="border-bottom:1px;">${record.subtotal@label}:</td>
+	<td align="right">${record.subtotal}</td>
+	</tr>
+	<tr>
+	<td align="right">&nbsp;</td>
+	<td align="right" style="border-bottom:1px;">Descuento:</td>
+	<td align="right"><#if record.discounttotal?length != 0>${record.discounttotal}<#else>0.00</#if></td>
+	</tr>
+	<tr>
+	<td align="right" colspan="2" style="border-bottom:1px;">Total Impuestos Trasladados:</td>
+	<td align="right" style="border-bottom:1px;">${record.taxtotal}</td>
+	</tr>
+	<tr>
+	<td align="right" colspan="5">&nbsp;</td>
+	<td align="right" colspan="2"><b>Total Comprobante:</b></td>
+	<td align="right">${record.total}</td>
+	</tr></table>
+<table class="total" style="width: 100%; margin-top: 3px;"><tr>
+	<td align="center" colspan="8"><b>&quot;ESTE DOCUMENTO ES UNA REPRESENTACI&Oacute;N IMPRESA DE UN CFDI&quot;</b></td>
+	</tr>
+	<tr>
+	<td align="center" colspan="8">&quot;La emisi&oacute;n y env&iacute;o del presente documento no implica la recepci&oacute;n del pago que en el mismo se se&ntilde;ala&quot;</td>
+	</tr></table>
+<div style="background-color: black;height:6px; width:100%;">&nbsp;</div>
+<table class="total" style="width: 100%; margin-top: 3px;"><tr>
+  	<td align="left" colspan="2" style="font-weight: bold">No. Certificado del emisor:</td>
+	<td align="left" colspan="2">${certData.custbody_mx_cfdi_issuer_serial}</td>
+	<td align="center" colspan="5" rowspan="2">
+	<p>Para su dep&oacute;sito de preferencia en:<br /><b>Bancomer Suc 414 Cta: 0142334437 Clabe Bancaria: 012320001423344379<br />Bancomer CIE 856460 Referencia: ${record.tranid}</b><br />Otros bancos:<br />Banamex Suc 567 CTA 5591956 Referencia ${record.tranid}<br />Santander Convenio 7846 Referencia ${record.tranid}<br />Santander Trasferencia:014320655014960891 Referencia ${record.tranid}</p>
+	</td>
+	</tr>
+  	<tr>
+	<td align="left" colspan="2" style="font-weight: bold">RFC. Proveedor certificado:</td>
+	<td align="left" colspan="2">${record.custbody_counterparty_vat}</td>
+	</tr>
+	</table>
+<#if record.memo?string != "">
+<table class="body" style="width: 100%;"><tr>
+	<td align="left" style="width: 20%;"><b>Nota: </b>${record.memo}</td>
+</tr></table>
+</#if>
+<table style="width: 100%; margin-top: 8px;"><tr>
+	<td align="left" colspan="8" style="padding: 0px 0px 0px;"><b>${record.custbody_mx_cfdi_sat_signature@label}</b></td>
+	</tr>
+	<tr>
+	<td align="left" border="1" colspan="6">
+	<p style="font-size: 6pt;"><#if certData.custbody_mx_cfdi_sat_signature??>${certData.custbody_mx_cfdi_sat_signature}</#if></p>
+	</td>
+	<td align="center" colspan="2" rowspan="3"><#if certData.custbody_mx_cfdi_qr_code??><#assign qrcodeImage = "data:image/png;base64, " + certData.custbody_mx_cfdi_qr_code ><img src="${qrcodeImage}" style="width: 100px;height:100px" /> </#if></td>
+	</tr>
+	<tr>
+	<td align="left" colspan="6" style="padding: 0px 0px 0px; vertical-align:bottom;"><b>${record.custbody_mx_cfdi_signature@label}</b></td>
+	</tr>
+	<tr>
+	<td align="left" border="1" colspan="6">
+	<p style="font-size: 6pt;"><#if certData.custbody_mx_cfdi_signature??>${certData.custbody_mx_cfdi_signature}</#if></p>
+	</td>
+	</tr>
+  	<tr>
+	<td align="left" colspan="8" style="padding: 0px 0px 0px;">&nbsp;</td>
+	</tr>
+	<tr>
+	<td align="left" colspan="8" style="padding: 0px 0px 0px;"><b>${record.custbody_mx_cfdi_cadena_original@label}</b></td>
+	</tr>
+	<tr>
+	<td align="left" border="1" colspan="8">
+	<p style="font-size: 6pt;"><#if certData.custbody_mx_cfdi_cadena_original??>${certData.custbody_mx_cfdi_cadena_original}<#else>&nbsp;</#if></p>
+	</td>
+	</tr></table>
+</body>
+</pdf>

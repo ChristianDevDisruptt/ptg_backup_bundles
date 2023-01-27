@@ -1,0 +1,16 @@
+<customlist scriptid="customlist_ptg_status_sgc">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>PTG - Status SGC</name>
+  <customvalues>
+    <customvalue scriptid="val_467091_5298967_sb1_359">
+      <isinactive>F</isinactive>
+      <value>Facturado - Venta Facturada</value>
+    </customvalue>
+    <customvalue scriptid="val_467092_5298967_sb1_863">
+      <isinactive>F</isinactive>
+      <value>Terminado - Venta sin Facturar</value>
+    </customvalue>
+  </customvalues>
+</customlist>

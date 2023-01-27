@@ -1,0 +1,16 @@
+<customlist scriptid="customlist_ptg_turnos_para_equipos">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>PTG - TURNOS PARA EQUIPOS</name>
+  <customvalues>
+    <customvalue scriptid="val_2115172_5298967_sb1_602">
+      <isinactive>F</isinactive>
+      <value>Matutino</value>
+    </customvalue>
+    <customvalue scriptid="val_2115173_5298967_sb1_756">
+      <isinactive>F</isinactive>
+      <value>Vespertino</value>
+    </customvalue>
+  </customvalues>
+</customlist>

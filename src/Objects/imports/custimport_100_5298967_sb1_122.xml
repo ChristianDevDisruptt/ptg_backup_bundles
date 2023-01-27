@@ -1,0 +1,214 @@
+<savedcsvimport scriptid="custimport_100_5298967_sb1_122">
+  <charencoding>MacRoman</charencoding>
+  <columndelimiter>COMMA</columndelimiter>
+  <customrecord>[scriptid=customrecord_ptg_equipos]</customrecord>
+  <datahandling>ADD</datahandling>
+  <decimaldelimiter>PERIOD</decimaldelimiter>
+  <entryform>[scriptid=custform_ptg_zonadeprecio_]</entryform>
+  <ignorereadonly>T</ignorereadonly>
+  <importname>PTG - EQUIPOS</importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <recordtype>CUSTOMRECORD</recordtype>
+  <runserversuitescript>F</runserversuitescript>
+  <usemultithread>F</usemultithread>
+  <validatemandatorycustfields>T</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>F</ispublic>
+    <roles></roles>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>CUSTOMRECORD</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>CUSTOMRECORD</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ptg_equipos.custrecord_ptg_anofabricacion_]</field>
+          <columnreference>
+            <column>PTG - Año Fabricación</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ptg_equipos.custrecord_ptg_condicion_]</field>
+          <columnreference>
+            <column>PTG - CONDICIÓN</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ptg_equipos.custrecord_ptg_descrip_codigo_fabricante]</field>
+          <columnreference>
+            <column>PTG - Descripción Código fabricante</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ptg_equipos.custrecord_ptg_descrip_codigo_modelo]</field>
+          <columnreference>
+            <column>PTG - Descripción Código Modelo</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ptg_equipos.custrecord_ptg_descripcion_equipo_]</field>
+          <columnreference>
+            <column>PTG - DESCRIPCIÓN EQUIPO</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ptg_equipos.custrecord_ptg_idequipo_]</field>
+          <columnreference>
+            <column>PTG - ID EQUIPO</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ptg_equipos.custrecord_ptg_idmodelo_]</field>
+          <columnreference>
+            <column>PTG - ID MODELO</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ptg_equipos.custrecord_ptg_licensenumber_]</field>
+          <columnreference>
+            <column>PTG - LICENSE NUMBER</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ptg_equipos.custrecord_ptg_nombredelcontacto_]</field>
+          <columnreference>
+            <column>PTG - NOMBRE DEL CONTACTO</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ptg_equipos.custrecord_ptg_numerodecontacto_]</field>
+          <columnreference>
+            <column>PTG - NUMERO DE CONTACTO</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ptg_equipos.custrecord_ptg_pmcode_]</field>
+          <columnreference>
+            <column>PTG -PM CODE</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ptg_equipos.custrecord_ptg_serialnumber_]</field>
+          <columnreference>
+            <column>PTG - SERIAL NUMBER</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ptg_equipos.custrecord_ptg_vin_]</field>
+          <columnreference>
+            <column>PTG - VIN</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=customrecord_ptg_equipos.custrecord_ptg_wc_capacity_]</field>
+          <columnreference>
+            <column>PTG - WC CAPACITY</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>CUSTRECORDCUSTRECORD_PTG_AUTOTANQUESGC__2</field>
+          <columnreference>
+            <column>PTG - AutoTanqueSGC</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>CUSTRECORDCUSTRECORD_PTG_CODIGO_FABRICA__2</field>
+          <columnreference>
+            <column>PTG - Código del fabricante</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>CUSTRECORDCUSTRECORD_PTG_LITROS_TANQUE1__2</field>
+          <columnreference>
+            <column>PTG - Litros tanque 1</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>CUSTRECORDCUSTRECORD_PTG_TIPO_VEHICULO_2</field>
+          <columnreference>
+            <column>PTG - Tipo de Vehículo</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>CUSTRECORDCUSTRECORD_PTG_TIPODECOMB__2</field>
+          <columnreference>
+            <column>PTG- Tipo Combustible</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>CUSTRECORDCUSTRECORD_PTG_USO_VEHICULO_2</field>
+          <columnreference>
+            <column>PTG - Uso del Vehículo</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>CUSTRECORDCUSTRECORD_PTG_WC_CAPACITY__2</field>
+          <columnreference>
+            <column>PTG - Litros tanque 2</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>NAME</field>
+          <columnreference>
+            <column>Nombre</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>

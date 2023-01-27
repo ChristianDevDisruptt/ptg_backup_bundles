@@ -1,0 +1,23 @@
+<restlet scriptid="customscript_ptg_rl_get_list_tb_travel">
+  <description>Listado de numero de viajes para asignar ruta al monitor</description>
+  <isinactive>F</isinactive>
+  <name>PTG|RL|Get List Table Travel Mon</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_list_table_travel_mon.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_ptg_rl_get_list_tb_travel">
+      <allemployees>F</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>F</allroles>
+      <audslctrole>ADMINISTRATOR|[scriptid=customrole1162_2]|[scriptid=customrole1213]|[scriptid=customrole1167]|[scriptid=customrole1165_2]</audslctrole>
+      <audsubsidiary>[ACCOUNT_SPECIFIC_VALUE]|[ACCOUNT_SPECIFIC_VALUE]|[ACCOUNT_SPECIFIC_VALUE]</audsubsidiary>
+      <isdeployed>T</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <status>RELEASED</status>
+      <title>PTG|RL|Get List Table Travel Mon</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</restlet>

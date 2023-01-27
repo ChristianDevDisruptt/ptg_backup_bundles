@@ -1,0 +1,16 @@
+<customlist scriptid="customlist_ptg_tipodepago_sgc">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>PTG - Tipo de Pago SGC</name>
+  <customvalues>
+    <customvalue scriptid="val_467111_5298967_sb1_439">
+      <isinactive>F</isinactive>
+      <value>Contado</value>
+    </customvalue>
+    <customvalue scriptid="val_467112_5298967_sb1_853">
+      <isinactive>F</isinactive>
+      <value>Crédito</value>
+    </customvalue>
+  </customvalues>
+</customlist>

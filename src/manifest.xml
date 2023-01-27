@@ -1,0 +1,1575 @@
+<manifest projecttype="ACCOUNTCUSTOMIZATION">
+  <projectname>ptg_prd_backup_bundles</projectname>
+  <frameworkversion>1.0</frameworkversion>
+  <dependencies>
+    <features>
+      <feature required="false">SUITESIGNON</feature>
+      <feature required="false">CRM</feature>
+      <feature required="true">INVENTORY</feature>
+      <feature required="true">MULTILOCINVT</feature>
+      <feature required="true">ADVRECEIVING</feature>
+      <feature required="true">GROSSPROFIT</feature>
+      <feature required="false">WEBSITE</feature>
+      <feature required="true">APPROVALROUTING</feature>
+      <feature required="true">GLAUDITNUMBERING</feature>
+      <feature required="true">ADVFORECASTING</feature>
+      <feature required="true">RETURNAUTHS</feature>
+      <feature required="false">WEBSTORE</feature>
+      <feature required="true">SALESORDERS</feature>
+      <feature required="true">MULTICURRENCY</feature>
+      <feature required="true">CLASSES</feature>
+      <feature required="true">SFA</feature>
+      <feature required="true">CHARGEBASEDBILLING</feature>
+      <feature required="true">INVENTORYSTATUS</feature>
+      <feature required="true">SUBSCRIPTIONBILLING</feature>
+      <feature required="false">EXTREMELIST</feature>
+      <feature required="true">ADVTAXENGINE</feature>
+      <feature required="false">MAILMERGE</feature>
+      <feature required="true">OPPORTUNITIES</feature>
+      <feature required="true">CROSSSUBSIDIARYFULFILLMENT</feature>
+      <feature required="false">PERIODENDJOURNALENTRIES</feature>
+      <feature required="true">INTERCOMPANYAUTOELIMINATION</feature>
+      <feature required="false">WEBSERVICES</feature>
+      <feature required="true">INBOUNDSHIPMENT</feature>
+      <feature required="true">PAYABLES</feature>
+      <feature required="true">EXPREPORTS</feature>
+      <feature required="true">BILLINGACCOUNTS</feature>
+      <feature required="false">MULTILANGUAGE</feature>
+      <feature required="true">LOCATIONS</feature>
+      <feature required="true">SUPPORT</feature>
+      <feature required="true">BLANKETPURCHASEORDERS</feature>
+      <feature required="true">MULTIBOOK</feature>
+      <feature required="true">ADVBINSERIALLOTMGMT</feature>
+      <feature required="true">AVAILABLETOPROMISE</feature>
+      <feature required="true">ADVANCEDPRINTING</feature>
+      <feature required="true">PAYMENTINSTRUMENTS</feature>
+      <feature required="true">VENDORPREPAYMENTS</feature>
+      <feature required="true">DEPARTMENTS</feature>
+      <feature required="true">WORKFLOW</feature>
+      <feature required="true">PROMOCODES</feature>
+      <feature required="true">RECEIVABLES</feature>
+      <feature required="true">ADVSHIPPING</feature>
+      <feature required="true">TIMETRACKING</feature>
+      <feature required="true">SERVERSIDESCRIPTING</feature>
+      <feature required="true">PURCHASECONTRACTS</feature>
+      <feature required="true">MULTICURRENCYVENDOR</feature>
+      <feature required="true">ADVANCEDNUMBERINGSEQUENCES</feature>
+      <feature required="true">BUSINESS</feature>
+      <feature required="true">REQUISITIONS</feature>
+      <feature required="true">DROPSHIPMENTS</feature>
+      <feature required="true">ESTIMATES</feature>
+      <feature required="true">ACCOUNTINGPERIODS</feature>
+      <feature required="true">ITEMOPTIONS</feature>
+      <feature required="true">ADVINVENTORYMGMT</feature>
+      <feature required="true">ACCOUNTING</feature>
+      <feature required="true">AUTOAPPLYPROMOTIONS</feature>
+      <feature required="true">MULTPRICE</feature>
+      <feature required="true">ITEMDEMANDPLANNING</feature>
+      <feature required="true">CCTRACKING</feature>
+      <feature required="true">CUSTOMRECORDS</feature>
+      <feature required="true">SUBSIDIARIES</feature>
+      <feature required="true">UNITSOFMEASURE</feature>
+      <feature required="true">PURCHASEORDERS</feature>
+      <feature required="true">LANDEDCOST</feature>
+    </features>
+    <objects>
+      <object>custbody_ptg_op_relacionada_al_pago</object>
+      <object>custitem_drt_custom_price1_0</object>
+      <object>custitem_drt_custom_price1_2</object>
+      <object>custitem_drt_custom_price1_1</object>
+      <object>custbody_drt_pm_impz_estado</object>
+      <object>custitem_drt_custom_price1_4</object>
+      <object>custbody_ptg_plantadestinoconfirmacion</object>
+      <object>custentity_ptg_frecuenciafactura_</object>
+      <object>custitem_drt_custom_price1_3</object>
+      <object>custbody_ptg_numerodeviajeautotanque</object>
+      <object>customrecord_ptg_precios_sgc_.custrecord_ptg_precio_sgc_</object>
+      <object>custbody_drt_disa_lote_item</object>
+      <object>custcol_disa_cantidad_por_recibir</object>
+      <object>custbody_crt_incoterm</object>
+      <object>custbody_ptg_fechadeautotanque</object>
+      <object>custbodydisa_pago_referencia_cie</object>
+      <object>custcol_ptg_importebruto_sgc_</object>
+      <object>custentityptg_tipodecontacto_</object>
+      <object>custbody_ptg_pesosalida_confirmacion</object>
+      <object>custbody_ptg_nombre_cliente</object>
+      <object>custbody_ptg_odometro</object>
+      <object>custbody_ptg_tarjeta_debito</object>
+      <object>custbodydrt_impuesto_aduana</object>
+      <object>custbody_drt_wms_location_before</object>
+      <object>custcol_disa_nota_linea</object>
+      <object>custbody_ptg_turno</object>
+      <object>custbody_ptg_embarquesalida</object>
+      <object>custentity_sii_id_type</object>
+      <object>custitem_disa_aupdate_footprint</object>
+      <object>custitem_disa_drt_response_footprint</object>
+      <object>custitem_disa_conversion_factor</object>
+      <object>custbody_ptg_captanque</object>
+      <object>custentity_11724_pay_bank_fees</object>
+      <object>customrecord_mant_centroembarcador_.custrecord_ptg_proveedorce_</object>
+      <object>custbody_disa_fecha_pedido_liverpool</object>
+      <object>custbody_drt_accion_envia_wms</object>
+      <object>custbody_disa_deliverydate</object>
+      <object>custentity_ptg_numerodeactivofijo_</object>
+      <object>custbodyptg_fin_servicio</object>
+      <object>custbody_disa_actualizar_wms</object>
+      <object>custbody_ptg_folio_fiscal</object>
+      <object>custbody_disa_fecha_timbre_carta_porte</object>
+      <object>custcol_drt_wms_back_ordered</object>
+      <object>custbody_ptg_status_sgc_</object>
+      <object>custitem_ptg_clasedeprodcuto_</object>
+      <object>custbody_drt_send_wms</object>
+      <object>custentity_disa_credito_disponible</object>
+      <object>customrole1129</object>
+      <object>customrole1128</object>
+      <object>custbody_ptg_plantadestinoconf</object>
+      <object>custitem_drt_clase</object>
+      <object>custentity_ptg_tipodecliente_</object>
+      <object>custbody_fam_lp_leaseliability</object>
+      <object>custcol_disa_peso_articulo_cp</object>
+      <object>custbody_ptg_identificador_descarga</object>
+      <object>custbody_disa_nivel_precio_autorizado</object>
+      <object>custbody_disa_de_transito_aduana</object>
+      <object>custevent_ptg_nombre_calle</object>
+      <object>customrecord_ptg_titulosdepermiso_.custrecord_ptg_titulopermiso_</object>
+      <object>customrole1137</object>
+      <object>customrole1136</object>
+      <object>customrole1135</object>
+      <object>customrole1139</object>
+      <object>custbody_drt_ptg_registro_creado_mov</object>
+      <object>customrole1138</object>
+      <object>custcol_disa_precio_lista</object>
+      <object>custbody_ptg_registro_liq_venta_anden</object>
+      <object>custentity_crt_ce_pais</object>
+      <object>custtab_drt_rf_refacturacion</object>
+      <object>custevent_ptg_conceptos_para_paquete</object>
+      <object>custbody_ptg_hora_fv_</object>
+      <object>custbody_ptg_dispensador_</object>
+      <object>custentity_ptg_cantidad_estacionario_cli</object>
+      <object>customrecord_traspaso_entrada_estcarb_.custrecord_ptg_usuario_dot_est_carb_</object>
+      <object>customrole1130</object>
+      <object>custbody_9997_pfa_record</object>
+      <object>custbody_ptg_cantidadprogramada_n</object>
+      <object>custitem_disa_warehose_code</object>
+      <object>custbody_disa_responce_body</object>
+      <object>custbody_sii_registration_msg</object>
+      <object>custbodyptg_horaconfirmacion</object>
+      <object>customrecord_mx_sat_cfdi_usage</object>
+      <object>customlist_drt_cp_config_autotransp</object>
+      <object>custbody_drt_total_relacionado</object>
+      <object>custentity_disa_tipo_persona</object>
+      <object>custbody_ptg_pesoentrada</object>
+      <object>custbody_drt_pm_impz_cliente_paga_flet</object>
+      <object>customrole1147</object>
+      <object>customrole1146</object>
+      <object>customrole1145</object>
+      <object>custcol_drt_cs_serie_folio</object>
+      <object>custbody_15529_vendor_entity_bank</object>
+      <object>customrecord_ptg_gas_tomado_a_cuenta_</object>
+      <object>custevent_ptg_visita_realizada</object>
+      <object>custevent_ptg_cantidad_evidenciada</object>
+      <object>customrole1149</object>
+      <object>customrole1140</object>
+      <object>custcol_sii_annual_prorate</object>
+      <object>customrecord_ptg_control_cli_tlf_avi_lla</object>
+      <object>customrole1143</object>
+      <object>custcol_ptg_precio_unitario</object>
+      <object>customrole1141</object>
+      <object>custevent_ptg_numero_exterior</object>
+      <object>customlist_ptg_tipo_de_combustible.val_2481130_5298967_sb1_324</object>
+      <object>custbody_drt_pm_total_pedido_minimo</object>
+      <object>custbody_ptg_servicio_id</object>
+      <object>custbody_9997_is_for_ep_dd</object>
+      <object>custitem_disa_serie</object>
+      <object>custbody_ptg_plantadescargagas</object>
+      <object>custbody_ptg_tipos_de_pago</object>
+      <object>custbody_fam_lp_intexpense</object>
+      <object>customrecord_ptg_comodato_asignado.custrecord_ptg_articulo_asignado</object>
+      <object>custrecord_ptg_ruta_cilindro_</object>
+      <object>customrole1159</object>
+      <object>customrole1158</object>
+      <object>customrole1157</object>
+      <object>custbody_ptg_nombredelchoferdescarga</object>
+      <object>custbody_disa_shipment_reason_name</object>
+      <object>customrole1156</object>
+      <object>custbody_mx_operation_type</object>
+      <object>custbodycustbody_disa_motivo_canc_ov</object>
+      <object>customrole1151</object>
+      <object>customrole1150</object>
+      <object>custbody_disa_fecha_contra_recibo_liv</object>
+      <object>custbody_ptg_pesodescarga</object>
+      <object>customrole1155</object>
+      <object>customrole1154</object>
+      <object>customrole1153</object>
+      <object>customrole1152</object>
+      <object>custbody_ptg_monitor</object>
+      <object>custbody_ptg_etiqueta_direccion_envio</object>
+      <object>custentity_psg_ei_auto_select_temp_sm</object>
+      <object>custcol_ptg_fl_</object>
+      <object>custbody_drt_cp_transpinternac</object>
+      <object>custbody_ptg_tarifaporviajesencillo</object>
+      <object>custbody_ptg_embarque_programado_compr</object>
+      <object>custbody_ptg_centroembarcador_</object>
+      <object>custentity_ptg_cada_</object>
+      <object>custevent_ptg_ano_producto</object>
+      <object>custbody_disa_comments</object>
+      <object>custbody_drt_cp_json_figura_transporte</object>
+      <object>custbody_2663_reference_num</object>
+      <object>custbody_drt_ptg_opp_consolidada</object>
+      <object>custbody_ptg_fechainicio_sgc</object>
+      <object>custcol_statistical_procedure_purc</object>
+      <object>custentity_ptg_route_code</object>
+      <object>custentity_disa_uso_de_cfdi_</object>
+      <object>custbody_nondeductible_ref_genjrnl</object>
+      <object>custcol_9572_dd_file_format</object>
+      <object>custbody_mx_cfdi_payer_account</object>
+      <object>custitem_disa_kit</object>
+      <object>custbody_ptg_llenadoporcentaje</object>
+      <object>custtab_16_3776644_208</object>
+      <object>custbody_ptg_localizaciongas_</object>
+      <object>customrole1162</object>
+      <object>customrole1161</object>
+      <object>custbody_ptg_liquidado</object>
+      <object>customrole1160</object>
+      <object>custentity_ptg_cantidad_frecuente_lt_cil</object>
+      <object>custbody_ptg_identificadorunidad_</object>
+      <object>custbody_ptg_tarjeta_credito</object>
+      <object>customrole1166</object>
+      <object>customrole1165</object>
+      <object>customrole1164</object>
+      <object>custbody_ptg_fechaimportacion</object>
+      <object>customrole1163</object>
+      <object>custentity_tipodeproveedor_</object>
+      <object>custentity_disa_tipo_localidad</object>
+      <object>custevent_ptg_prueba_hermetica</object>
+      <object>custbody_mx_cfdi_qr_code</object>
+      <object>custentity_ptg_activ_cli</object>
+      <object>custentity_ptg_numerodeservicios_cli</object>
+      <object>custbody_drt_cp_destino</object>
+      <object>custbody_ptg_preciokilogramo</object>
+      <object>custcol_ptg_novehiculo_</object>
+      <object>custtab_10_4533432_230</object>
+      <object>custcol_disa_precio_unitario</object>
+      <object>custtab_111_5259217_580</object>
+      <object>custbody_ptg_estatuspo_</object>
+      <object>custbody_disa_lim_cred_ov</object>
+      <object>custbody14</object>
+      <object>custbody_disa_customer_name</object>
+      <object>custbody11</object>
+      <object>custbody10</object>
+      <object>custbody13</object>
+      <object>custbody_ptg_kgs_compras</object>
+      <object>custbody_ptg_compra_importacion_</object>
+      <object>custbody_ptg_numeroembarqueimportacion</object>
+      <object>custbody12</object>
+      <object>custitem_disa_required_expiration</object>
+      <object>custbody_drt_sync_up_wms</object>
+      <object>custitem_type_of_goods</object>
+      <object>custentity_disa_comprobante_domici_act</object>
+      <object>custbody_drt_ce_pedimento_exportacion</object>
+      <object>custbody_drt_tipo_cambio_uuid</object>
+      <object>custentity_edoc_use_sender_list</object>
+      <object>custbody_ptg_sellounosalida</object>
+      <object>custbody_disa_pm_apro_directo</object>
+      <object>custbody_drt_pm_impz_ciudad</object>
+      <object>custcol_disa_peso_total_cp</object>
+      <object>custtab_11_4533432_230</object>
+      <object>custentity_ptg_num_cuenta_</object>
+      <object>custbody9_2</object>
+      <object>custbody_drt_fecha_origen</object>
+      <object>custentity_disa_forma_de_pago_</object>
+      <object>custitem_drt_response_material</object>
+      <object>custevent_ptg_imagen_servicio</object>
+      <object>custbody_fam_lp_gainonmod</object>
+      <object>custbody_disa_prefix_almacen</object>
+      <object>custcol_4601_witaxbamt_exp</object>
+      <object>custentity_edoc_sender_domain</object>
+      <object>custbody_fam_lp_rentalfreq</object>
+      <object>custbody_drt_disa_send_wep</object>
+      <object>custbody_ptg_tipo_sgc</object>
+      <object>custcol_emirate</object>
+      <object>custentity_sii_id</object>
+      <object>customrecord_2663_entity_bank_details.custrecord_2663_parent_customer</object>
+      <object>custtab_45_5298967_sb1_355</object>
+      <object>custcol_9572_dd_entitybank_format</object>
+      <object>custbody_disa_tipo_servicio</object>
+      <object>custentity_disa_inventory_rotation_name</object>
+      <object>custitem_disa_descripcion_huella</object>
+      <object>custbody_ptg_opp_transaccion_gen</object>
+      <object>customrecord_ncfar_asset.custrecord_assetcaretaker</object>
+      <object>custbody_ptg_motivo_cancelation</object>
+      <object>custbody_disa_control_transaccion</object>
+      <object>custbody_ptg_cliente_trans_</object>
+      <object>customrecord_pt_tarifa_centro_emb_dest_.custrecord_ptg_centroembarcador_tarifa_</object>
+      <object>customrecord_pt_tarifa_centro_emb_dest_.custrecord_ptg_planta_tarifa_</object>
+      <object>custentity_ptg_horainicialcli_</object>
+      <object>custentity_disa_limite_credito_aprobado</object>
+      <object>customlist_ptg_tipodecliente_registro_</object>
+      <object>custcol_ptg_orden_directa_</object>
+      <object>custbody_drt_send_wep</object>
+      <object>custitem_drt_disa_apdate_wep</object>
+      <object>custentity_ptg_saldo_disponible</object>
+      <object>custcol_drt_cp_cvematerialpeligroso</object>
+      <object>custentity_disa_oficina_ventas</object>
+      <object>custcol_9572_dd_entitybank_sub</object>
+      <object>custbody_ptg_titulopermiso_</object>
+      <object>custbody_mx_cfdi_payment_string_type</object>
+      <object>custevent_ptg_municipio</object>
+      <object>custentity_ptg_condicion_credito</object>
+      <object>customrecord_ptg_estados_colonias</object>
+      <object>custbody_drt_ptg_num_consecutivo</object>
+      <object>custbody_drt_cp_moneda</object>
+      <object>custcol_drt_cp_materialpeligroso</object>
+      <object>custitem_disa_lote_date_interval</object>
+      <object>custbody_ptg_motivodeajuste_</object>
+      <object>customrecord_psg_ei_standards</object>
+      <object>custbody_drt_cp_tipo_transporte</object>
+      <object>customrecord_pt_tarifa_centro_emb_dest_.custrecord_ptg_centroembar_dest_tarifa_</object>
+      <object>custbody_ptg_cobrador</object>
+      <object>custentitykop_drt_pedimento_imp_clie</object>
+      <object>custentity_ptg_miercoles_</object>
+      <object>custbody_drt_cp_pesonetototal</object>
+      <object>custcol_drt_pm_monto</object>
+      <object>custbody_disa_nombre_dpto_liverpool</object>
+      <object>custbody_ptg_estacion_carburacion</object>
+      <object>custitem_itr_supplementary_unit</object>
+      <object>custbody_ptg_solicitud_cancelacion</object>
+      <object>custbody_fam_specdeprjrn_term1</object>
+      <object>custitem_disa_origen_articulo</object>
+      <object>custevent_ptg_conceptos_casos</object>
+      <object>custbody_ptg_proveedor_transpotistagas</object>
+      <object>custbody_ptg_inv_rep_log</object>
+      <object>custbody_fam_specdeprjrn_term2</object>
+      <object>custbody_disa_carrier_name</object>
+      <object>custbody_11724_bank_fee</object>
+      <object>custevent_ptg_direccion_para_visita</object>
+      <object>custentity_ptg_ruta_asignada</object>
+      <object>custbody_4110_customregnum</object>
+      <object>custcol_ptg_densidad_ejecucion</object>
+      <object>custbody_drt_cp_entradasalidamerc</object>
+      <object>custentity_crt_ce_calle</object>
+      <object>custrecord_ptg_estacion_carburacion_ubi</object>
+      <object>custcol_drt_uuid</object>
+      <object>custbody_ptg_sellovioladounodescarga</object>
+      <object>custbody_drt_transaccion_bloqueada</object>
+      <object>custevent_ptg_cantidad_cobrada</object>
+      <object>custbody_4599_sg_import_permit_num</object>
+      <object>custevent_ptg_direccion_para_casos</object>
+      <object>custbody_ptg_tarifa_flete_viaje</object>
+      <object>custbody_ptg_desviocliente_</object>
+      <object>custbody_ptg_solici_cambio_fech_prome</object>
+      <object>custitem_disa_origen</object>
+      <object>custbody_ptg_fechaembarquedescarga</object>
+      <object>custbody_disa_tipo_descuento_cargo</object>
+      <object>custevent_ptg_reposicion_camino</object>
+      <object>custbody_kop_fechaped</object>
+      <object>custbody_srt_task_transaction_update</object>
+      <object>custtab_15_3776644_208</object>
+      <object>custbody_psg_ei_template</object>
+      <object>custcol_4601_witaxcode_exp</object>
+      <object>custcol_ptg_tasadeimpuesto_sgc</object>
+      <object>custitem_disa_familia</object>
+      <object>custitem_disa_ancho</object>
+      <object>custbody_drt_disa_rma</object>
+      <object>custcol_disa_disa_marcaart</object>
+      <object>customlist_ptg_opcion_pago_anden</object>
+      <object>custbody_ptg_entre_las</object>
+      <object>custcol_4601_witaxapplies</object>
+      <object>custitem_disa_sku_ml</object>
+      <object>custentity_disa_response_body</object>
+      <object>custbody_9997_is_for_ep_eft</object>
+      <object>custbody_ptg_plantaoriginal_importac</object>
+      <object>custbody_ptg_fecha_hora_servicio_carb</object>
+      <object>custbody_ptg_fechadeembarque</object>
+      <object>custcol_drt_cp_embalaje</object>
+      <object>custitem_disa_is_pickable</object>
+      <object>custbody_drt_pm_folio</object>
+      <object>custbody_mx_cfdi_certify_timestamp</object>
+      <object>custbody_ptg_tokenpago</object>
+      <object>custbody_drt_ce_pedimento_importacion</object>
+      <object>custentity_disa_condicion_credito</object>
+      <object>custbody_ptg_embarque</object>
+      <object>customrecord_pt_tarifa_centro_emb_dest_.custrecord_ptg_fechafinvigenciatarifa_</object>
+      <object>custentity_ptg_codigodecliente_</object>
+      <object>custbody_sii_property_location</object>
+      <object>custevent_ptg_levantamiento_instalacion</object>
+      <object>custbody_nondeductible_ref_tran</object>
+      <object>custbody_ptg_oportunidad_avisos_llamad</object>
+      <object>custbody_mx_cfdi_signature</object>
+      <object>custbody_ptg_fechadecontabilizacion</object>
+      <object>custbody_drt_cp_fechahora_salida</object>
+      <object>custbody_drt_dias</object>
+      <object>custbody_ptg_servicioestacionario_</object>
+      <object>custentity_disa_name_address</object>
+      <object>custbody_psg_ei_edoc_recipient</object>
+      <object>custevent_ptg_se_realizo_cob_adicional</object>
+      <object>custbody_ptg_tarifa_flete_kg</object>
+      <object>custentity_disa_formato_referencias</object>
+      <object>customrecord_mx_mapper_values.custrecord_mx_mapper_value_category</object>
+      <object>custentity_ptg_articulo_frecuente</object>
+      <object>custbody_fam_lp_journal</object>
+      <object>custbody_ptg_liq_viaje_especial</object>
+      <object>custentity_ptg_planta_</object>
+      <object>customrecord_4601_witaxcode</object>
+      <object>custentity_ptg_viernes_</object>
+      <object>custbody_sii_land_register</object>
+      <object>custbody_sii_exempt_details</object>
+      <object>custbody_ptg_estatussalidadeautotanque</object>
+      <object>custbody_crt_sol_cancel</object>
+      <object>custtab_8_3838944_670</object>
+      <object>custtab_7_4346104_208</object>
+      <object>custcol_drt_cp_dimensiones</object>
+      <object>custbody_ptg_sello1violado</object>
+      <object>custbody_ptg_cierre_real</object>
+      <object>custbody_ptg_pesoentrada_confirmacion</object>
+      <object>custbody_ptg_sellosviolados_</object>
+      <object>custentity_2663_direct_debit</object>
+      <object>custbody_ptg_cp_json_ubicacion</object>
+      <object>custbody_disa_control_proceso_ci</object>
+      <object>custitem_un_number</object>
+      <object>custbody_ptg_tipo_prestamos</object>
+      <object>custentity_ptg_domingo_</object>
+      <object>custbody_ptg_peso_confirmacion</object>
+      <object>custitemdisa_codigo_barras</object>
+      <object>customrecord_ptg_centro_embar_destino_.custrecord_ptg_centro_embarcador_2</object>
+      <object>customrole_wtax_cfo</object>
+      <object>custbodyptg_embarqueimportacion</object>
+      <object>custentity_ptg_estado_aviso_llamadas</object>
+      <object>custbody_psg_ei_inbound_edocument</object>
+      <object>custbody_ptg_nombre_chofer_compra</object>
+      <object>custbody_drt_cp_clave_unidadpeso</object>
+      <object>custbody_establishment_code</object>
+      <object>custitem_drt_custom_price11_3</object>
+      <object>custitem_drt_custom_price11_2</object>
+      <object>custbody_ptg_fechadescarga</object>
+      <object>custitem_drt_custom_price11_4</object>
+      <object>custbody_ptg_nombre_del_chofer</object>
+      <object>customrecord_ptg_embarprogramcons_</object>
+      <object>customrole_ns_taf_accountant</object>
+      <object>custbody_ptg_segundas_llamadas</object>
+      <object>custentityptg_tipo_de_persona</object>
+      <object>custbody_drt_cp_pesobrutototal</object>
+      <object>customrecord_mx_sat_payment_term.val_mx_sat_pt_pue</object>
+      <object>custbody_drt_rf_codigo_relacion</object>
+      <object>custbody_drt_cp_numtotalmercancias</object>
+      <object>custbody_ptg_tipo_de_venta_fv</object>
+      <object>custentity_drt_codigo_pais</object>
+      <object>custcolptg_concepto</object>
+      <object>custcol_np_articulo</object>
+      <object>custbody_ptg_embarque_confirmacion</object>
+      <object>custbody_drt_compensacion</object>
+      <object>custentity_disa_reservation_priority</object>
+      <object>custentity_edoc_ws_sender</object>
+      <object>custitem_disa_alto</object>
+      <object>custbody_qr_code</object>
+      <object>custbody_ptg_plantaoriginalsalida</object>
+      <object>custbodyptg_hora_importacion</object>
+      <object>customrecord_ptg_titulosdepermiso_</object>
+      <object>custentity_disa_pagare_firmado</object>
+      <object>custitem_drt_custom_price11_1</object>
+      <object>custitem_drt_custom_price11_0</object>
+      <object>custitem_disa_largo</object>
+      <object>custentity_disa_constancia_situacion_f</object>
+      <object>custcol_statistical_value</object>
+      <object>custbody_ptg_fecha_de_contabilizacion</object>
+      <object>custbody_fam_lp_assetdesc</object>
+      <object>custentity_my_brn</object>
+      <object>custentity_ptg_cilindro_cliente_</object>
+      <object>custbody_ptg_registro_mov_creado</object>
+      <object>custitem_disa_peso</object>
+      <object>custevent_ptg_recogi_cilindro_danado</object>
+      <object>custitem_commodity_code</object>
+      <object>customrecord_ptg_detallegasclie_</object>
+      <object>custcol_crt_fraccion_arancelaria</object>
+      <object>custcoldisa_es_item_mto</object>
+      <object>customrecord_mx_sat_cfdi_usage.val_18968_5295602_945</object>
+      <object>custbody_mx_cfdi_sat_serial</object>
+      <object>custbody_ptg_motivo_reprogramacion</object>
+      <object>custentity_ptg_categoria4proveedor</object>
+      <object>custbody_disa_expiration_date</object>
+      <object>custcol_ptg_cantidad_sgc</object>
+      <object>customrecord_ptg_turnos</object>
+      <object>custcol_ptg_registro_salida_</object>
+      <object>custbody_ptg_plantadestinoimportacion</object>
+      <object>custitem_disa_accesory_name</object>
+      <object>custentity_ptg_proveedor_internacional</object>
+      <object>custbody_ptg_registro_pre_liq_esta</object>
+      <object>custentity_drt_bank_number_code</object>
+      <object>custbody_edoc_gen_trans_pdf</object>
+      <object>custentity_drt_update_wms</object>
+      <object>custitem_drt_custom_price8_1</object>
+      <object>custitem_drt_custom_price8_0</object>
+      <object>custbody_mx_cfdi_serie</object>
+      <object>custitem_drt_custom_price8_3</object>
+      <object>custbody_ptg_deposito_cliente_contrato</object>
+      <object>custbody_ptg_id_app</object>
+      <object>custitem_drt_custom_price8_2</object>
+      <object>custitem_disa_estatus</object>
+      <object>custbody_ptg_proveedorconfirmacion</object>
+      <object>customlist_ptg_tipodeservicio_.val_2114895_5298967_sb1_823</object>
+      <object>custbody_mx_txn_sat_payment_term</object>
+      <object>custbodydisa_clabe_interbancaria</object>
+      <object>custentity_ptg_ruta_empleado_</object>
+      <object>custbody_ptg_folio_ticket</object>
+      <object>custbodyptg_identificadorimportacion</object>
+      <object>custbody_sii_orig_bill</object>
+      <object>customrecord_mant_centroembarcador_.custrecord_ptg_centroembarce_</object>
+      <object>custbody_ptg_sellodos</object>
+      <object>custbody_ptg_kgspemexsalida</object>
+      <object>custbody_disa_metodo_de_pago_</object>
+      <object>custbody_ptg_sobrepreciointercompania</object>
+      <object>custbody_ptg_dotacion</object>
+      <object>custbody_disa_is_back_order</object>
+      <object>custcol_ptg_oportunidad_origen</object>
+      <object>customrecord_drt_rd_refacturacion</object>
+      <object>custbody_11724_pay_bank_fees</object>
+      <object>custtab_2_3838944_108</object>
+      <object>custitem_disa_is_level_serial</object>
+      <object>custbody_mcp_sat_c_carta_porte</object>
+      <object>custbody_ptg_vehiculo_especial_</object>
+      <object>custbody_drt_pm_impz_importe_minimo</object>
+      <object>custbody_ptg_vale_electronico</object>
+      <object>custtmpl_123_5298967_sb1_101</object>
+      <object>custentity_ptg_cobrador_asignado</object>
+      <object>custentity_drt_sed_email_invoice</object>
+      <object>custentity_ptg_periododecontacto_</object>
+      <object>custbody_drt_send_wep_validate</object>
+      <object>customrecord_ph4014_wtax_type_kind</object>
+      <object>custitem_drt_cp_clavestcc</object>
+      <object>custitem_drt_custom_price8_4</object>
+      <object>custcol_ptg_num_permiso_</object>
+      <object>custitem_ptg_descrip_tipomaterial_</object>
+      <object>custbody_sii_operation_date</object>
+      <object>customrecord_ptg_trasenvasesinventario_.custrecord_ptg_folio_traspaso_</object>
+      <object>customrecord_pt_tarifa_centro_emb_dest_</object>
+      <object>custbody_ptg_temp_descarga</object>
+      <object>custbody_ptg_captanqueimportacion</object>
+      <object>custbody_ptg_pesoentradaimportacion</object>
+      <object>custbody_drt_crt_verificacion_cancel</object>
+      <object>custevent_ptg_cantidad_recolectada_tras</object>
+      <object>custitem_drt_cp_fraccionarancelaria</object>
+      <object>custbody_sii_spcl_scheme_code_purchase</object>
+      <object>custentity_ptg_tipodeservicio_</object>
+      <object>custbodyptg_plantadescargagas</object>
+      <object>custcol_disa_xml_gastos</object>
+      <object>custcol_mx_txn_line_sat_cadastre_id</object>
+      <object>custbody_fecha_final_sgc_</object>
+      <object>custbody_disa_tipo_cargo_des</object>
+      <object>custbody_ptg_temp_importacion</object>
+      <object>customrecord_mx_sat_payment_term.val_mx_sat_pt_ppd</object>
+      <object>custbody_ptg_identificadorcompras</object>
+      <object>custentity2_2</object>
+      <object>custtab_12_4533432_230</object>
+      <object>custentity_disa_tipo_cliente</object>
+      <object>custbody_fecha_fv_</object>
+      <object>custbody_fam_lp_contractnum</object>
+      <object>custbodyptg_inicio_servicio</object>
+      <object>custcol_crt_valor_dolares</object>
+      <object>custbody_mx_cfdi_issue_datetime</object>
+      <object>customlist_ptg_tipo_de_combustible</object>
+      <object>custbody_ptg_cp_figuratransporte</object>
+      <object>custbody_ptg_numerodeviaje_compras</object>
+      <object>custentity_ptg_jueves_</object>
+      <object>custbodydrt_no_pedimento</object>
+      <object>custbody_ptg_precio_articulo_zona</object>
+      <object>custbody_kop_numped</object>
+      <object>custentity_ptg_cantidaddevisitas_</object>
+      <object>custentity_disa_is_partial</object>
+      <object>custbody_ptg_plantadestinosalida</object>
+      <object>custbody_ptg_cp_json_figura</object>
+      <object>custbody_drt_cp_totaldistrec</object>
+      <object>custbody_drt_pm_ap_total_pedido_minimo</object>
+      <object>custentity_drt_disa_apdate_wep</object>
+      <object>custcol_statistical_procedure_sale</object>
+      <object>custbody_ptg_orden_traslado</object>
+      <object>custbody_fam_specdeprjrn_rate</object>
+      <object>custentity_ptg_recordatoriopago_pv_cli</object>
+      <object>custentitykop_pedimento_exportacion_clie</object>
+      <object>customrole_ns_taf_cfo</object>
+      <object>custbody_ptg_sello2descarga</object>
+      <object>custbody_ptg_foliounidad_sgc</object>
+      <object>custbody_ptg_tipo_de_pago_sgc_</object>
+      <object>custbody_disa_carrier</object>
+      <object>custbodyptg_clave_banxico_pago</object>
+      <object>custbody_ptg_terminal_utilizada</object>
+      <object>custevent_ptg_fecha_visita</object>
+      <object>custcol_ptg_unidaddemedida_sgc_</object>
+      <object>custevent_ptg_imagen_bs64</object>
+      <object>custentity_ptg_politicadeventa_</object>
+      <object>custbody_mx_txn_sat_payment_method</object>
+      <object>custbody_ptg_cp_transporte</object>
+      <object>custbody_ptg_fact_inter_</object>
+      <object>custcol_drt_cp_numeroguiaidentificaci</object>
+      <object>custbody_ptg_no_consecutivo_</object>
+      <object>custbody_sii_spcl_scheme_code_sales</object>
+      <object>custbody_mx_cfdi_payment_id</object>
+      <object>custbody_ptg_numerodeentrega</object>
+      <object>custitem_drt_custom_price6_1</object>
+      <object>custitem_drt_custom_price6_0</object>
+      <object>customrecord_ptg_trasenvasesinventario_</object>
+      <object>custitem_drt_custom_price6_3</object>
+      <object>custentity_2663_customer_refund</object>
+      <object>custentity_ptg_nocontrato_</object>
+      <object>custitem_drt_custom_price6_2</object>
+      <object>custbody_ptg_nombredelchoferconfirmaci</object>
+      <object>custitem_drt_custom_price6_4</object>
+      <object>custbody_ptg_orden_de_venta</object>
+      <object>customrecord_ptg_comodato_asignado.custrecord_ptg_relacion_cliente</object>
+      <object>custbody_ptg_presion_confirmacion</object>
+      <object>custbody_disa_order_type</object>
+      <object>custcol_ptg_importe_impustos_sgc_</object>
+      <object>custbodydisa_pago_convenio_cie</object>
+      <object>custbody_disa_shipment_order_status</object>
+      <object>custbody_ptg_plantaoriginal_compra</object>
+      <object>custbody_ptg_registro_pagos</object>
+      <object>custbody_mx_cfdi_issuer_entity_rfc</object>
+      <object>custform_ptg_salida_de_camiones_</object>
+      <object>custbody_ptg_id_equipo</object>
+      <object>custentity_ptg_cliente_act_sgc</object>
+      <object>custcol_far_trn_relatedasset</object>
+      <object>custbody_drt_pm_impz_montominimo</object>
+      <object>custbody_ptg_turno_equipo</object>
+      <object>custbody_ptg_vehiculo_oportunidad_</object>
+      <object>customrecord_psg_ei_audit_trail</object>
+      <object>custbody_disa_cierre_ov_aut</object>
+      <object>custbody_ptg_numeroviaje</object>
+      <object>custbody_ptg_prepago</object>
+      <object>custcol_drt_cp_clavestcc</object>
+      <object>custcol_mx_txn_line_sat_cust_req_num</object>
+      <object>customrecord_4601_witaxtype</object>
+      <object>custbody_disa_shipaddress_name</object>
+      <object>custbody_drt_check_ok_cert</object>
+      <object>custbody_ptg_vendedor_</object>
+      <object>custbody_drt_addres_location</object>
+      <object>custbody_ptg_pressimportacion</object>
+      <object>custbody_ptg_compra_internacional</object>
+      <object>custbody_sii_invoice_date</object>
+      <object>custbody_ptg_sello2violadodescarga</object>
+      <object>custbody_ptg_tarifa_flete_a_pagar</object>
+      <object>custbody_ptg_referencia_</object>
+      <object>custcol_drt_cp_unidadpeso</object>
+      <object>custbody_disa_de_aduana_produc_venta</object>
+      <object>custbody_ptg_idconsumidor_</object>
+      <object>custbody_ptg_objeto_para_articulos</object>
+      <object>custitem_disa_marca</object>
+      <object>custbody_drt_proceso_identificador</object>
+      <object>custbody_fam_lp_term</object>
+      <object>customlist_drt_cp_tipo_operador</object>
+      <object>custitem_tim_clavearticulo_</object>
+      <object>custbody_drt_traspaso_ac_ad</object>
+      <object>custbody_ptg_viaje_sencillo_</object>
+      <object>custbody_ptg_numero_embarque_remision</object>
+      <object>custentity_ptg_comentarios_1</object>
+      <object>custcol_drt_pm_committed</object>
+      <object>custevent_ptg_motivo_reemplazo_cil</object>
+      <object>custbody_ptg_kgspemex_confirmacion</object>
+      <object>custbody_fam_lp_totalinterest</object>
+      <object>customrecord_mx_mapper_category.sat_payment_method</object>
+      <object>custcol_drt_rfc_proveedor</object>
+      <object>custbody_ptg_horaderecepcion_compra</object>
+      <object>custbody_ptg_totalizador_final_</object>
+      <object>custbody_ptg_iddevice</object>
+      <object>custbody_disa_fecha_promesa_entrega</object>
+      <object>custcol_4601_witaxamt_exp</object>
+      <object>custcol_ptg_num_entrega_</object>
+      <object>custbody_ptg_numeroentrega_compra</object>
+      <object>custcol_timclaveart_</object>
+      <object>custbody_psg_ei_digitalsignature_label</object>
+      <object>custentity_ptg_clave_cli_potoapp</object>
+      <object>custbody_drt_datos_pdf</object>
+      <object>custcol_ptg_nota_articulo</object>
+      <object>custbody_delivery_terms</object>
+      <object>custbody_ptg_identificador_conf</object>
+      <object>custbody_razon_social_para_facturar</object>
+      <object>custentity_drt_bank_number</object>
+      <object>custbody_drt_cp_complemento_cartaporte</object>
+      <object>custbody_ptg_tipodeservicio_</object>
+      <object>custitem_drt_tipo_material</object>
+      <object>custbody_disa_factura_impresa</object>
+      <object>custentity_disa_identificacion_oficial</object>
+      <object>custbody_ptg_oportunidad_programado</object>
+      <object>custbody_ptg_kgsdescarga</object>
+      <object>custbody_drt_ce_certificado_origen</object>
+      <object>custbody_drt_response_wms</object>
+      <object>custbody_sii_external_reference</object>
+      <object>custitem_drt_custom_price4_1</object>
+      <object>custitem_drt_custom_price4_0</object>
+      <object>custentity_disa_estados_financieros</object>
+      <object>custitem_drt_custom_price4_3</object>
+      <object>custbody_ptg_lab_</object>
+      <object>custbody_drt_pm_tipo_pedido_minimo</object>
+      <object>custitem_drt_custom_price4_2</object>
+      <object>custentity_edoc_gen_trans_pdf</object>
+      <object>custitem_drt_custom_price4_4</object>
+      <object>custentity_2663_email_address_notif</object>
+      <object>custbody_mx_cfdi_issuer_serial</object>
+      <object>custbody_drt_total_credito_aplicado</object>
+      <object>custcol_disa_codigo_ean_liverpool</object>
+      <object>custbody_ptg_proveedor_transpotista_co</object>
+      <object>custbody_sii_article_61d</object>
+      <object>custtab_17_3776644_208</object>
+      <object>custbody_ptg_estado_pedido</object>
+      <object>custbody_ptg_ruta_asignada</object>
+      <object>custbody_mx_inbound_bill_uuid</object>
+      <object>customrecord_ptg_conceptos_casos.custrecord_ptg_descripcion_concepto</object>
+      <object>custbody_ptg_desvio_orden_compra</object>
+      <object>custcol_drt_rfc_emisor</object>
+      <object>custbody_refno_originvoice</object>
+      <object>custbody_ptg_serviciocilindro_</object>
+      <object>custbody_ptg_estatusdescarga_</object>
+      <object>custcol_ptg_peso_ejecucion_</object>
+      <object>customrecord_ptg_centro_embar_destino_.custrecord_ptg_kms_centro_embarcador_</object>
+      <object>custbody_ptg_idcliente_</object>
+      <object>custentity_disa_declaracion_anual</object>
+      <object>custbody_ptg_sellodossalida</object>
+      <object>custevent_ptg_problema_localizado_en</object>
+      <object>custbody_ptg_entrega_importacion</object>
+      <object>custitem_code_of_supply</object>
+      <object>custbody_ptg_numerodeviajeconfirmacion</object>
+      <object>custbody_ptg_turn</object>
+      <object>custevent_ptg_prueba_hermet_realizada</object>
+      <object>custbody_fam_lp_rightofuse</object>
+      <object>custbody_ptg_horadescarga</object>
+      <object>custbody_ptg_estatusdescarga</object>
+      <object>custitem_disa_respuesta</object>
+      <object>custbody_ptg_equipo_</object>
+      <object>customrecord_pt_tarifa_centro_emb_dest_.custrecord_ptg_tarifa_litros_</object>
+      <object>custitem_disa_is_each_level</object>
+      <object>custbody_ptg_id_direccion_envio</object>
+      <object>custentity_kop_chkproveedorextranjero</object>
+      <object>customrecord_pt_tarifa_centro_emb_dest_.custrecord_ptg_fechainiciovigenciatarifa</object>
+      <object>custbody_ptg_pago_farmacia_gdl</object>
+      <object>custbody_disa_is_partial</object>
+      <object>custbody_drt_cp_fechahora_llegada</object>
+      <object>custbody_ptg_nota_credito_relacionada</object>
+      <object>customrecord_ph4014_wtax_jrnl_type</object>
+      <object>customrecord_4601_groupedwitaxcode</object>
+      <object>custtab_crt_comercio_exterior</object>
+      <object>custbody_ptg_empleado_a_transferir_rs</object>
+      <object>custbody_ptg_temperatura_compra</object>
+      <object>customrole1229</object>
+      <object>custcol_drt_cp_uuidcomercioext</object>
+      <object>custentity_ptg_facturarservicios_pv_cli</object>
+      <object>custbody_fam_lp_totalleaseliab</object>
+      <object>custbody_drt_cp_figura_transporte</object>
+      <object>custentity_crt_ce_codigo_postal</object>
+      <object>custbody_ptg_horasalidaautotanque</object>
+      <object>custbody_mx_cfdi_recipient_account</object>
+      <object>custentity_ptg_restringirtag_cli</object>
+      <object>custevent_ptg_hay_fuga</object>
+      <object>custentity_ptg_fechafabricacion_tanque_</object>
+      <object>custcol_drt_cp_cvestransporte</object>
+      <object>custbody_ptg_tipo_registro</object>
+      <object>custbody_drt_psg_ei_generated_edoc</object>
+      <object>custbody_disa_contra_recibo_liverpool</object>
+      <object>custcol_ptg_registro_estacionario</object>
+      <object>custbody_disa_saldo_cli_ov</object>
+      <object>custitem_crt_unidad_aduana</object>
+      <object>custbody_drt_folio_sustitucion</object>
+      <object>custbody_ptg_registro_venta_anden</object>
+      <object>custitem_disa_is_pallet_level</object>
+      <object>custbody_ptg_vehiculo_consumo_interno</object>
+      <object>customrecord_ei_sending_method</object>
+      <object>custbody_ptg_porcentajedellenado</object>
+      <object>custbody_fam_lp_annualrate</object>
+      <object>custbody_ptg_registro_pre_liq</object>
+      <object>customrole1230</object>
+      <object>custbody_mx_cfdi_issue_bank_name</object>
+      <object>customrecord_psg_ei_template</object>
+      <object>custitem_drt_custom_price2_1</object>
+      <object>custbody_drt_transaccion_relacionada</object>
+      <object>custbody_disa_route</object>
+      <object>custitem_drt_custom_price2_0</object>
+      <object>custitem_drt_custom_price2_3</object>
+      <object>custitem_drt_custom_price2_2</object>
+      <object>custbody_ptg_folio_respaldo</object>
+      <object>custitem_drt_response_foot</object>
+      <object>custbody_ptg_fact_flete_</object>
+      <object>custitem_drt_custom_price2_4</object>
+      <object>customlist_drt_cp_tipo_transporte</object>
+      <object>custbody_drt_cp_cargoportasacion</object>
+      <object>custtab_66_5259217_847</object>
+      <object>customrole1004</object>
+      <object>custbody_ptg_usuario_</object>
+      <object>custbody_15699_exclude_from_ep_process</object>
+      <object>customrecord_ptg_centro_embar_destino_</object>
+      <object>customrole1002</object>
+      <object>customrecord_pt_tarifa_centro_emb_dest_.custrecord_ptg_tarifa_vigente_</object>
+      <object>custbody_adjustment_journal</object>
+      <object>custbody_ptg_peso_compra</object>
+      <object>custbody_ptg_presskg</object>
+      <object>custbody_ptg_forma_pago_facturar_anden</object>
+      <object>customrole1001</object>
+      <object>custbody_ptg_codigo_movimiento</object>
+      <object>customrole1000</object>
+      <object>custbody_ptg_venta_en_</object>
+      <object>customrecord_ptg_status_oportunidad</object>
+      <object>custentity_ptg_ruta_manana_</object>
+      <object>custcol_drt_cp_pesoneto</object>
+      <object>custcol_drt_pc_pesotara</object>
+      <object>custitem_disa_no_comprar</object>
+      <object>customrecord_ptg_gas_tomadocliente_</object>
+      <object>custbody_drt_backup_cierre_periodo</object>
+      <object>custentity_crt_ce_estado</object>
+      <object>custbody_sii_not_reported_in_time</object>
+      <object>custentity_ptg_ylas_</object>
+      <object>custbody_drt_tptal_apply</object>
+      <object>custentity_disa_fecha_alta_original</object>
+      <object>custbody_drt_cp_unidadpeso</object>
+      <object>custbody_mx_cfdi_uuid</object>
+      <object>customrecord_mx_sat_payment_term</object>
+      <object>customrole1015</object>
+      <object>custevent_ptg_colonia</object>
+      <object>custbody_drt_motivo_cancelacion</object>
+      <object>custbody_disa_forma_pago_sat_</object>
+      <object>customrecord_ptg_trasenvasesinventario_.custrecord_ptg_usuario_trasp_env_</object>
+      <object>customrecord_traspaso_entrada_estcarb_.custrecord_ptg_planta_dot_estcarb_</object>
+      <object>custentity_ico</object>
+      <object>customrole1012</object>
+      <object>custbody_disa_espejo_fecha_limite</object>
+      <object>custbody_fam_lp_totalnpv</object>
+      <object>custevent_ptg_ultima_modificacion</object>
+      <object>customrecord_ptg_embarprogramcons_.custrecord_ptg_identificadordeunidad_</object>
+      <object>custitem_disa_default_life_days</object>
+      <object>custtab_disa_campos_addenda_liverpool</object>
+      <object>custbody_drt_clave_bancaria_benefi</object>
+      <object>custbody_ptg_sellocolocado_conf</object>
+      <object>custitem_ptg_capacidadcilindro_</object>
+      <object>custcol_drt_cp_numpiezas</object>
+      <object>custbody_ptg_consensado_compra</object>
+      <object>custbody_ptg_centroembarcadordestino_</object>
+      <object>custbody_disa_destination_name_address</object>
+      <object>customrole1027</object>
+      <object>customrole1026</object>
+      <object>customrole1025</object>
+      <object>customrole1024</object>
+      <object>customrole1029</object>
+      <object>customrecord_ptg_estados_col_rut</object>
+      <object>customrole1028</object>
+      <object>custbody_drt_iva_relacionado</object>
+      <object>custbody_fam_jrn_reversal_date</object>
+      <object>custbody_fam_lp_startdate</object>
+      <object>custbody_ptg_folio_aut</object>
+      <object>customrole1022</object>
+      <object>custbody_ptg_factura_venta</object>
+      <object>custevent_ptg_porcentaje_final_eviden</object>
+      <object>custbody_drt_date_expiration</object>
+      <object>custbody_ptg_hora_notificacion</object>
+      <object>custbodycustbody_disa_monto_letras</object>
+      <object>custbodyptg_planta_compra</object>
+      <object>custentity_disa_categoria_proveedor</object>
+      <object>custentity_ptg_descuento_por_kilo_</object>
+      <object>customrole1038</object>
+      <object>custentity_razon_social_para_facturar</object>
+      <object>customrole1037</object>
+      <object>customrecord_ptg_cantidad_trasp_env_</object>
+      <object>customrole1036</object>
+      <object>custentity_clabe_interbancaria</object>
+      <object>custbody_drt_pm_impz_monto_flete</object>
+      <object>customrole1039</object>
+      <object>customrole1030</object>
+      <object>custbody_disa_conceptos_nc</object>
+      <object>custbody_crt_motivo_traslado</object>
+      <object>customrole1034</object>
+      <object>custitem_disa_codigo_ean_liverpool</object>
+      <object>custbody_drt_cs_xml</object>
+      <object>custbody_disa_shipment_is_back_order</object>
+      <object>customrole1033</object>
+      <object>custbody_ptg_responsable_</object>
+      <object>custbody_ptg_tipodetransporte_</object>
+      <object>custbody_ptgnoembarque_</object>
+      <object>custbody_psg_ei_template_inlinehelp</object>
+      <object>custbody_ptg_sellos_violadosrevisados_</object>
+      <object>customrecord_ptg_titulosdepermiso_.custrecord_ptg_cli_titulopermiso_</object>
+      <object>custbody_itr_doc_number</object>
+      <object>custcol_drt_ptg_registro_mov_creado</object>
+      <object>custitem_ptg_descripclaseproducto_</object>
+      <object>custbody_drt_email_enviado</object>
+      <object>custbody_mx_cfdi_recipient_entity_rfc</object>
+      <object>custbody_drt_check_ok_upload</object>
+      <object>customrole_ncfar</object>
+      <object>customrole1049</object>
+      <object>customrole1048</object>
+      <object>custbody_drt_cp_transporte</object>
+      <object>custevent_ptg_precio_venta</object>
+      <object>customrole1046</object>
+      <object>custbody_ptg_planta_relacionada</object>
+      <object>custbody_drt_enviar_wms</object>
+      <object>customrole1041</object>
+      <object>custbody_disa_fecha_timbrado</object>
+      <object>customrole1040</object>
+      <object>customrole1045</object>
+      <object>customrole1044</object>
+      <object>customrole1043</object>
+      <object>customrole1042</object>
+      <object>custbody_disa_pago_representantevta</object>
+      <object>custbody_ptg_proveedor_importacion</object>
+      <object>custbodyptg_llenadoimportacion</object>
+      <object>custbody_disa_emailfacturaenviada</object>
+      <object>custbody_psg_ei_pdf</object>
+      <object>custbody_disa_aprobaciongastos_</object>
+      <object>custentity_ptg_employee_masterpassword</object>
+      <object>custbody_psg_ei_status</object>
+      <object>custevent_ptg_etiqueta</object>
+      <object>custbody_ptg_planta_trans</object>
+      <object>custbody_drt_rf_transaccion</object>
+      <object>custbody_sii_issued_inv_type</object>
+      <object>custentity_edoc_ws_id</object>
+      <object>customrole1059</object>
+      <object>custcol_drt_cp_pesoguiaidentificacion</object>
+      <object>custbody_disa_condiciones_credito</object>
+      <object>custentity_disa_warehose</object>
+      <object>custbody_ptg_zonadeprecio_traslado_</object>
+      <object>custbody_notc</object>
+      <object>custbody_mx_journalentry_createdby</object>
+      <object>customrole1052</object>
+      <object>custbodyptg_capacidadtanque</object>
+      <object>customrole1050</object>
+      <object>custcol_ptg_codigodeimpuesto_sgc_</object>
+      <object>custcol_ptg_no_embarque_progra</object>
+      <object>customrole1228_0</object>
+      <object>customrole1055</object>
+      <object>customrole1054</object>
+      <object>customrole1053</object>
+      <object>custcol_4601_witaxline_exp</object>
+      <object>custbody_mx_cfdi_payment_string</object>
+      <object>customlist_ptg_ventaen_esp_.val_2510237_5298967_sb1_679</object>
+      <object>custevent_ptg_repuse_cilindro_danado</object>
+      <object>custbody_drt_rf_uuid_relacionado</object>
+      <object>custevent_ptg_codigo_postal</object>
+      <object>custbody_ptg_sobreprecioclientes</object>
+      <object>custentity_ptg_categoria2proveedor</object>
+      <object>customrecord_ptg_viajepotogas_detalleinv</object>
+      <object>custbody_ptg_origen_servicio</object>
+      <object>custcol_5892_eutriangulation</object>
+      <object>custbody_ptg_importacionsello2</object>
+      <object>custentity_drt_task_entity_update</object>
+      <object>custentity_disa_concepto_cie</object>
+      <object>customlist_drt_cp_tipo_transporte.val_76441_5259217_502</object>
+      <object>custbody_date_of_taxable_supply</object>
+      <object>custcol_ptg_kgms_pemex</object>
+      <object>customrole1062</object>
+      <object>custcol_nondeductible_account</object>
+      <object>customrole1060</object>
+      <object>custbody_ptg_identificadorunidad</object>
+      <object>custbody_drt_tesing_json</object>
+      <object>custbody_nexus_notc</object>
+      <object>custbody_disa_prov_extranjero</object>
+      <object>custcoldisa_pdf_gastos</object>
+      <object>custbody_ptg_estacion_carburacion_dest</object>
+      <object>custbody_psg_ei_certified_edoc</object>
+      <object>custbody_ptg_invalidado_desde_cc</object>
+      <object>custbody_ptg_y_las</object>
+      <object>custbody_ptg_sellouno</object>
+      <object>custbody_drt_cp_json_transporte</object>
+      <object>custbody_ptg_num_viaje_destino</object>
+      <object>custitem_drt_cp_materialpeligroso</object>
+      <object>custbody_mx_cfdi_sat_addendum</object>
+      <object>customlist_ptg_tipo_sgc</object>
+      <object>custentity_crt_ce_num_interior</object>
+      <object>custbody_disa_matriz_riesgo1</object>
+      <object>custbody_disa_matriz_riesgo2</object>
+      <object>customrecord_traspaso_entrada_estcarb_.custrecord_error_dot_est_carb_</object>
+      <object>custbody_disa_matriz_riesgo3</object>
+      <object>custbody_disa_matriz_riesgo4</object>
+      <object>custbody_ptg_nombredelchofersalida</object>
+      <object>custbody_ptg_embarqueprogramado</object>
+      <object>custbody_ptg_diferencia_peso_pemex</object>
+      <object>custbody_ptg_selliouno</object>
+      <object>custbody_ptg_serv_conciliado_sgc_</object>
+      <object>custentity_ptg_imagen_cliente</object>
+      <object>custbody_ptg_pesoinicialfinal</object>
+      <object>custbody_drt_cp_viaentradasalida</object>
+      <object>custbody8_2</object>
+      <object>custbody_my_import_declaration_num</object>
+      <object>custitem_disa_drt_esponse_product</object>
+      <object>custentity_ptg_metodopago_cli</object>
+      <object>custentity_drt_sed_email_customerpayment</object>
+      <object>custentity_ptg_tipo_descuento</object>
+      <object>customrole1002_2</object>
+      <object>custbody_ptg_cp_id_destino</object>
+      <object>custcol_counterparty_vat</object>
+      <object>custbody_fam_lp_enddate</object>
+      <object>custbody_drt_ptg_oportunidad_consolida</object>
+      <object>customrecord_ptg_servicios_movimien_2</object>
+      <object>custbody_ptg_kilometraje_registrado</object>
+      <object>custentity_drt_folio</object>
+      <object>custbodyptg_fecha_embarque_compra_impo</object>
+      <object>customrecord_ptg_detalle_dot_est_carb_</object>
+      <object>custbody_ptg_tarifa_flete_a_cobrar</object>
+      <object>customrecord_ptg_precios_sgc_.custrecord_ptg_planta_sgc_precio_</object>
+      <object>custevent_ptg_capacidad_tanq_est</object>
+      <object>custbody_ptg_cp_json_figura_transporte</object>
+      <object>customrecord_ptg_planta_</object>
+      <object>customrecord_ptg_conceptos_casos.custrecord_ptg_identificador_concepto</object>
+      <object>custbody_document_date</object>
+      <object>custbodyptg_captanquedescargue</object>
+      <object>custcol_sii_exempt_line_details</object>
+      <object>custentity_drt_send_wep</object>
+      <object>custentity_ptg_metododepago_cli</object>
+      <object>custcol_crt_unidad_aduana</object>
+      <object>customrecord_ptg_descuentos_</object>
+      <object>custentity_4601_defaultwitaxcode</object>
+      <object>custbody_drt_rf_refacturacion</object>
+      <object>custitem_disa_inventory_rotation_name</object>
+      <object>custbody_ptg_hora_trans</object>
+      <object>custbody_sii_accounting_date</object>
+      <object>custbody_ptg_plantaoriginal_confirmaci</object>
+      <object>custbody_drt_ch_pedido_minimo</object>
+      <object>customrecord_ptg_centro_embar_destino_.custrecord_ptg_planta_centro_embar_</object>
+      <object>customrecord_4601_witaxsetup</object>
+      <object>custbody_ptg_direccion_pdf</object>
+      <object>custbody_ptg_tota_inicial_</object>
+      <object>custbody_ptg_porcentajellenado</object>
+      <object>custentity_ptg_ruta_tarde_</object>
+      <object>customrecord_psg_ei_email_recipient.custrecord_psg_ei_email_recipient_cust</object>
+      <object>custitem_disa_send_interface</object>
+      <object>custbody_drt_pm_impz_paqueteria</object>
+      <object>custbody_drt_output_wep</object>
+      <object>custentity_disa_account_name</object>
+      <object>custbody_ptg_fecha_modificacion_sgc</object>
+      <object>custbody_totalizador_final_sgc_</object>
+      <object>custcol_ptg_venta_anden</object>
+      <object>custbody_ptg_cp_id_origen</object>
+      <object>custentity_ptg_employee_password</object>
+      <object>customrecord_ptg_comodato_asignado.custrecord_ptg_cantidad_asignada</object>
+      <object>custtab_drt_pm_pedido_minimo</object>
+      <object>custbody_drt_rf_tipo_relacion</object>
+      <object>custbody10_2</object>
+      <object>custbody_sii_ref_no</object>
+      <object>custitem_disa_build_order</object>
+      <object>custcol_drt_cp_pedimento</object>
+      <object>custentity_crt_ce_municipio</object>
+      <object>custbody_mx_cfdi_payment_signature</object>
+      <object>custtab_crt_comercio_exterior_entity</object>
+      <object>custentity_ptg_capacidad_</object>
+      <object>customrecord_ptg_politicadeconsumo_</object>
+      <object>custitem_4601_defaultwitaxcode</object>
+      <object>customrecord_traspaso_entrada_estcarb_.custrecord_ptg_transferencia_inv</object>
+      <object>custbody_disa_revision_conciliacion</object>
+      <object>custbody_ptg_creado_por</object>
+      <object>custentity_ptg_eliminar_contratos</object>
+      <object>custtmpl_mx_pdf_journalentry</object>
+      <object>custitem_disa_import_number</object>
+      <object>custbody_ptg_fecha_notificacion</object>
+      <object>custentity_ptg_vehiculo_</object>
+      <object>custentitycustentity_ptg_employee_rol</object>
+      <object>custbody_ptg_registro_facturacion</object>
+      <object>custentity_ptg_cantidad_cilindros_cli_</object>
+      <object>custevent_ptg_numero_interior</object>
+      <object>custbody_mx_cfdi_sat_signature</object>
+      <object>custbody_drt_cp_id_origen</object>
+      <object>custbody_ptg_plantaautotanque</object>
+      <object>custbody_disa_indicador_car_des_conso</object>
+      <object>custitem_disa_is_package_level</object>
+      <object>custcol_ptg_capacidad_articulo</object>
+      <object>custbody_kop_valorcomercial</object>
+      <object>custbody_sii_received_inv_type</object>
+      <object>custbody_ptg_numero_vehiculo</object>
+      <object>custbody_disa_estatus_ov</object>
+      <object>custentity_disa_opinion_cumpli_positiva</object>
+      <object>custbody_mx_journalentry_authorizedby</object>
+      <object>custbody_ptg_descrip_motivo_ajust_</object>
+      <object>custbody_counterparty_vat</object>
+      <object>custbody_fam_lp_financelease</object>
+      <object>custbody_ptg_num_tomadoacuenta_</object>
+      <object>custevent_ptg_id_direccion</object>
+      <object>custbody_pg_clientedesvio_</object>
+      <object>custcol_drt_cp_fraccionarancelaria</object>
+      <object>custbody_ptg_viaje_full_</object>
+      <object>customrecord_drt_ptg_message_satus</object>
+      <object>customrecord_pt_tarifa_centro_emb_dest_.custrecord_ptg_distancia_tarifa_</object>
+      <object>custcol_drt_cp_pesobruto</object>
+      <object>custcol_drt_pm_backordered</object>
+      <object>custbody_ptg_localizacion_envases_</object>
+      <object>customrecord_2663_entity_bank_details.custrecord_2663_parent_cust_ref</object>
+      <object>custentity_dic</object>
+      <object>custtab_mc_bank_info_details</object>
+      <object>custentity_drt_ce_num_reg_trib</object>
+      <object>custcol_ptg_total_sgc</object>
+      <object>custentity_disa_shipping_type</object>
+      <object>custentity_ptg_politicadeconsumo_cliente</object>
+      <object>custbody_psg_ei_generated_edoc</object>
+      <object>customrecord_drt_ptg_message_type</object>
+      <object>custitem_drt_custom_price9_1</object>
+      <object>custitem_drt_custom_price9_2</object>
+      <object>customrecord_ptg_registrodeefectivo</object>
+      <object>custitem_drt_custom_price9_0</object>
+      <object>custentity_psg_ei_entity_edoc_standard</object>
+      <object>custbody_ptg_clienteprestamo_</object>
+      <object>custbody_drt_ptg_registro_creado</object>
+      <object>custbody_ptg_merma</object>
+      <object>custcol_ptg_nombre_chofer</object>
+      <object>custbody_drt_fecha_limite</object>
+      <object>custitem_ptg_marca_</object>
+      <object>custcol_ptg_subtotal_sgc_</object>
+      <object>custevent_ptg_motivo_reprogramacion</object>
+      <object>custentity_disa_autori_buro_credito</object>
+      <object>custbody_drt_pm_impz_pedidominimo</object>
+      <object>custitem_disa_account_name</object>
+      <object>custbody_disa_lugar_pago</object>
+      <object>custbody_fam_lp_asset</object>
+      <object>custevent_ptg_y_calle</object>
+      <object>custentity_disa_convenio_cie</object>
+      <object>custitem_drt_custom_price10_4</object>
+      <object>custitem_drt_custom_price10_3</object>
+      <object>custbody_fam_lp_company</object>
+      <object>custitem_drt_custom_price9_3</object>
+      <object>custitem_drt_custom_price9_4</object>
+      <object>custentity_disa_solicitud_alta</object>
+      <object>custtab_6_4346104_208</object>
+      <object>custbody_disa_ejec_pedido_venta</object>
+      <object>custbody_ptg_cpmpra_n_i</object>
+      <object>custbody_disa_control_devoluciones</object>
+      <object>custbody_sii_orig_invoice</object>
+      <object>customrecord_ptg_rutas</object>
+      <object>custbody_disa_wms_id</object>
+      <object>custbody_ptg_fecha_embarque_compra</object>
+      <object>custentity_ptg_cliente_en_proceso</object>
+      <object>custcol_9572_eft_entitybank_format</object>
+      <object>custentity_ptg_notas_cliente_</object>
+      <object>customlist_drt_cp_tipo_operador.val_76447_5259217_969</object>
+      <object>custevent_ptg_planta_relacionada_caso</object>
+      <object>customlist_ptg_catalogodeplantas_</object>
+      <object>customrecord_psg_mx_bank_info.custrecord_psg_mx_bank_info_entity</object>
+      <object>custbody_fam_lp_totalprincipal</object>
+      <object>custform_ptg_zonadeprecio_</object>
+      <object>custitem_drt_consecutivo_1</object>
+      <object>custentity_ptg_martes_</object>
+      <object>custitem_drt_consecutivo_2</object>
+      <object>custentity_crt_ce_colonia</object>
+      <object>custentity_disa_reg_firmas_autorizadas</object>
+      <object>customlist_ptg_tipodeventa__2</object>
+      <object>custitem_drt_custom_price10_0</object>
+      <object>custbody_drt_serie_lote_obj</object>
+      <object>custcol_drt_cp_descripembalaje</object>
+      <object>custbody_disa_is_tms_planning</object>
+      <object>custitem_drt_custom_price10_2</object>
+      <object>customrecord_mant_centroembarcador_</object>
+      <object>custbody_ptg_cp_tipo_transporte</object>
+      <object>custitem_drt_impuesto_diot</object>
+      <object>custitem_drt_custom_price10_1</object>
+      <object>custbody_mx_cfdi_usage</object>
+      <object>custentity_ptg_alianza_comercial_cliente</object>
+      <object>custentity_4599_sg_uen</object>
+      <object>custentity_ptg_restringirgps_cli</object>
+      <object>custbody_fam_specdeprjrn_shortage</object>
+      <object>customlist_ptg_aprobacion_.val_2519776_5298967_sb1_385</object>
+      <object>custcol_9997_dd_file_format</object>
+      <object>custentitydisa_referencia_cie</object>
+      <object>custbody_drt_traspaso_so</object>
+      <object>custentity_ptg_indicaciones_cliente</object>
+      <object>customrole_wtax_accountant</object>
+      <object>custbody_fam_lp_assetprop</object>
+      <object>custbody_ptg_servicio_invalidado</object>
+      <object>custbody_ptg_tecnico_conductor_asig</object>
+      <object>custbody_ptg_estacion_</object>
+      <object>custbody_drt_aprobar_cliente_paga</object>
+      <object>custitem_kop_fraccarancelaria</object>
+      <object>custentity_ptg_cliente_especial</object>
+      <object>custbody_ptg_transpor_cobra_flete_</object>
+      <object>custitemcustitem_disa_categoriacatalog</object>
+      <object>custbodyptg_fecha_recepcion_compra</object>
+      <object>custbody_ptg_totalizador_inicial_sgc</object>
+      <object>custbody_drt_ce_observaciones</object>
+      <object>custbody_ptg_entregadescarga</object>
+      <object>custentity_ptg_bloqueomorosidad_pv_cli_</object>
+      <object>custbody_sii_is_third_party</object>
+      <object>custbody_regime_code_of_supply</object>
+      <object>custbody_ptg_plantadestino_compra</object>
+      <object>custbody_drt_traspaso_po</object>
+      <object>custevent_ptg_segunda_llamada_casos</object>
+      <object>customrecord_ptg_comodato_asignado</object>
+      <object>custitem_disa_is_default</object>
+      <object>custbodyptg_estatus_importacion</object>
+      <object>custcol_establishment_code</object>
+      <object>custitem_disa_is_base_unit</object>
+      <object>custitem_drt_custom_price7_0</object>
+      <object>custitem_drt_custom_price7_2</object>
+      <object>custitem_drt_custom_price7_1</object>
+      <object>custitem_drt_custom_price7_4</object>
+      <object>custitem_drt_custom_price7_3</object>
+      <object>custtab_4_3838944_241</object>
+      <object>custbody_ptg_tarifaporkilogramo</object>
+      <object>custbodydisa_fecha_pago</object>
+      <object>customlist_ptg_ventaen_esp_</object>
+      <object>custbodyptg_sellodosimportacion</object>
+      <object>custentity_ptg_giro_negocio</object>
+      <object>custentity_disa_buro_credito</object>
+      <object>custentity_ptg_precio_sgc_</object>
+      <object>customlist_ptg_aprobacion_</object>
+      <object>custentity_crt_ce_num_exterior</object>
+      <object>custbodydisa_pago_concepto_cie</object>
+      <object>custbody_drt_reference_payment</object>
+      <object>custcol_ptg_embarque</object>
+      <object>custbody_mx_bank_information</object>
+      <object>custbodyptg_plantadescargadestino</object>
+      <object>custbody_sii_article_72_73</object>
+      <object>custentity_ptg_estacionario_cliente_</object>
+      <object>custbody_ptg_tipo_pago_anden</object>
+      <object>custbody_ptg_plantaoriginaldescarga</object>
+      <object>custtab_drt_pago_10</object>
+      <object>custcol_drt_cp_valormercancia</object>
+      <object>custtab_drt_envio_wms</object>
+      <object>customrole_wtax_accountat_rvwr</object>
+      <object>custbody_ptg_estado_aviso_llamadas</object>
+      <object>custevent_ptg_estado</object>
+      <object>custbody_ptg_zonadeprecioop_</object>
+      <object>custcol_drt_desvio_plant_cli_nin</object>
+      <object>custitem_disa_subfamilia</object>
+      <object>custitem_disa_lote</object>
+      <object>custbody_disa_tipo_nc</object>
+      <object>custbody_fam_lp_totalleasepayment</object>
+      <object>custbody_disa_transf_oficina_venta</object>
+      <object>customrecord_ptg_embarprogramcons_.custrecord_ptg_planta_</object>
+      <object>custbody_ptg_pressdescarga</object>
+      <object>custbody_edoc_generated_pdf</object>
+      <object>custentity_ptg_clientesuspendido_</object>
+      <object>custbody_ptg_autoconsumo</object>
+      <object>custevent_ptg_agente_call_center</object>
+      <object>customrecord_2663_entity_bank_details.custrecord_2663_parent_employee</object>
+      <object>custentity_ptg_notificarlimitecred_pv_cl</object>
+      <object>custbody_transaction_region</object>
+      <object>custbody_fam_jrn_reversal_no</object>
+      <object>custentity_tax_reg_no</object>
+      <object>custevent_ptg_entre_calle</object>
+      <object>custbody_ptg_tipodepago_</object>
+      <object>custitem_disa_wms_ejecucion_ws</object>
+      <object>custtab_312_5298967_sb1_565</object>
+      <object>custcol_crt_cantidad_aduana</object>
+      <object>custcol_ptg_densidad_</object>
+      <object>custbody_ptg_estatus_compras</object>
+      <object>custcol_ptg_preciounitario_sgc_</object>
+      <object>custbody_ptg_press_salidadeautotanque</object>
+      <object>customrole1000_2</object>
+      <object>custcol_drt_nombre_emisor</object>
+      <object>custcol_drt_cp_descripguiaidentificac</object>
+      <object>custcol_ptg_proc_ter_desp_confirm_</object>
+      <object>customlist_ptg_vehiculos_</object>
+      <object>custcol_disa_precio_lista_2</object>
+      <object>custevent_ptg_horario_preferido</object>
+      <object>custbody_drt_disa_price_level_custom</object>
+      <object>custcol_mx_operation_type</object>
+      <object>custbody_ptg_fechadeembarqueconfirmaci</object>
+      <object>customlist_ptg_direccionesoc_</object>
+      <object>custbody_ptg_embarquedescarga</object>
+      <object>custcol_expense_code_of_supply</object>
+      <object>customlist_ptg_tipodeservicio_</object>
+      <object>custbody_ptg_numero_impresiones</object>
+      <object>custbody_sii_registration_status</object>
+      <object>custbody_disa_progression_name</object>
+      <object>custcol_drt_sat_clave_roducto</object>
+      <object>custcol_ptg_cantidad_litros</object>
+      <object>custbody_sii_correction_type</object>
+      <object>custcol_9572_eft_entitybank_sub</object>
+      <object>custbody_drt_cp_rfc_receptor</object>
+      <object>custentity_ptg_entrelas_</object>
+      <object>custbody_psg_ei_sending_method</object>
+      <object>custentity_disa_codigo_nomina</object>
+      <object>custentityptg_terminos_pv_cli</object>
+      <object>customrecord_mant_centroembarcador_.custrecord_ptg_direccionoc_ce_</object>
+      <object>custbody1</object>
+      <object>custentity_2663_payment_method</object>
+      <object>custbody2</object>
+      <object>custbody3</object>
+      <object>custbody_ptg_pago_para_paquete</object>
+      <object>customrecord_traspaso_entrada_estcarb_</object>
+      <object>custentity_ptg_requiere_factura</object>
+      <object>custentity_drt_response_wms</object>
+      <object>custbody_drt_cp_json_ubicacion</object>
+      <object>custbody_ptg_cuentacliente_</object>
+      <object>custbody_disa_account_name</object>
+      <object>custbody_ptg_tarifaporviajedoble</object>
+      <object>custbody_ptg_hora_cierre</object>
+      <object>customlist_ptg_aprobacion_.val_2519777_5298967_sb1_249</object>
+      <object>custbody_disa_motivos</object>
+      <object>custbody_disa_analista_credito</object>
+      <object>custbody_ptg_solicitado_compra</object>
+      <object>custtab_31_5435884_159</object>
+      <object>custitem_disa_is_case_level</object>
+      <object>custitem_ptg_mostrar_call_center</object>
+      <object>customrecord_drt_ptg_delete_record</object>
+      <object>custbody_drt_credito_valido</object>
+      <object>custbody_ptg_fecha_de_emabrque_</object>
+      <object>custtab_170_6387011_sb1_577</object>
+      <object>custtab_98_5298967_sb1_279</object>
+      <object>custbody_drt_pm_aprob_pedido_minimo</object>
+      <object>custbody_cash_register</object>
+      <object>custentity_ptg_banco_</object>
+      <object>custentity_ptg_lunes_</object>
+      <object>custbody5</object>
+      <object>custbody6</object>
+      <object>custbody7</object>
+      <object>custcol_drt_cp_pesoenkg</object>
+      <object>custbody_ptg_plantadestinocompra</object>
+      <object>custbody_ptg_oportunidad_antojado</object>
+      <object>custbody8</object>
+      <object>custtab_9_4533432_230</object>
+      <object>customrecord_ptg_conceptos_casos</object>
+      <object>custbody9</object>
+      <object>custbody_ptg_tipopago_carburacion_</object>
+      <object>custentity_ptg_activa_cli</object>
+      <object>custbody_11187_pref_entity_bank</object>
+      <object>custentity_disa_poder_vigente</object>
+      <object>customlist_drt_cp_tipo_permiso.val_76351_5259217_573</object>
+      <object>custcol_drt_uuid_informes_gastos</object>
+      <object>custcolptg_numerodevale</object>
+      <object>custentity_ptg_contrato2_</object>
+      <object>custentity_disa_correos_adicionales</object>
+      <object>custbody_kop_aduanaped</object>
+      <object>custbody_ptg_plantadesvio_</object>
+      <object>custbody_sii_intra_txn_type</object>
+      <object>custtab_payment_method</object>
+      <object>custcol_crt_valor_unitario_aduana</object>
+      <object>customrecord_ptg_viajepotgas_movinv_</object>
+      <object>custentity_disa_copia_acta_constitutiva</object>
+      <object>custbody_disa_monto_letras</object>
+      <object>custbody_ptg_kgsimportacion</object>
+      <object>custitem_ptg_tipomaterial_</object>
+      <object>custentity_ptg_id_sgc_</object>
+      <object>custentity_mx_rfc</object>
+      <object>custcol_ptg_prov_transpor_</object>
+      <object>custbody_ptg_pedido_cargado_sgc</object>
+      <object>custbody_disa_warehouse_code</object>
+      <object>custbody_sii_registration_code</object>
+      <object>custbody_mx_bank_name</object>
+      <object>custbody_drt_cp_origen</object>
+      <object>custbody_disa_saldo_vencido_ov</object>
+      <object>custentity_drt_disa_send_wep</object>
+      <object>custbody_drt_cp_paisorigendestino</object>
+      <object>custbody_crt_compl_com_ext</object>
+      <object>custentityptg_frecuenciasemanal_</object>
+      <object>custbodyptg_numerodeviaje</object>
+      <object>custbody_ptg_registro_pre_liq_carb</object>
+      <object>custbody_mx_payment_method</object>
+      <object>custentityptg_tiempodeentrega</object>
+      <object>custbody_ptg_programaentrega_</object>
+      <object>custbody_ptg_vendor_bill_transporte</object>
+      <object>custevent_ptg_relacionar_caso_existente</object>
+      <object>custentity_ptg_horafinal_cli</object>
+      <object>custbody_disa_billaddress_name</object>
+      <object>custbody_ptg_sello2violado</object>
+      <object>custentity_ptg_faturartodos_pv_cli</object>
+      <object>customrecord_ptg_viajepotogas_detavent_</object>
+      <object>custbody_disa_response_s_vueltas</object>
+      <object>custbody_ptg_direccion_embarque_</object>
+      <object>custbody_disa_indicador_cargo_des</object>
+      <object>custbody_disa_json_wep_shipment</object>
+      <object>custitem_drt_custom_price3_0</object>
+      <object>custbody_mx_bank_acct_num</object>
+      <object>custitem_drt_custom_price3_2</object>
+      <object>custitem_drt_custom_price3_1</object>
+      <object>custitem_drt_custom_price3_4</object>
+      <object>custitem_drt_custom_price3_3</object>
+      <object>custbody_mx_customer_rfc</object>
+      <object>custbody_ptg_total_kgs_pemex</object>
+      <object>custbody_ptg_nombredelchoferimportacio</object>
+      <object>custbody_ptg_fechaimportacion_compra</object>
+      <object>custentity_ptg_carburacion_ajustar</object>
+      <object>custentity_ptg_sabado_</object>
+      <object>custcol_mx_txn_line_sat_item_code</object>
+      <object>custbody_fam_specdeprjrn_limit</object>
+      <object>custbody_ptg_sello1importacion</object>
+      <object>custbody_drt_pm_pedido_minimo_valido</object>
+      <object>custevent_ptg_solucion</object>
+      <object>custentity_ptg_descuento_asignar</object>
+      <object>custbody_ptg_almacen_envases_</object>
+      <object>custbody_mx_cfdi_cadena_original</object>
+      <object>customrecord_mant_centroembarcador_.custrecord_ptg_descripcentroembce_</object>
+      <object>custcol_sii_service_date</object>
+      <object>customlist_drt_cp_tipo_permiso</object>
+      <object>custevent_ptg_monitor</object>
+      <object>custbody_disa_progression</object>
+      <object>custbody_ptg_capacidad_pedido</object>
+      <object>custitem_mx_txn_item_sat_item_code</object>
+      <object>custbody_drt_fecha_recepcion</object>
+      <object>custbody_mx_cfdi_payment_certificate</object>
+      <object>custcol_2663_eft_file_format</object>
+      <object>custcol_4601_witaxrate_exp</object>
+      <object>custentity_disa_metodo_de_pago_</object>
+      <object>custitem_disa_huella_name</object>
+      <object>customrole_wtax_bookkeeper</object>
+      <object>custitem_drt_response_wms</object>
+      <object>custbody_disa_aprobacion_contabilidad</object>
+      <object>custbody_drt_traspaso_ad_ac</object>
+      <object>custitem_ptg_tipodearticulo__2</object>
+      <object>custbody_ptg_cliente_prepago</object>
+      <object>customrecord_mx_mapper_values</object>
+      <object>customlist_ptg_status_recepcion</object>
+      <object>customrecord_ptg_soluciones_csos</object>
+      <object>customrecord_ptg_precios_sgc_</object>
+      <object>custentity_ptg_prov_internacional_</object>
+      <object>custbody_disa_shipment_date</object>
+      <object>custbody_mode_of_transport</object>
+      <object>custbody_ptg_compra_importacion</object>
+      <object>custentity_ptg_categoria3proveedor</object>
+      <object>custbody_nondeductible_processed</object>
+      <object>custbody_disa_forma_depago_</object>
+      <object>custentity_drt_consecutivo</object>
+      <object>custbody_disa_segunda_vuelta</object>
+      <object>custbody_ptg_fecha_hora_ultima_notifi</object>
+      <object>custcol_ptg_pg_ejecucion_</object>
+      <object>customrecord_ph4014_wtax_type_d</object>
+      <object>custitem_disa_desc_alter_cli_liverpool</object>
+      <object>custbody_drt_cp_id_destino</object>
+      <object>custbody_15529_emp_entity_bank</object>
+      <object>custentity_disa_estatusaseguradora</object>
+      <object>custbody_ptg_proveedor_de_gas_fv_</object>
+      <object>custevent_ptg_realice_trasiego</object>
+      <object>custentity_ptg_limitecredito_pv_cli</object>
+      <object>custitem_disa_uom_code</object>
+      <object>custentity_ptg_limitecredito_cli</object>
+      <object>custbody_ptg_sello1descarga</object>
+      <object>custcol_mx_vendor</object>
+      <object>custbody_mx_cfdi_folio</object>
+      <object>customrecord_ptg_precios_sgc_.custrecord_ptg_id_sgc_</object>
+      <object>custitem_drt_cp_cvematerialpeligroso</object>
+      <object>custbody_ptg_opcion_pago</object>
+      <object>custbody_ptg_sello1violadoimportacion</object>
+      <object>custbody_ptg_enviarpor_</object>
+      <object>custentity_ptg_recordatoriodepago_pv_cli</object>
+      <object>custbody_ptg_bomba_despachadora</object>
+    </objects>
+    <files>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_preliquidacion_metodo_pago_rs.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_get_zonas_rs.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_consulta_colonia_rs.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_opp_of_method_payment.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_put_notes.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_post_ctrl_tel.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_post_case.js</file>
+      <file>/SuiteScripts/drt_ptg_serv_no_conciliados_stlt.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_status_oportunidad_rl.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_create_opp_app.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_complaints.js</file>
+      <file>/SuiteScripts/dev/ptg_ue_requestcustomercsgweb.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_invidual_case.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_post_Opport_callcenter.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_get_oportunidades_monitor_rs.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_oportunidades_concretadas_rs.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_travel_employe.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_get_items_oportunidad_rs.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_plantas_rls.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_consultcustomer_rs.js</file>
+      <file>/SuiteScripts/ptg_call_center_monitor_suitlet/ptg_rl_get_business_type.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_conceptos_casos_rl.js</file>
+      <file>/SuiteScripts/PTG-Compras/ptg_confirmacion_autotanque_ue.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_colonias.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_opp_data.js</file>
+      <file>/SuiteScripts/ptg_call_center_monitor_suitlet/ptg_rl_get_opp_filters_v2.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_dotacion_app.js</file>
+      <file>/SuiteScripts/drt_servicios_no_conciliados_schedule.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/drt_get_colonias_rs.js</file>
+      <file>/SuiteScripts/drt_precios_schedule.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_reason_changed_list.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_servicio_por_id_rs.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_num_viajes_empleado_rs.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_get_consulta_f_pago_rs.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_articles.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_create_to_app_rs.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_post_Opport.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_get_real_historic.js</file>
+      <file>/SuiteScripts/drt_custom_body_prices.js</file>
+      <file>/SuiteScripts/ptg_call_center_monitor_suitlet/ptg_sl_reporte_diario_view.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_credit_memo_call.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_list_table_travel_mon.js</file>
+      <file>/SuiteBundles/Bundle 426900/ptg_sl_callcenter_monitor_view.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_total_transfer_and_sales_app.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_codigos_postales.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_get_motivos_reprogramacion_rs.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_items_of_opp.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_oportunidades_nViaje_rl_app.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_municipios.js</file>
+      <file>/SuiteScripts/drt_servicios_schedule.js</file>
+      <file>/SuiteScripts/itemReceipt/ptg_custom_record.client.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_tipos_servicio_rl.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_data_opp_of_id.js</file>
+      <file>/SuiteScripts/drt_pago_ue.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_get_choferes.js</file>
+      <file>/SuiteScripts/PTG-Compras/ptg_create_pg_ue.js</file>
+      <file>/SuiteScripts/ptg_call_center_monitor_suitlet/ptg_rl_get_cases_filters_v2.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_total_opp_monitor.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_numero_viaje_rsl.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_cases_solutions_list.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_rutas_colonias.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_list_type_contact.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_post_customers.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_ordenes_por_empleado_rs.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/drt_get_employee_rs.js</file>
+      <file>/SuiteScripts/ptg_call_center_monitor_suitlet/ptg_sl_monitor_programados.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_message_notes_cases.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_get_reporte_diario.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_motivos_reprogramacion_casos.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_list_address_of_cp.js</file>
+      <file>/SuiteScripts/dev/ptg_ue_request_opportunities.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_principal.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_list_replacement_cil.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_create_customer_app.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_consulta_casos_completados_rs.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_select_customer.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_get_casos_rl.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_case_issues_list.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_resurtido_planta_or_estacionario_app.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_como_dato.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_Opport.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_opp_telefonico.js</file>
+      <file>/SuiteScripts/PTG-Compras/ptg_po_cl.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_list_cancell_reason.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_post_notes_message_rl.js</file>
+      <file>/SuiteScripts/ptg_call_center_monitor_suitlet/ptg_rl_test_uploadimage.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_transfer_orders_app.js</file>
+      <file>/SuiteScripts/drt_cp_cfdi_pdf_ue.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_post_consultCustomer.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_get_casos_monitor_rs.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_list_supp_employee.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_list_match_customer_app.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_message_opp.js</file>
+      <file>/SuiteScripts/PTG-Compras/ptg_conformacion_transporte_cl.js</file>
+      <file>/SuiteScripts/PTG-Compras/ptg_entrada_transporte_cl.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_get_asignacion_casos_rl.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_turnos_rls.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_consulta_mensajes_notas_rl.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_list_concept_cases.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rutas_rls.js</file>
+      <file>/SuiteScripts/ptg_call_center_monitor_suitlet/ptg_rl_get_services_list.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_get_total_servicio_rutas_rs.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_items_transfer_order.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rutas_subcidiaria_rs.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_get_oport_rs.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_estados.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_numero_viaje_por_vehiculo_rs.js</file>
+      <file>/SuiteBundles/Bundle 426900/ptg_sl_monitor_view.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_list_cases_of_opp_app.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_sales_inv_managment.js</file>
+      <file>/SuiteScripts/drt_clientes_schedule.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_login.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_consulta_casos_asignados_rs.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_method_payment.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_item_reciept_rs.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_approve_rma_callcenter.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_cases_of_sales_rep_app.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_items.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_create_prepayment_customer_payment.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_get_items_rs.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_cambio_contraseña_rs.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_total_payments_method_opp.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_query_test_rs.js</file>
+      <file>/SuiteScripts/PTG-Compras/ptg_salida_transporte_cl.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_OpportStatus.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_list_of_terminal.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_post_consult_costumer_app.js</file>
+      <file>/SuiteScripts/ptg_call_center_monitor_suitlet/suiteql-query-tool.v20211027.suitelet.js</file>
+      <file>/SuiteScripts/PTG-Compras/ptg_consecutivo_ue.js</file>
+      <file>/SuiteScripts/SGC Carburacion/ptg_mr_get_services.js</file>
+      <file>/SuiteScripts/ptg_call_center_monitor_suitlet/ptg_sl_get_city_and_country.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_rma_approve_list_callcenter.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_list_status_call_or_alert.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_rutas_activas.js</file>
+      <file>/SuiteScripts/dev/ptg_mr_update_opportunities.js</file>
+      <file>/SuiteScripts/ptg_call_center_monitor_suitlet/ptg_rl_get_customer_v2.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_ctrl_tel.js</file>
+      <file>/SuiteScripts/SCRIPTS POTOGAS/ptg_oportunidades_tipo_aviso_rs.js</file>
+      <file>/SuiteScripts/ptg_call_center_monitor_suitlet/ptg_sl_monitor_total_service.js</file>
+    </files>
+  </dependencies>
+</manifest>

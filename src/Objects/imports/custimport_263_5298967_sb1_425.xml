@@ -1,0 +1,226 @@
+<savedcsvimport scriptid="custimport_263_5298967_sb1_425">
+  <charencoding>UTF_8</charencoding>
+  <columndelimiter>COMMA</columndelimiter>
+  <datahandling>ADD</datahandling>
+  <decimaldelimiter>COMMA</decimaldelimiter>
+  <entryform>[scriptid=custform_ptg_salida_de_camiones_]</entryform>
+  <ignorereadonly>T</ignorereadonly>
+  <importname>PTG - CLIENTES MORALES</importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <preventduplicates>F</preventduplicates>
+  <recordtype>CUSTOMER</recordtype>
+  <runserversuitescript>F</runserversuitescript>
+  <usemultithread>T</usemultithread>
+  <validatemandatorycustfields>F</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>F</ispublic>
+    <roles></roles>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>CUSTOMER</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>CUSTOMER</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>COMPANYNAME</field>
+          <columnreference>
+            <column>Nombre de la Empresa(Razon Social)</column>
+            <file>CUSTOMER</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>CREDITLIMIT</field>
+          <columnreference>
+            <column>Limite de credito</column>
+            <file>CUSTOMER</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>CURRENCY</field>
+          <columnreference>
+            <column>Moneda Principal</column>
+            <file>CUSTOMER</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custentity_disa_forma_de_pago_]</field>
+          <columnreference>
+            <column>Forma de Pago</column>
+            <file>CUSTOMER</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custentity_disa_metodo_de_pago_]</field>
+          <columnreference>
+            <column>Método de Pago</column>
+            <file>CUSTOMER</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custentity_disa_uso_de_cfdi_]</field>
+          <columnreference>
+            <column>Uso de CFDI</column>
+            <file>CUSTOMER</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custentity_drt_sed_email_customerpayment]</field>
+          <columnreference>
+            <column>Correo Electronico para complementos de Pago 1</column>
+            <file>CUSTOMER</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custentity_drt_sed_email_invoice]</field>
+          <columnreference>
+            <column>Correo Electronico para Factura 1</column>
+            <file>CUSTOMER</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custentity_mx_rfc]</field>
+          <columnreference>
+            <column>RFC</column>
+            <file>CUSTOMER</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custentity_ptg_comentarios_1]</field>
+          <columnreference>
+            <column>Comentarios 1</column>
+            <file>CUSTOMER</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custentity_ptg_comentarios_2]</field>
+          <columnreference>
+            <column>Comentarios 2</column>
+            <file>CUSTOMER</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custentity_ptg_derechos]</field>
+          <columnreference>
+            <column>Derechos</column>
+            <file>CUSTOMER</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custentity_ptg_estado_aviso_llamadas]</field>
+          <columnreference>
+            <column>PTG - ESTADO PARA AVISOS Y LLAMADAS</column>
+            <file>CUSTOMER</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custentity_ptg_giro_negocio]</field>
+          <columnreference>
+            <column>Giro del Negocio</column>
+            <file>CUSTOMER</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custentity_ptg_notas_cliente_]</field>
+          <columnreference>
+            <column>Observaciones</column>
+            <file>CUSTOMER</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custentity_ptg_plantarelacionada_]</field>
+          <columnreference>
+            <column>Planta Relacionada Net</column>
+            <file>CUSTOMER</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custentity_ptg_tipo_descuento]</field>
+          <columnreference>
+            <column>Descuento Autorizado (% o $)</column>
+            <file>CUSTOMER</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custentity_ptg_tipodecliente_]</field>
+          <columnreference>
+            <column>Tipo de Cliente</column>
+            <file>CUSTOMER</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ENTITYID</field>
+          <columnreference>
+            <column>ID Del cliente</column>
+            <file>CUSTOMER</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>EXTERNALID</field>
+          <columnreference>
+            <column>External ID</column>
+            <file>CUSTOMER</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ISPERSON</field>
+          <value>F</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>SUBSIDIARY</field>
+          <columnreference>
+            <column>Subsidiaria Principal</column>
+            <file>CUSTOMER</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>TAXITEM</field>
+          <columnreference>
+            <column>Tipo de Impuesto</column>
+            <file>CUSTOMER</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>TERMS</field>
+          <columnreference>
+            <column>Términos de Crédito</column>
+            <file>CUSTOMER</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>

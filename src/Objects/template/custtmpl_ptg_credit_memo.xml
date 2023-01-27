@@ -1,0 +1,9 @@
+<advancedpdftemplate scriptid="custtmpl_ptg_credit_memo" standard="STDTMPLEMPTY">
+  <description></description>
+  <displaysourcecode>T</displaysourcecode>
+  <isinactive>F</isinactive>
+  <preferred>F</preferred>
+  <printtype>TRANSACTION</printtype>
+  <title>PTG - Nota de Credito</title>
+  <trantype>CUSTCRED</trantype>
+</advancedpdftemplate>

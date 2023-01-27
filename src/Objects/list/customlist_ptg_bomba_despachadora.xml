@@ -1,0 +1,16 @@
+<customlist scriptid="customlist_ptg_bomba_despachadora">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>PTG - Bomba Despachadora</name>
+  <customvalues>
+    <customvalue scriptid="val_2064378_5298967_sb1_135">
+      <isinactive>F</isinactive>
+      <value>Bomba 1</value>
+    </customvalue>
+    <customvalue scriptid="val_2064379_5298967_sb1_558">
+      <isinactive>F</isinactive>
+      <value>Bomba 2</value>
+    </customvalue>
+  </customvalues>
+</customlist>

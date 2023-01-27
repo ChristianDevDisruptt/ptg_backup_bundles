@@ -1,0 +1,23 @@
+<restlet scriptid="customscript_ptg_rl_get_t_tra_a_sale_app">
+  <description>Servicio que devuelve los re surtidos de los camiones y las ventas que tiene el viaje</description>
+  <isinactive>F</isinactive>
+  <name>PTG|RL|GET TOTAL TRANSF AND SALE APP</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_total_transfer_and_sales_app.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_ptg_rl_get_t_tra_a_sale_app">
+      <allemployees>F</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>F</allroles>
+      <audslctrole>ADMINISTRATOR|[scriptid=customrole1162_2]|[scriptid=customrole1213]|[scriptid=customrole1167]|[scriptid=customrole1165_2]</audslctrole>
+      <audsubsidiary>[ACCOUNT_SPECIFIC_VALUE]|[ACCOUNT_SPECIFIC_VALUE]|[ACCOUNT_SPECIFIC_VALUE]</audsubsidiary>
+      <isdeployed>T</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <status>RELEASED</status>
+      <title>PTG|RL|GET TOTAL TRANSF AND SALE APP</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</restlet>

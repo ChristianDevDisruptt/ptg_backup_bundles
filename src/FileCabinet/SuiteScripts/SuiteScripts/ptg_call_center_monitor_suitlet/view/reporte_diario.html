@@ -1,0 +1,1703 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Reporte diario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Monitor" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <meta name="keywords" content="Monitor, clientes, pedidos, potogas">
+    <!-- App favicon -->
+    <link rel="shortcut icon"
+        href="https://5298967.app.netsuite.com/core/media/media.nl?id=220951&c=5298967&h=nHZy1bhYBxW3Y6ljy8cEFE1FHeTdYOT8VJEWpIPzvcI5WmLN&_xt=.ico">
+
+    <!-- Select 2 -->
+    <link href="https://themesbrand.com/skote/layouts/assets/libs/select2/css/select2.min.css" rel="stylesheet"
+        type="text/css" />
+
+    <!-- Datepicker -->
+    <link href="https://themesbrand.com/skote/layouts/assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css"
+        rel="stylesheet" type="text/css">
+    <link href="https://themesbrand.com/skote/layouts/assets/libs/@chenfengyuan/datepicker/datepicker.min.css"
+        rel="stylesheet">
+
+    <!-- Timepicker -->
+    <link href="https://themesbrand.com/skote/layouts/assets/libs/bootstrap-timepicker/css/bootstrap-timepicker.min.css"
+        rel="stylesheet" type="text/css">
+
+    <!-- DataTables -->
+    <link href="https://themesbrand.com/skote/layouts/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css"
+        rel="stylesheet" type="text/css" />
+    <!-- <link href="./assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />    -->
+
+    <!-- <link rel="stylesheet" href="./assets/libs/@chenfengyuan/datepicker/datepicker.min.css"> -->
+
+    <!-- Bootstrap Css -->
+    <link href="https://themesbrand.com/skote/layouts/assets/css/bootstrap.min.css" id="bootstrap-style"
+        rel="stylesheet" type="text/css" />
+    <!-- Select 2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- Icons Css -->
+    <!-- <link href="https://themesbrand.com/skote/layouts/assets/css/icons.min.css" rel="stylesheet" type="text/css" /> -->
+    <!-- App Css-->
+    <link href="https://themesbrand.com/skote/layouts/assets/css/app.min.css" id="app-style" rel="stylesheet"
+        type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html,
+        body {
+            font-family: "Roboto", "Helvetica Neue", sans-serif !important;
+        }
+
+        .pl-0 {
+            padding-left: 0;
+        }
+
+        .pr-0 {
+            padding-right: 0;
+        }
+
+        .btn-flat {
+            border-radius: 0;
+        }
+
+        .btn-header {
+            width: 51px;
+            height: 56px;
+        }
+
+        .bg-primary-cc {
+            background-color: #355da7;
+            color: #ffffff;
+        }
+
+        button.bg-primary-cc:hover {
+            background-color: #456aae;
+            color: #ffffff;
+        }
+
+        .bg-secondary-cc {
+            background-color: #e7792b;
+            color: #ffffff;
+        }
+
+        button.bg-secondary-cc:hover {
+            background-color: #e98640;
+            color: #ffffff;
+        }
+
+        .bg-success-cc {
+            background-color: #2dd36f;
+            color: #ffffff;
+        }
+
+        button.bg-success-cc:hover {
+            background-color: #42d77d;
+            color: #ffffff;
+        }
+
+        .bg-warning-cc {
+            background-color: #ffc409;
+            color: #ffffff;
+        }
+
+        button.bg-warning-cc:hover {
+            background-color: #ffca22;
+            color: #ffffff;
+        }
+
+        .bg-dark-cc {
+            background-color: #222428;
+            color: #ffffff;
+        }
+
+        button.bg-dark-cc:hover {
+            background-color: #222428;
+            color: #ffffff;
+        }
+
+        .bg-danger-cc {
+            background-color: #eb445a;
+            color: #ffffff;
+        }
+
+        button.bg-danger-cc:hover {
+            background-color: #ed576b;
+            color: #ffffff;
+        }
+
+        #header-title {
+            font-size: 28px;
+        }
+
+        .ft-12 {
+            font-size: 12px;
+        }
+
+        .ft-16 {
+            font-size: 16px;
+        }
+
+        .bg-white {
+            background-color: #ffffff;
+        }
+
+        .chip {
+            display: inline-block;
+            padding: 0 25px;
+            height: 30px;
+            font-size: 16px;
+            line-height: 30px;
+            border-radius: 25px;
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        .chip.bg-primary-cc {
+            background-color: rgba(231, 121, 43, 0.08)
+        }
+
+        .chip img {
+            float: left;
+            margin: 0 10px 0 -25px;
+            height: 25px;
+            width: 25px;
+            margin-top: 2.5px;
+            border-radius: 50%;
+        }
+
+        .w-100 {
+            width: 100%;
+        }
+
+        .h-100 {
+            height: calc(100vh - 56px);
+        }
+
+        .form-ptg {
+            font-size: 16px;
+            border: solid 2px #9d9b99;
+            border-radius: 9px;
+            padding-left: 9px;
+            color: #737373;
+            padding-right: 9px;
+            width: 100%;
+            padding-top: 9px;
+            padding-bottom: 9px;
+        }
+
+        select.form-ptg {
+            padding-top: 11.5px;
+            padding-bottom: 11.5px;
+        }
+
+        .form-ptg-primary {
+            border: solid 2px #355da7;
+            color: #355da7;
+        }
+
+        .content-input-primary .form-ptg-primary[type="date"]::-webkit-calendar-picker-indicator {
+            background: url(https://5298967.app.netsuite.com/core/media/media.nl?id=220955&c=5298967&h=BIVgVsv-993f8BwEpQNqTwbSd3jb_s-tp_kX9mjugRyfJGiW) center/80% no-repeat;
+            cursor: pointer;
+        }
+
+        .content-input-primary .form-ptg-primary[type="time"]::-webkit-calendar-picker-indicator {
+            background: url(https://5298967.app.netsuite.com/core/media/media.nl?id=220931&c=5298967&h=EhZ6vnw3ymfx-k5XfjKFIE7s-BaBC4sy6dp7CHGfj8z27omb) center/80% no-repeat;
+            cursor: pointer;
+        }
+
+        .form-search {
+            width: 100%;
+            position: relative;
+        }
+
+        .p-rel {
+            position: relative;
+        }
+
+        .form-search .form-ptg {
+            padding-left: 45px;
+            padding-right: 45px;
+        }
+        
+
+        .form-search .fa-magnifying-glass {
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: 20px;
+            font-size: 20px;
+            cursor: text;
+        }
+
+        .form-search .fa-xmark {
+            position: absolute;
+            right: 15px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .vertical-center {
+            margin: auto;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            height: fit-content;
+            width: fit-content;
+        }
+
+        label {
+            margin: 0;
+        }
+
+        .fw-bold {
+            font-weight: bold;
+        }
+
+        .content-tabs {
+            background-color: rgb(225, 225, 225);
+            ;
+        }
+
+        .content-tabs .tab {
+            padding: 7px 20px;
+            margin: 0px 0;
+            cursor: pointer;
+        }
+
+        .tab.active {
+            background: #ffffff;
+            border-radius: 10px 0;
+            color: #355da7;
+        }
+
+        .modal-header .modal-title {
+            color: #ffffff;
+        }
+
+        .content-input label {
+            color: #737373;
+            margin-bottom: 5px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .content-input-primary label {
+            color: #355da7;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .color-primary {
+            color: #355da7;
+        }
+
+        .ft-18 {
+            font-size: 18px;
+        }
+
+        .invisible {
+            visibility: hidden;
+        }
+
+        .ft-24 {
+            font-size: 24px;
+        }
+
+        .table-gen {
+            min-width: 100%;
+        }
+
+        .table-gen .sticky-col {
+            position: -webkit-sticky;
+            position: sticky;
+            left: 0px;
+        }
+
+        .table-gen thead tr th {
+            position: sticky;
+            top: 0;
+        }
+
+        .table-gen thead tr th,
+        .table-gen tbody tr td {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .table-gen-blue thead tr th {
+            background: #355da7;
+            color: #ffffff;
+        }
+
+        .table-gen-blue tbody tr:nth-of-type(odd) td {
+            background-color: #ffffff;
+        }
+
+        .table-gen-blue tbody tr:nth-of-type(even) td {
+            background-color: rgb(225, 225, 225);
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .btn-expand {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            right: -30px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        .btn-expand-down {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .btn-expand .btn,
+        .btn-expand-down .btn {
+            width: 100%;
+            height: 100%;
+            background: #e7792b;
+            border-radius: 100px;
+            cursor: pointer;
+            box-shadow: 5px 2px 20px 6px rgb(0 0 0);
+            position: relative;
+        }
+
+        .btn-expand-down .btn {
+            z-index: 2;
+            position: relative;
+        }
+
+        .btn-expand .btn:hover,
+        .btn-expand-down .btn:hover {
+            background: #e98640;
+        }
+
+        .btn-expand .btn i {
+            position: absolute;
+            left: 0;
+            right: 15px;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            height: 22px;
+            font-size: 22px;
+            color: #ffffff;
+        }
+
+        .btn-expand-down .btn i {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            right: 0;
+            left: 0;
+            margin: auto;
+            font-size: 22px;
+            color: #ffffff;
+        }
+
+        .title-tab {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d4d4d4;
+        }
+
+        .title-tab.active {
+            cursor: pointer;
+            color: #000000;
+        }
+
+        .c-pointer {
+            cursor: pointer;
+        }
+
+        .card {
+            box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .title-ptg {
+            font-size: 24px;
+        }
+
+        .check-ptg {
+            font-size: 20px;
+        }
+
+        /* no global ccs */
+        #filters-data {
+            background-color: rgb(225, 225, 225);
+            position: relative;
+        }
+        #content-filters {
+            background-color: rgb(225, 225, 225);
+            height: 205px;
+            overflow: auto;
+            position: relative;
+        }
+
+        #content-casos {
+            width: 100%;
+            overflow: auto;
+            background-color: white;
+            height: calc(100vh - 337px);
+            position: relative;
+        }
+
+        #content-casos.no-expand {
+            height: calc(100vh - 130px);
+        }
+
+        #historic-data {
+            overflow: auto;
+            height: calc(100vh - 449px);
+        }
+
+        #content-forms {
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+
+        .tabs-content {
+            height: calc(100vh - 326px);
+            overflow: auto;
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .tabs-content.no-expand {
+            height: calc(100vh - 122px);
+        }
+
+        #content-forms.no-expand .tabs-content {
+            height: calc(100vh - 324px);
+        }
+
+        #content-avisos {
+            height: calc(100vh - (100vh - 290px) - 56px);
+        }
+
+        .content-input .select2 {
+            font-size: 16px;
+            border: solid 2px #9d9b99;
+            border-radius: 9px;
+            padding-left: 9px;
+            color: #737373;
+            padding-bottom: 9px;
+            padding: 2px 9px;
+            background: white;
+            width: 100% !important;
+        }
+
+        .content-input .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+            border-right: 0 !important;
+        }
+
+        .content-input .select2-container--default .select2-selection--multiple .select2-selection__choice__display {
+            padding-left: 10px !important;
+        }
+
+        .content-input .select2-container .select2-selection--multiple {
+            border: 0 !important;
+        }
+
+        .content-input.content-input-primary .select2 {
+            border: solid 2px #355da7;
+            color: #355da7;
+        }
+
+        .content-input .select2 .select2-selection {
+            border: 0;
+        }
+
+        .content-input .select2 .select2-selection .select2-selection__rendered {
+            padding-left: 0;
+        }
+
+        .content-gen {
+            border-radius: 20px;
+            background-color: #efefef;
+        }
+
+        .content-gen .title {
+            color: #000000;
+            font-weight: bold;
+        }
+
+        .content-gen .resp {
+            color: #000000;
+            border-bottom: 1px solid #000000;
+        }
+
+        .dropdown-menu {
+            width: 180px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .border-bottom-primary {
+            border-bottom: solid 2px #355da7;
+        }
+
+        input:disabled, textarea:disabled, select:disabled {
+            background-color: #c9c9c9;
+            cursor: not-allowed;
+        }
+
+        #tablePedidos tfoot, #tableCasos tfoot {
+            position: fixed;
+            width: fit-content;
+            margin: auto;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        #tablePedidos tfoot.expand, #tableCasos tfoot.expand {
+            right: 50%;
+        }
+
+        tfoot .pag a {
+            color: #000;
+            background-color: #b0c1e0;
+            border-color: #b0c1e0;
+        }
+
+        tfoot .pag a:hover {
+            color: #000;
+            background-color: #9eaeca;
+            border-color: #9eaeca;
+        }
+
+        tfoot .pag a.active, tfoot .pag a.active:hover {
+            color: #fff;
+            background-color: #355da7;
+            border-color: #355da7;
+        }
+
+        @media print {
+        /* Contenido del fichero print.css */
+            body {
+                background-color: red;
+            }
+
+            table {
+                width: 100%;
+            }
+
+            tr th {
+                font-weight: bold;
+            }
+
+            tr th, tr td {
+                border: 1px solid #000 !important;
+                padding-left: 5px !important;
+                padding-right: 5px !important;
+            }
+        }
+    </style>
+</head>
+
+<body data-topbar="dark" data-spy="scroll" data-offset="175" style="overflow: hidden;">
+    <header class="bg-primary-cc">
+        <div class="row align-items-center w-100">
+            <!--<div class="col-auto pr-0">
+                <button id="btnMenu" type="button" class="btn bg-primary-cc btn-flat btn-header"><i
+                        class="fa-solid fa-bars"></i></button>
+                <button id="btnBack" type="button" class="btn bg-primary-cc btn-flat btn-header d-none"><i
+                        class="fa-solid fa-arrow-left"></i></button>
+            </div>-->
+            <div class="col-auto pr-0">
+                <img src="https://5298967.app.netsuite.com/core/media/media.nl?id=220946&c=5298967&h=TmNPxzZvfG_Oi7trmAX5TMK6qKjzmK2ex8uG0mdt2vQhbtGx"
+                    alt="" height="56">
+            </div>
+            <div id="header-title" class="col">
+                Reporte diario
+            </div>
+            <div class="col-auto p-0">
+                <div class="row align-items-center">
+                    <div class="col-auto pr-0 ft-16" id="today">
+                    </div>
+                    <div class="col-auto pr-0 ft-16">
+                        <strong>ROL: </strong><span id="role"></span>
+                    </div>
+                    <div class="col-auto pr-0 ft-16">
+                        <strong>PLANTA: </strong>
+                    </div>
+                    <div class="col-auto pr-0 ft-16">
+                        <select id="plantas" type="date" style="
+                            width: 190px; 
+                            height: 30px; 
+                            background: #ffffff; 
+                            border-width: 1px; 
+                            border-color: #808080; 
+                            color: #000;">
+                        </select>
+                    </div>
+                    <div class="col-auto">
+                        <div class="chip bg-primary-cc">
+                            <img
+                                src="https://5298967.app.netsuite.com/core/media/media.nl?id=220953&c=5298967&h=HbE7Ixbs-Kyan3scm5bkMA8HbeDjjJu9CYknf_4qaHw6qKOj">
+                            <span class="user-name"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <div id="formNotasAdicionalesModal" class="modal fade" tabindex="-1" role="dialog"
+        aria-labelledby="titleNotasAdicionalesModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document" style="width: 450px;">
+            <div class="modal-content " style="border: 0">
+                <div class="modal-header bg-primary-cc">
+                    <h5 class="modal-title" id="titleNotasAdicionalesModal">Agregar nota</h5>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="typeNota"/>
+                    <textarea id="notaAdicional" rows="3" placeholder="Nota..."
+                        class="form-ptg form-ptg-primary"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        aria-label="Close">Cancelar</button>
+                    <button id="guardarNotaAdicional" type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="asignarViajeModal" class="modal fade" tabindex="-1" role="dialog"
+        aria-labelledby="titleAsignarViajeModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document" style="width: 500px;">
+            <div class="modal-content " style="border: 0">
+                <div class="modal-header bg-primary-cc">
+                    <h5 class="modal-title" id="titleAsignarViajeModal">Asignar ruta al servicio: <span id="asignarViajePedido"></span></h5>
+                </div>
+                <div class="modal-body">
+                    <div class="content-input content-input-primary">
+                        <label>Ruta*</label><br>
+                        <select id="asignarViajeRuta" class="form-ptg form-ptg-primary">
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        aria-label="Close">Cerrar</button>
+                    <button id="guardarAsignarViaje" type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cancelarOppModal" class="modal fade" tabindex="-1" role="dialog"
+        aria-labelledby="titlecancelarOppModalModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document" style="width: 500px;">
+            <div class="modal-content " style="border: 0">
+                <div class="modal-header bg-primary-cc">
+                    <h5 class="modal-title" id="titlecancelarOppModalModal">Cancelar servicio<span id="cancelarOppPedido"></span></h5>
+                </div>
+                <div class="modal-body">
+                    <div class="content-input content-input-primary">
+                        <label>Motivo de Cancelacion*</label><br>
+                        <select id="cancelarOppMotivo" class="form-ptg form-ptg-primary">
+                        </select>
+                    </div>
+                    <div class="content-input content-input-primary mt-3">
+                        <label>Observaciones*</label><br>
+                        <textarea rows="3" id="cancelarOppObservaciones" class="form-ptg form-ptg-primary">
+                        </textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        aria-label="Close">Cerrar</button>
+                    <button id="guardarCancelarOpp" type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cerrarCasoModal" class="modal fade" tabindex="-1" role="dialog"
+        aria-labelledby="titlecerrarCasoModalModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document" style="width: 500px;">
+            <div class="modal-content " style="border: 0">
+                <div class="modal-header bg-primary-cc">
+                    <h5 class="modal-title" id="titlecerrarCasoModalModal">Cancelar <span id="cerrarCasoPedido"></span></h5>
+                </div>
+                <div class="modal-body">
+                    <div class="content-input content-input-primary">
+                        <label>Observaciones*</label><br>
+                        <textarea rows="3" id="cerrarCasoObservaciones" class="form-ptg form-ptg-primary">
+                        </textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        aria-label="Close">Cerrar</button>
+                    <button id="guardarCerrarCaso" type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="notificarModal" class="modal fade" tabindex="-1" role="dialog"
+        aria-labelledby="titlenotificarModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document" style="width: 800px;">
+            <div class="modal-content " style="border: 0">
+                <div class="modal-header bg-primary-cc">
+                    <h5 class="modal-title" id="titlenotificarModal">Notificar <span id="notificarPedido"></span></h5>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col-auto">
+                            <div class="content-input text-center checkClicked">
+                                <label class="c-pointer" style="margin: auto;">Enviar SMS&nbsp;</label>
+                                <input id="sendSmsNotificar" disabled type="checkbox" class="form-check-input form-ptg" style="width: auto; margin: auto;">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="contentSmsNotificar" class="content-input content-input-primary d-none">
+                        <label>SMS*</label><br>
+                        <textarea rows="3" disabled id="notificarSms" onkeydown="noEnter(event)" class="form-ptg form-ptg-primary">
+                        </textarea>
+                    </div>
+                    <div class="content-input content-input-primary">
+                        <label>Notificación*</label><br>
+                        <textarea rows="3" id="notificarNotificacion" onkeydown="noEnter(event)" class="form-ptg form-ptg-primary">
+                        </textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        aria-label="Close">Cerrar</button>
+                    <button id="enviarNotificacion" type="button" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="seguimientoModal" class="modal fade" tabindex="-1" role="dialog"
+        aria-labelledby="titleseguimientoModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document" style="width: 600px;">
+            <div class="modal-content " style="border: 0">
+                <div class="modal-header bg-primary-cc">
+                    <h5 class="modal-title" id="titleseguimientoModal">Seguimiento <span id="seguimientoServicio"></span></h5>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <label style="font-weight: bold;">Lista de comentarios</label><br>
+                            <table class="table-gen table-gen-blue text-center" id="table-notas-seguimiento">
+                                <thead>
+                                    <tr>
+                                        <th>Autor</th>
+                                        <th>Fecha</th>
+                                        <th>Contenido</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <div class="content-input content-input-primary">
+                                <div class="row">
+                                    <div class="col">
+                                        <label>Nueva nota*</label>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="content-input text-center checkClicked">
+                                            <label class="c-pointer" style="margin: auto; color: #737373">Enviar SMS&nbsp;</label>
+                                            <input id="sendSmsSeguimiento" disabled type="checkbox" class="form-check-input form-ptg" style="width: auto; margin: auto;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <textarea id="nuevaNotaSeguimiento" rows="3" placeholder="Nota..." class="form-ptg form-ptg-primary"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        aria-label="Close">Cerrar</button>
+                    <button id="guardarSeguimiento" type="button" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="formVerDetallesPedidos" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="titleerDetallesPedidosModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document" style="width: 600px;">
+            <div class="modal-content " style="border: 0">
+                <div class="modal-header">
+                    <div class="row align-items-center">
+                        <div class="col-auto">
+                            <img src="https://5298967.app.netsuite.com/core/media/media.nl?id=220945&c=5298967&h=Cww6Z8Rn9x082LA03PmFIYbQFicQaqEJzxcEG_J8g33Pg9GI"
+                            alt="" width="120">
+                        </div>
+                        <div class="col text-center">
+                            <label class="fw-bold" style="font-size: 22px;" id="verDetallesCliente"></label><br>
+                            <label class="fw-bold" style="font-size: 18px;" id="verDetallesTelefono"></label><br>
+                            <label class="fw-bold" style="font-size: 16px;" id="verDetallesDireccion"></label><br>
+                            <label class="fw-bold" style="font-size: 16px;">Tipo: <span id="verDetallesTipoServicio"></span></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="content-gen">
+                        <div class="row p-3">
+                          <div class="col-3 title">Servicio</div>
+                          <div id="verDetallesServicio" class="col-9 resp"></div>
+                        </div>
+                        <div class="row p-3">
+                          <div class="col-3 title">Vehículo</div>
+                          <div id="verDetallesVehiculo" class="col-9 resp"></div>
+                        </div>
+                        <div class="row p-3">
+                          <div class="col-3 title">Zona</div>
+                          <div id="verDetallesZona" class="col-9 resp"></div>
+                        </div>
+                        <div class="row p-3">
+                          <div class="col-3 title">Usuario Monitor</div>
+                          <div id="verDetallesUsuarioMonitor" class="col-9 resp"></div>
+                        </div>
+                        <div class="row p-3">
+                          <div class="col-3 title">Direccíon</div>
+                          <div id="verDetallesDireccion2" class="col-9 resp"></div>
+                        </div>
+                        <div class="row p-3">
+                          <div class="col-3 title">Fecha Prometida</div>
+                          <div id="verDetallesFechaPrometida" class="col-9 resp"></div>
+                        </div>
+                        <div class="row p-3">
+                          <div class="col-3 title">Fecha Pedido</div>
+                          <div id="verDetallesFechaPedido" class="col-9 resp"></div>
+                        </div>
+                        <div class="row p-3">
+                          <div class="col-3 title">Fecha Notificación</div>
+                          <div id="verDetallesFechaNotificacion" class="col-9 resp"></div>
+                        </div>
+                        <div class="row p-3">
+                          <div class="col-3 title">Tipo Producto</div>
+                          <div id="verDetallesTipoProducto" class="col-9 resp"></div>
+                        </div>
+                        <div class="row p-3">
+                          <div class="col-3 title">Contrato</div>
+                          <div id="verDetallesContrato" class="col-9 resp"></div>
+                        </div>
+                        <div class="row p-3">
+                          <div class="col-3 title">Agente atiende</div>
+                          <div id="verDetallesAgenteAtiende" class="col-9 resp"></div>
+                        </div>
+                        <div class="row p-3 align-items-end">
+                          <div class="col-3 title">Tiempo de notificación</div>
+                          <div id="verDetallesTiempoNotificacion" class="col-9 resp"></div>
+                        </div>
+                        <div class="row p-3">
+                          <div class="col-3 title">Observaciones</div>
+                          <div id="verDetallesObservaciones" class="col-9 resp"></div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        aria-label="Close">Cancelar</button>
+                    <button id="guardarNotaAdicional" type="button" class="btn btn-primary">Guardar</button>
+                </div>-->
+            </div>
+        </div>
+    </div>
+
+    <div id="formVerDetallesCaso" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="titleerDetallesPedidosModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document" style="width: 600px;">
+            <div class="modal-content " style="border: 0">
+                <div class="modal-header">
+                    <div class="row align-items-center" style="width: 100%;">
+                        <div class="col-auto">
+                            <img src="https://5298967.app.netsuite.com/core/media/media.nl?id=220945&c=5298967&h=Cww6Z8Rn9x082LA03PmFIYbQFicQaqEJzxcEG_J8g33Pg9GI"
+                            alt="" width="120">
+                        </div>
+                        <div class="col text-center">
+                            <label class="fw-bold" style="font-size: 22px;" id="verDetallesClienteCaso"></label><br>
+                            <label class="fw-bold" style="font-size: 18px;" id="verDetallesTelefonoCaso"></label><br>
+                            <label class="fw-bold" style="font-size: 16px;" id="verDetallesDireccionCaso"></label><br>
+                            <label class="fw-bold" style="font-size: 16px;">Tipo: <span id="verDetallesTipoServicioCaso"></span></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="content-gen">
+                        <div class="row p-3">
+                            <div class="col-5 title">No. Caso</div>
+                            <div id="verDetallesNoCaso" class="col-7 resp"></div>
+                          </div>
+                          <div class="row p-3">
+                            <div class="col-5 title">Fecha reporte</div>
+                            <div id="verDetallesFechaReporte" class="col-7 resp"></div>
+                          </div>
+                        <div class="row p-3">
+                          <div class="col-5 title">Repuse cilindro dañado</div>
+                          <div id="verDetallesRepuseCilindroDanado" class="col-7 resp"></div>
+                        </div>
+                        <div class="row p-3">
+                            <div class="col-5 title">Realicé trasiego</div>
+                            <div id="verDetallesRealiceTrasiego" class="col-7 resp"></div>
+                        </div>
+                        <div class="row p-3">
+                            <div class="col-5 title">Cantidad recolectada en trasiego</div>
+                            <div id="verDetallesCantidadRecolectada" class="col-7 resp"></div>
+                        </div>
+                        <div class="row p-3">
+                            <div class="col-5 title">Prueba hermetica</div>
+                            <div id="verDetallesPruebaHermetica" class="col-7 resp"></div>
+                        </div>
+                        <div class="row p-3">
+                            <div class="col-5 title">Problema localizado en</div>
+                            <div id="verDetallesProblemaLocalizado" class="col-7 resp"></div>
+                        </div>
+                        <div class="row p-3">
+                            <div class="col-5 title">Solución</div>
+                            <div id="verDetallesSolucion" class="col-7 resp"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="home-view" class="w-100 m-0">
+        <div id="filters-data" class="p-3">
+            <div class="btn-expand-down">
+                <div class="p-rel btn">
+                    <i class="fa-solid fa-caret-up"></i>
+                </div>
+            </div>
+            <div id="content-filters" class="row">
+                <div class="col-auto pb-2 tipo-pedido">
+                    <div class="content-input">
+                        <label>Tipo de servicio</label><br>
+                        <select id="filterTipoProducto" onchange="setSelectRutas(false);" class="form-ptg" style="width: 180px;">
+                        </select>
+                    </div>
+                </div>
+                <div class="col-auto pb-2 tipo-pedido">
+                    <div class="row align-items-end" style="width: 357px;">
+                        <div class="col">
+                            <div class="content-input" style="width: 270px;">
+                                <label>Ruta</label><br>
+                                <select id="filterRuta" multiple="multiple" class="form-ptg" >
+                                    
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <button id="limpiarFilterRuta" type="button" class="btn bg-secondary-cc"><i class="fa-solid fa-trash-can"></i></button>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="col-auto pb-2 tipo-pedido">
+                    <div class="content-input">
+                        <label>Fecha</label><br>
+                        <input id="filterFecha" type="date" class="form-ptg range-date date-fin" style="width: 160px;">
+                    </div>
+                </div>
+                <div class="col-auto pb-2 tipo-pedido">
+                    <div class="row align-items-end" style="width: 357px;">
+                        <div class="col">
+                            <div class="content-input" style="width: 270px;">
+                                <label>Estado de la Solicitud</label><br>
+                                <select id="filterEstadoSolicitud" multiple="multiple" class="form-ptg" >
+                                    
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <button id="limpiarFilterEstadoSolicitud" type="button" class="btn bg-secondary-cc"><i class="fa-solid fa-trash-can"></i></button>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="col-auto pb-2 tipo-pedido">
+                    <div class="content-input text-center">
+                        <label>Programado</label><br>
+                        <input id="filterProgramado" type="checkbox" class="form-check-input form-ptg" style="width: auto;">
+                    </div>
+                </div>
+                <div class="col-12 pb-2 text-center">
+                    <div class="content-input">
+                        <button id="filtrar" type="button" onclick="getServicios()" class="btn btn-primary">Filtrar</button>
+                        <button id="printTable" type="button" class="btn btn-secondary">Imprimir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content-data">
+            <div class="row m-0" style="width: 100vw;">
+                <div class="col-12 p-0" style="z-index: 2; position: relative; height: fit-content;">                    
+                    <!--<div class="btn-expand" style="z-index: 2;">
+                        <div class="p-rel btn">
+                            <i class="fa-solid fa-caret-left"></i>
+                        </div>
+                    </div>-->
+                    <div id="content-casos" class="printableArea">     
+                        <table id="tablePedidos" class="table-gen table-gen-blue tipo-pedido">
+                            <thead>
+                                <tr>
+                                    <th style="min-width: 250px" class="text-center">Nombre / Dirección</th>
+                                    <th style="min-width: 130px" class="text-center">CTE RI-505 / Contrato</th>
+                                    <th style="min-width: 130px" class="text-center">Teléfono</th>
+                                    <th style="min-width: 250px" class="text-center">Nota / Desc. Producto</th>
+                                    <th style="min-width: 100px" class="text-center">Surtir Lts / Cil</th>
+                                    <th style="min-width: 100px" class="text-center">Atendió / Cto disponible</th>
+                                    <th style="min-width: 100px" class="text-center">Tipo pedido</th>
+                                    <th style="min-width: 100px" class="text-center">Último servicio</th>
+                                </tr>
+                            </thead>
+                            <tbody>   
+                                <tr>
+                                    <td colspan="20" class="text-center fw-bold py-5">Sin pedidos encontrados</td>
+                                </tr>                  
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="elementH"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="dataPrint" class="d-none">
+
+    </div>
+
+    <!-- END layout-wrapper -->
+
+    <!-- JAVASCRIPT -->
+    <script src="https://themesbrand.com/skote/layouts/assets/libs/jquery/jquery.min.js"></script>
+    <script src="https://themesbrand.com/skote/layouts/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="assets/libs/simplebar/simplebar.min.js"></script> -->
+    <!-- <script src="assets/libs/jquery.easing/jquery.easing.min.js"></script> -->
+
+    <!-- Datatablets -->
+    <script src="https://themesbrand.com/skote/layouts/assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script
+        src="https://themesbrand.com/skote/layouts/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Datepicker -->
+    <script
+        src="https://themesbrand.com/skote/layouts/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://themesbrand.com/skote/layouts/assets/libs/@chenfengyuan/datepicker/datepicker.min.js"></script>
+
+    <!-- Timepicker -->
+    <script
+        src="https://themesbrand.com/skote/layouts/assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+    <!-- Select2 -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script
+        src="https://themesbrand.com/skote/layouts/assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+    <!-- Extra -->
+    <script src="https://themesbrand.com/skote/layouts/assets/libs/metismenu/metisMenu.min.js"></script>
+    <!-- <script src="https://themesbrand.com/skote/layouts/assets/libs/simplebar/simplebar.min.js"></script> -->
+    <script src="https://themesbrand.com/skote/layouts/assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- <script src="assets/js/app.js"></script> -->
+    <script src="https://themesbrand.com/skote/layouts/assets/js/app.js"></script>
+
+    <!-- Sweet alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Moment js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- FancyTable -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery.fancytable/dist/fancyTable.min.js"></script>
+
+    <!-- Js PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> -->
+
+    <!-- Funciones generales -->
+    <script type="text/javascript">
+        (function ($) {// Código para generar el html e imprimir la tabla de pedidos
+            'use strict';
+            $(document).on("click", "#printTable", function (e) {
+                $("tfoot").addClass("d-none");
+                var printContents = document.querySelector(".printableArea").innerHTML;
+                var originalContents = document.body.innerHTML;
+
+                $("#home-view, header").addClass("d-none");
+                $("#dataPrint").removeClass("d-none");
+                
+                window.print();
+
+                $("#home-view, header, tfoot").removeClass("d-none");
+                $("#dataPrint").addClass("d-none");
+            });
+        })(window.jQuery);
+        
+        userId = '${ds.userId}';
+        userName = '${ds.userName}';
+        userRole = '${ds.userRole}';
+        urlPlantas = '${ds.getPlantas}';
+        urlStatusOp = '${ds.getListStatusOpp}';
+        urlRutas = '${ds.getListRoutes}';
+        urlTiposServicios = '${ds.getListTypeServices}';
+        urlGetOpp = '${ds.getOppMonitor}';
+        urlGetCasos = '${ds.getCasesMonitor}';
+        urPutOppMonitor = '${ds.putOppMonitor}';
+        urlGetListCancellReason = "${ds.getListCancellReason}";
+        urlPostNoteandMessage = "${ds.postNoteandMessage}";
+        urlObtenerPedidos = '${ds.getOpp}';
+        urlGetConceptosCasos = '${ds.getLisConceptosCasos}';
+        urlObtenerArticulos = '${ds.getItems}';
+        urlPutCases = '${ds.putCases}';
+        urlGetMessageandNotes = '${ds.getMessageandNotes}';
+        urlGetListSuppEmp = '${ds.getListSuppEmp}';
+        urlGetItemsOpp = '${ds.getItemsOpp}';
+        urlGetMethodPayments = '${ds.getMethodPayments}';
+        urlGetListTravelNumber = '${ds.getListTravelNumber}';
+        urlSendNotification = '${ds.sendNotification}';
+        urlGetNotesOfOPP = '${ds.getNotesOfOPP}';
+        conceptoFugasQuejasArr = [];
+        methodPayments = [];
+        deftEstacionarVal = "4216";
+        vrStatus = [];
+        idPorAsignar = "";
+        idAsignado = "";
+        idCancelado = "";
+        idEntregado = "";
+        idPorReprogramar = "";
+        idPorConfirmar = "";
+        rutasCilindros = [];
+        rutasEstacionarios = [];
+        vrViajes = [];
+        countServices = 0;
+        concatObsPagos = ["2", "8"]
+
+        function noEnter(e) {
+            if (e.which === 13 && !e.shiftKey) {
+                e.preventDefault();
+                return false;
+            }
+        }
+
+        function initComponents() {
+            $('body').delegate('#limpiarFilterRuta', 'click', function () {
+                $("#filterRuta").val([]).trigger("change")
+            });
+
+            $('body').delegate('#limpiarFilterEstadoSolicitud', 'click', function () {
+                $("#filterEstadoSolicitud").val([]).trigger("change")
+            });            
+
+            $('body').delegate('.checkClicked label', 'click', function () {
+                if(!$(this).parent().find('input[type=checkbox]').prop("disabled")) {
+                    let prop = $(this).parent().find('input[type=checkbox]').prop("checked");
+                    $(this).parent().find('input[type=checkbox]').prop("checked", !prop)
+                }
+            });
+
+            $('body').delegate('#sendSmsNotificar', 'change', function () {
+                if($(this).prop("checked")) {
+                    $("#contentSmsNotificar").removeClass("d-none");
+                } else {
+                    $("#contentSmsNotificar").addClass("d-none");
+                }
+            });
+
+            $('body').delegate('.dropdown-toggle', 'show.bs.dropdown', function () {
+                $(this).closest("td").css("z-index", "2");
+            });
+
+            $('body').delegate('.dropdown-toggle', 'hidden.bs.dropdown', function () {
+                $(this).closest("td").css("z-index", "1");
+            });
+
+            /* Inicia todos los form-search */
+            $(".form-search .fa-magnifying-glass").click(function () {
+                $(this).parent().find("input").focus();
+            });
+            $(".form-search input").keyup(function () {
+                if ($(this).val()) {
+                    $(this).parent().find(".fa-xmark").removeClass('d-none');
+                } else {
+                    $(this).parent().find(".fa-xmark").addClass('d-none');
+                }
+            });
+            $(".form-search .fa-xmark").click(function () {
+                $(this).addClass('d-none');
+                $(this).parent().find("input").val('');
+                $(this).parent().find("input").trigger('keyup');
+            });
+
+            $("#metodoPagoPedido").change(function () {
+                if ($(this).val() == "Transferencia" || $(this).val() == "Prepago") {
+                    $("#referenciaPagoPedido").parent().removeClass("d-none");
+                    $("#folioAutorizacionPedido").parent().removeClass("d-none");
+                } else {
+                    $("#referenciaPagoPedido").parent().addClass("d-none");
+                    $("#folioAutorizacionPedido").parent().addClass("d-none");
+                }
+            });
+
+            $("#productoFormProductos").change(function () {
+                if ($(this).val() == "cilindro") {
+                    $(".cilindroFormProductos").removeClass("d-none");
+                    $(".estacionarioFormProductos").addClass("d-none");
+                } else {
+                    $(".estacionarioFormProductos").removeClass("d-none");
+                    $(".cilindroFormProductos").addClass("d-none");
+                }
+            });
+
+            $(".content-tabs .tab").click(function () {
+                $(".tab").removeClass('active');
+                $(".tabs-content").addClass("d-none");
+                $(this).addClass('active');
+                $("#tab-" + $(this).data("tab")).removeClass("d-none");
+            });
+
+            $(".btn-expand").on('click', function () {
+                if ($(this).find("i").hasClass('fa-caret-right')) {
+                    $(this).find(".btn").html('<i class="fa-solid fa-caret-left"></i>');
+                    $("#content-forms").parent().addClass("d-none");
+                    $(this).parent().removeClass("col-6").addClass("col-12");
+                    $("#tablePedidos tfoot, #tableCasos tfoot").removeClass("expand");
+                } else {
+                    $(this).find(".btn").html('<i class="fa-solid fa-caret-right"></i>');
+                    $("#content-forms").parent().removeClass("d-none");
+                    $(this).parent().removeClass("col-12").addClass("col-6");
+                    $("#tablePedidos tfoot, #tableCasos tfoot").addClass("expand");
+                }
+            });
+
+            $("#plantas").change(function() {
+                $('title').html($("#plantas option:selected").text());
+                getRutas(true);
+                getListTravel();
+            });
+
+            $(".btn-expand-down").click(function () {
+                if ($(this).find("i").hasClass('fa-caret-down')) {
+                    $(this).find(".btn").html('<i class="fa-solid fa-caret-up"></i>');
+                    $("#content-filters").removeClass("d-none");
+                    $("#content-casos").removeClass("no-expand");
+                    $(".tabs-content").removeClass("no-expand");
+                } else {
+                    $(this).find(".btn").html('<i class="fa-solid fa-caret-down"></i>');
+                    $("#content-filters").addClass("d-none");
+                    $("#content-casos").addClass("no-expand");
+                    $(".tabs-content").addClass("no-expand");
+                }
+            });
+
+            $("#notasAdicionalesFugaQueja").click(function () {
+                $("#typeNota").val("fuga");
+                $("#formNotasAdicionalesModal").modal("show");
+                $("#notaAdicional").val("");
+            });
+
+            $("#notasAdicionalesQueja").click(function () {
+                $("#typeNota").val("queja");
+                $("#formNotasAdicionalesModal").modal("show");
+                $("#notaAdicional").val("");
+            });
+
+            $("#filterDatosCliente").change(function() {
+                if($(this).val() == 'address') {
+                    $("#filterBuscarCalle").closest(".col-auto").removeClass("d-none");
+                    $("#filterBuscarInt").closest(".col-auto").removeClass("d-none");
+                    $("#filterBuscarExt").closest(".col-auto").removeClass("d-none");
+                    $("#filterBuscarCliente").closest(".col-auto").addClass("d-none");
+                } else {
+                    $("#filterBuscarCalle").closest(".col-auto").addClass("d-none");
+                    $("#filterBuscarInt").closest(".col-auto").addClass("d-none");
+                    $("#filterBuscarExt").closest(".col-auto").addClass("d-none");
+                    $("#filterBuscarCliente").closest(".col-auto").removeClass("d-none");
+                }
+            });
+
+            $("#guardarNotaAdicional").click(function () {
+                if ($("#notaAdicional").val().trim()) {
+                    let trAux = '<tr>' +
+                                    '<td class="ion-text-center sticky-col fw-bold">'+userName+'</td>'+
+                                    '<td class="ion-text-center sticky-col fw-bold">'+dateFormatFromDate(new Date(), "7")+'</td>'+
+                                    '<td class="ion-text-center sticky-col fw-bold">'+$("#notaAdicional").val().trim()+'</td>'+
+                                    '<td class="ion-text-center sticky-col fw-bold">'+
+                                        '<i class="fa-solid fa-trash-can" style="cursor: pointer;" onclick="deleteNota(this)"></i>'  
+                                    '</td>'+
+                                '</tr>';
+                    
+                    if($("#typeNota").val().trim().toLowerCase() == "fuga") {
+                        if($("#notasAdicionales tbody").find("tr").first().find("td").length == 1) {
+                            $("#notasAdicionales tbody").html("");
+                        }
+                        $("#notasAdicionales tbody").append(trAux);
+                    } else {
+                        if($("#notasAdicionalesQueja tbody").find("tr").first().find("td").length == 1) {
+                            $("#notasAdicionalesQueja tbody").html("");
+                        }
+                        $("#notasAdicionalesQueja tbody").append(trAux);
+                    }
+                    $("#formNotasAdicionalesModal").modal("hide");
+                } else {
+                    alert("Llena la nota.");
+                }
+
+            });
+
+            $(".range-date").change(function() {
+                $(this).closest(".content-range-date").find(".date-ini").prop("max", $(this).closest(".content-range-date").find(".date-fin").val());
+                $(this).closest(".content-range-date").find(".date-fin").prop("min", $(this).closest(".content-range-date").find(".date-ini").val());
+            });
+
+            $(".btn-clean-date").click(function() {
+                $(this).closest(".content-range-date").find("input[type=date]").val(null);
+                $(this).closest(".content-range-date").find("input[type=date]").first().trigger("change");
+            });
+        }
+
+        function removeDuplicates(originalArray, prop) {
+            var newArray = [];
+            var lookupObject = {};
+
+            for (var i in originalArray) {
+            lookupObject[originalArray[i][prop]] = originalArray[i];
+            }
+
+            for (i in lookupObject) {
+            newArray.push(lookupObject[i]);
+            }
+            return newArray;
+        }
+
+        function deleteNota(item) {
+            $(item).parent().parent().remove();
+        }
+
+        function getRestTime(datetime, type = "1") {  
+            let hours = Math.abs(new Date().getTime() - datetime.getTime()) / 3600000,
+                days = 0;
+
+            if(type == "1") {
+                if(hours >= 24) {
+                    days = Math.floor(hours / 24);
+                    hours = hours - (days * 24);
+                }
+            
+                return (days > 0 ? days + (days > 1 ? ' días con ' : ' día con ') : '') + this.getTimeFromDecimal(hours);
+            } else if (type == "2") {
+                return hours;
+            } else if (type == "3") {
+                return this.getTimeFromDecimal(hours, "2");
+            }    
+        }
+
+        function dateFormatFromDate(date, format = "1") {
+            if (typeof date == "string") {
+                let aux = date;
+                if(aux.split("-").length > 1) {
+                    date = new Date(parseInt(aux.split("-")[0]), parseInt(aux.split("-")[1]) - 1, parseInt(aux.split("-")[2]));
+                } else {
+                    date = new Date(parseInt(aux.split("/")[2]), parseInt(aux.split("/")[1]) - 1, parseInt(aux.split("/")[0]));
+                }                
+            }
+
+            let day = date.getDate();
+            let month = date.getMonth();
+            let year = date.getFullYear();
+            let fecha = "";
+            let months = ["Enero", "Febrero", "Marzo", "Abrrl", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+            if (format == "1") {
+                fecha = day + " de " + months[month] + " - " + timeFormatFromDate(date);
+            } else if (format == "2") {
+                if (day < 10) {
+                    day = "0" + day;
+                }
+                month = month + 1;
+                if (month < 10) {
+                    month = "0" + month;
+                }
+                fecha = year + "-" + month + "-" + day;
+            } else if (format == "3") {
+                fecha = day + "/" + month + "/" + year + " " + timeFormatFromDate(date);
+            } else if (format == "4") {
+                if (day < 10) {
+                    day = "0" + day;
+                }
+                month = month + 1;
+                if (month < 10) {
+                    month = "0" + month;
+                }
+                fecha = year + "-" + month + "-" + day + "T" + timeFormatFromDate(date, "2");
+            } else if (format == "5") {
+                if (day < 10) {
+                    day = "0" + day;
+                }
+                month = month + 1;
+                if (month < 10) {
+                    month = "0" + month;
+                }
+                fecha = day + "/" + month + "/" + year;
+            } else if (format == "6") {
+                if (day < 10) {
+                    day = "0" + day;
+                }
+                month = month + 1;
+                if (month < 10) {
+                    month = "0" + month;
+                }
+                fecha = day + "-" + month + "-" + year;
+            } else if (format == "7") {
+                if (day < 10) {
+                    day = "0" + day;
+                }
+                month = month + 1;
+                if (month < 10) {
+                    month = "0" + month;
+                }
+                fecha = day + "/" + month + "/" + year + " " + timeFormatFromDate(date);;
+            } else if (format == "8") {
+                if (day < 10) {
+                    day = "0" + day;
+                }
+                month = month + 1;
+                if (month < 10) {
+                    month = "0" + month;
+                }
+                fecha = year + month + day + timeFormatFromDate(date, "4");;
+            }
+
+            return fecha;
+        }
+
+        function dynamicSort(property) {
+            var sortOrder = 1;
+            if (property[0] === "-") {
+                sortOrder = -1;
+                property = property.substr(1);
+            }
+            return function (a, b) {
+                /* next line works with strings and numbers, 
+                * and you may want to customize it to your needs
+                */
+                var result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
+                return result * sortOrder;
+            }
+        }
+
+        function getTimeFromDecimal(decimalTimeString, tipo = "1") {
+            var decimalTime = parseFloat(decimalTimeString);
+            decimalTime = decimalTime * 60 * 60;
+            var hours = Math.floor((decimalTime / (60 * 60)));
+            decimalTime = decimalTime - (hours * 60 * 60);
+            var minutes = Math.floor((decimalTime / 60));
+            decimalTime = decimalTime - (minutes * 60);
+
+            if(tipo == "1") {
+                let auxHour = "";
+                auxHour += hours > 0 ? hours > 1 ? hours + ' horas' : ' hora' : '';
+
+                if(minutes > 0) {
+                    if(auxHour != "") {
+                        auxHour += " y ";
+                    }
+                    auxHour += minutes > 0 ? minutes > 1 ? minutes + ' minutos' : minutes + ' minuto' : '';
+                }    
+                return auxHour ? auxHour : '0 minutos';
+            } else {
+                let time = ((hours * 60) + minutes);
+                if (time > 0) {
+                    if (time > 1) {
+                        time += " minutos";
+                    } else {
+                        time += " minuto";
+                    }
+                } else {
+                    time = '0 minutos';
+                }
+                return time;
+            }            
+        }
+
+        function dateFormatFromString(datetime, format = "1") {
+            if (format == "1") {
+                let date = datetime.split(" ")[0].split("-");
+                let time = [0, 0, 0]
+                if (datetime.split(" ").length > 1) {
+                    time = datetime.split(" ")[1].split(":");
+                    if (datetime.split(" ")[2] == "PM") {
+                        time[0] = parseInt(time[0]) + 12;
+                    }
+                }
+                
+                return new Date(date[0], parseInt(date[1]) - 1, date[2], time[0], time[1]);
+            } else if (format == "2") {
+                let date = datetime.split(" ")[0].split("/");
+                let time = [0, 0];
+                if (datetime.split(" ").length > 1) {
+                    time = datetime.split(" ")[1].split(":");
+                    if (datetime.split(" ").length > 2 && datetime.split(" ")[2].toUpperCase() == "PM") {
+                        time[0] = parseInt(time[0]) + 12;
+                    }
+                }
+                return new Date(date[2], parseInt(date[1]) - 1, date[0], time[0], time[1]);
+            }
+        }
+
+        function getTimeFromString(time) {
+            let aux = time.split(" "),
+            aux2 = aux[0].split(":");
+            if (aux.length > 1 && (aux[1].toLowerCase() == "pm" || aux[1].toLowerCase() == "p.m")) {
+                if(parseInt(aux2[0]) < 12) {
+                    aux2[0] = parseInt(aux2[0]) + 12;
+                }                
+            } else {
+                if(aux2[0].toString().length == 1) {
+                    aux2[0] = "0"+aux2[0].toString();
+                }
+                if(parseInt(aux2[0]) == 12) {
+                    aux2[0] = "00";
+                }
+            }
+
+            return aux2[0].toString() + ":" + aux2[1];
+
+        }
+
+        function getTimeInt(time) {
+            let timeAux = time.split(" "),
+                hour = timeAux[0].split(":")[0];
+
+            if(timeAux[1].toLowerCase() == "pm" || timeAux[1].toLowerCase() == "p.m") {
+                if(hour != "12") {
+                    hour = parseInt(hour) + 12;
+                }                
+            } else if(timeAux[1].toLowerCase() == "am" || timeAux[1].toLowerCase() == "a.m"){
+                if(hour == "12") {
+                    hour = 0;
+                } 
+            }
+            return parseInt(hour);
+        }
+
+        function timeFormatFromDate(date, format = "1") {
+            date = new Date(date);
+            let hours = date.getHours();
+            let minutes = date.getMinutes();
+            let seconds = date.getSeconds();
+            let period = hours < 12 ? 'a.m.' : 'p.m.';
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+            if (seconds < 10) {
+                seconds = "0" + seconds;
+            }
+            let hora = "";
+            if (format == "1") {
+                hours = (hours + 24) % 12 || 12;
+                if (hours < 10) {
+                    hours = "0" + hours;
+                }
+
+                hora = hours + ":" + minutes + " " + period;
+            } else if (format == "2") {
+                if (hours < 10) {
+                    hours = "0" + hours;
+                }
+
+                hora = hours + ":" + minutes;
+            } else if (format == "3") {
+                if (hours < 10) {
+                    hours = "0" + hours;
+                }
+
+                hora = hours + ":" + minutes + ":" + seconds;
+            } else if (format == "4") {
+                if (hours < 10) {
+                    hours = "0" + hours;
+                }
+
+                hora = hours + minutes + seconds;
+            }
+            return hora;
+        }
+        
+        function removeDays(date, days) {
+            var result = new Date(date);
+            result.setDate(result.getDate() - days);
+            return result;
+        }
+    </script>
+
+    <script type="text/javascript">
+        let origins = ["WhatsApp", "PotoApp", "FaceBook", "Call center", "Página Web", "Chat", "Buzón"],
+            payment_methods = ["Efectivo", "Vale", "Prepago", "Cortesia", "Tarjeta de crédito", "Tarjeta de débito"],
+            tipoFugasQuejas = ['Fuga', 'Queja'];;
+        $(document).ready(function () {
+            initComponents();
+            getToday();
+            llenaCampos();
+        });
+
+        function llenaCampos() {
+            $("#filterFecha").val(dateFormatFromDate(new Date(), "2"));
+            origins.forEach((element, i) => {
+                $("#origenPedido").append('<option value="' + element + '">' + element + '</option>');
+            });
+            payment_methods.forEach((element, i) => {
+                $("#metodoPagoPedido").append('<option value="' + element + '">' + element + '</option>');
+            });
+            tipoFugasQuejas.forEach((element, i) => {
+                $("#tipoCasoFugaQueja").append('<option value="' + element + '">' + element + '</option>');
+            });
+        }
+
+        function getToday() {
+            let $this = this;
+            $("#today").html(dateFormatFromDate(new Date(), "7"));
+            $("#fechaPrometidaPedido").prop("min", dateFormatFromDate(new Date(), "2"));
+            setTimeout(function () {
+                $this.getToday();
+            }, 1000);
+        }
+    </script>
+
+    <!-- Archivo de javascript de Alexis y Christian -->
+    <script
+        src="https://5298967.app.netsuite.com/core/media/media.nl?id=220947&c=5298967&h=OzIZqH5Y4WufSvJGWlzE5MYDfYANUAuYRlqtNTbSUWpnxaU-&_xt=.js"></script>
+</body>
+
+</html>

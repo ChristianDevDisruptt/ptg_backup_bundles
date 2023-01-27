@@ -1,0 +1,24 @@
+<customlist scriptid="customlist_ptg_tipodevehiculo_">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>PTG - Tipo de vehículo</name>
+  <customvalues>
+    <customvalue scriptid="val_416709_5298967_sb1_956">
+      <isinactive>F</isinactive>
+      <value>Pipa</value>
+    </customvalue>
+    <customvalue scriptid="val_416710_5298967_sb1_737">
+      <isinactive>F</isinactive>
+      <value>Camión</value>
+    </customvalue>
+    <customvalue scriptid="val_416711_5298967_sb1_373">
+      <isinactive>F</isinactive>
+      <value>Utilitario</value>
+    </customvalue>
+    <customvalue scriptid="val_416712_5298967_sb1_983">
+      <isinactive>F</isinactive>
+      <value>Otro</value>
+    </customvalue>
+  </customvalues>
+</customlist>

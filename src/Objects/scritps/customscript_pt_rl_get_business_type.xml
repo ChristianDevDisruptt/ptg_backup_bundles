@@ -1,0 +1,23 @@
+<restlet scriptid="customscript_pt_rl_get_business_type">
+  <description>Servicio para obtener el listado de los giros de negocios de netsuite</description>
+  <isinactive>F</isinactive>
+  <name>PTG|RL|GET BUSINESS TYPE</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteScripts/ptg_call_center_monitor_suitlet/ptg_rl_get_business_type.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_pt_rl_get_business_type">
+      <allemployees>F</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>F</allroles>
+      <audslctrole>ADMINISTRATOR|[scriptid=customrole1162_2]|[scriptid=customrole1213]|[scriptid=customrole1167]|[scriptid=customrole1165_2]</audslctrole>
+      <audsubsidiary>[ACCOUNT_SPECIFIC_VALUE]|[ACCOUNT_SPECIFIC_VALUE]|[ACCOUNT_SPECIFIC_VALUE]</audsubsidiary>
+      <isdeployed>T</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <status>RELEASED</status>
+      <title>PTG|RL|GET BUSINESS TYPE</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</restlet>

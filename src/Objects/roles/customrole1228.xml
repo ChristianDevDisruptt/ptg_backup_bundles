@@ -1,0 +1,21 @@
+<role scriptid="customrole1228">
+  <centertype>BASIC</centertype>
+  <coreadminpermission>F</coreadminpermission>
+  <custrecord_permission_certification>F</custrecord_permission_certification>
+  <custrecord_permission_generation>F</custrecord_permission_generation>
+  <custrecord_permission_sending>F</custrecord_permission_sending>
+  <employeerestriction>NONE</employeerestriction>
+  <employeeselectionunrestricted>F</employeeselectionunrestricted>
+  <isinactive>F</isinactive>
+  <issalesrole>F</issalesrole>
+  <issinglesignononly>F</issinglesignononly>
+  <issupportrole>F</issupportrole>
+  <iswebserviceonlyrole>F</iswebserviceonlyrole>
+  <name>PTG - Infraestructura</name>
+  <restrictbydevice>F</restrictbydevice>
+  <restricttimeandexpenses>F</restricttimeandexpenses>
+  <subsidiaryoption>OWN</subsidiaryoption>
+  <subsidiaryviewingallowed>F</subsidiaryviewingallowed>
+  <tfaduration>0</tfaduration>
+  <tfarequired>OFF</tfarequired>
+</role>

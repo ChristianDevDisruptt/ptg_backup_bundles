@@ -1,0 +1,24 @@
+<restlet scriptid="customscript_ptg_rl_get_res_planta_esta">
+  <description>Servicio para devolver el resurtido de ruta por planta y estacionario</description>
+  <isinactive>F</isinactive>
+  <name>PTG|RL|GET RESURTIDO PLANTA ESTACIONARIO</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_resurtido_planta_or_estacionario_app.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_ptg_rl_get_res_planta_esta">
+      <allemployees>F</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>F</allroles>
+      <audemployee>[ACCOUNT_SPECIFIC_VALUE]</audemployee>
+      <audslctrole>ADMINISTRATOR|[scriptid=customrole1162_2]|[scriptid=customrole1213]|[scriptid=customrole1167]|[scriptid=customrole1165_2]</audslctrole>
+      <audsubsidiary>[ACCOUNT_SPECIFIC_VALUE]|[ACCOUNT_SPECIFIC_VALUE]|[ACCOUNT_SPECIFIC_VALUE]</audsubsidiary>
+      <isdeployed>T</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <status>RELEASED</status>
+      <title>PTG|RL|GET RESURTIDO PLANTA ESTACIONARIO</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</restlet>

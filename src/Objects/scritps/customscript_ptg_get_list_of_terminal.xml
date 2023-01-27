@@ -1,0 +1,23 @@
+<restlet scriptid="customscript_ptg_get_list_of_terminal">
+  <description>Servicio que devuelve las cuentas con el nombre de la terminal para los pagos de tipo pregado y me parece que las de tarjetas de credito y debito</description>
+  <isinactive>F</isinactive>
+  <name>PTG|RL|GET LIST OF TERMINAL</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteScripts/SCRIPTS POTOGAS/ptg_rl_get_list_of_terminal.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_ptg_get_list_of_terminal">
+      <allemployees>F</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>F</allroles>
+      <audslctrole>ADMINISTRATOR|[scriptid=customrole1162_2]|[scriptid=customrole1213]|[scriptid=customrole1167]|[scriptid=customrole1165_2]</audslctrole>
+      <audsubsidiary>[ACCOUNT_SPECIFIC_VALUE]|[ACCOUNT_SPECIFIC_VALUE]|[ACCOUNT_SPECIFIC_VALUE]</audsubsidiary>
+      <isdeployed>T</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <status>RELEASED</status>
+      <title>PTG|RL|GET LIST OF TERMINAL</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</restlet>

@@ -1,0 +1,168 @@
+<customlist scriptid="customlist_ptg_desc_cod_fabricante_">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>PTG - Desc. codigo fabricante</name>
+  <customvalues>
+    <customvalue scriptid="val_4028924_5298967_579">
+      <isinactive>F</isinactive>
+      <value>ACTARIS</value>
+    </customvalue>
+    <customvalue scriptid="val_4028925_5298967_452">
+      <isinactive>F</isinactive>
+      <value>AUTIC NEUMATIC</value>
+    </customvalue>
+    <customvalue scriptid="val_4028926_5298967_344">
+      <isinactive>F</isinactive>
+      <value>AUTOPAR</value>
+    </customvalue>
+    <customvalue scriptid="val_4028927_5298967_877">
+      <isinactive>F</isinactive>
+      <value>BOSCH</value>
+    </customvalue>
+    <customvalue scriptid="val_4028928_5298967_315">
+      <isinactive>F</isinactive>
+      <value>CHELSEA</value>
+    </customvalue>
+    <customvalue scriptid="val_2462253_5298967_sb1_155">
+      <isinactive>F</isinactive>
+      <value>CHEVROLET</value>
+    </customvalue>
+    <customvalue scriptid="val_4028929_5298967_929">
+      <isinactive>F</isinactive>
+      <value>CYTSA</value>
+    </customvalue>
+    <customvalue scriptid="val_4028930_5298967_394">
+      <isinactive>F</isinactive>
+      <value>DENSO</value>
+    </customvalue>
+    <customvalue scriptid="val_4028931_5298967_545">
+      <isinactive>F</isinactive>
+      <value>DEVILBIS</value>
+    </customvalue>
+    <customvalue scriptid="val_2462283_5298967_sb1_639">
+      <isinactive>F</isinactive>
+      <value>DINA</value>
+    </customvalue>
+    <customvalue scriptid="val_2462254_5298967_sb1_726">
+      <isinactive>F</isinactive>
+      <value>DODGE</value>
+    </customvalue>
+    <customvalue scriptid="val_2462642_5298967_sb1_555">
+      <isinactive>F</isinactive>
+      <value>FORD</value>
+    </customvalue>
+    <customvalue scriptid="val_2462282_5298967_sb1_431">
+      <isinactive>F</isinactive>
+      <value>FREIGHTLINER</value>
+    </customvalue>
+    <customvalue scriptid="val_4028932_5298967_822">
+      <isinactive>F</isinactive>
+      <value>GARRET</value>
+    </customvalue>
+    <customvalue scriptid="val_2462643_5298967_sb1_914">
+      <isinactive>F</isinactive>
+      <value>GENERICO UTILITARIO</value>
+    </customvalue>
+    <customvalue scriptid="val_4028933_5298967_538">
+      <isinactive>F</isinactive>
+      <value>GOODYEAR</value>
+    </customvalue>
+    <customvalue scriptid="val_2462644_5298967_sb1_941">
+      <isinactive>F</isinactive>
+      <value>HONDA</value>
+    </customvalue>
+    <customvalue scriptid="val_4028934_5298967_145">
+      <isinactive>F</isinactive>
+      <value>HYUNDAI</value>
+    </customvalue>
+    <customvalue scriptid="val_4028935_5298967_164">
+      <isinactive>F</isinactive>
+      <value>IMCO</value>
+    </customvalue>
+    <customvalue scriptid="val_4028936_5298967_735">
+      <isinactive>F</isinactive>
+      <value>INGERSOLLRAND</value>
+    </customvalue>
+    <customvalue scriptid="val_4028937_5298967_369">
+      <isinactive>F</isinactive>
+      <value>INGUSA</value>
+    </customvalue>
+    <customvalue scriptid="val_2462255_5298967_sb1_397">
+      <isinactive>F</isinactive>
+      <value>INTERNATIONAL</value>
+    </customvalue>
+    <customvalue scriptid="val_2462256_5298967_sb1_542">
+      <isinactive>F</isinactive>
+      <value>ISUZU</value>
+    </customvalue>
+    <customvalue scriptid="val_4028938_5298967_717">
+      <isinactive>F</isinactive>
+      <value>KNORR</value>
+    </customvalue>
+    <customvalue scriptid="val_4028939_5298967_826">
+      <isinactive>F</isinactive>
+      <value>MENHER</value>
+    </customvalue>
+    <customvalue scriptid="val_2462257_5298967_sb1_970">
+      <isinactive>F</isinactive>
+      <value>MERCEDES-BENZ</value>
+    </customvalue>
+    <customvalue scriptid="val_4028940_5298967_371">
+      <isinactive>F</isinactive>
+      <value>MILWAUKEE</value>
+    </customvalue>
+    <customvalue scriptid="val_4028941_5298967_661">
+      <isinactive>F</isinactive>
+      <value>NIPONDENSO</value>
+    </customvalue>
+    <customvalue scriptid="val_2462281_5298967_sb1_624">
+      <isinactive>F</isinactive>
+      <value>NISSAN</value>
+    </customvalue>
+    <customvalue scriptid="val_2462645_5298967_sb1_197">
+      <isinactive>F</isinactive>
+      <value>NO APLICA</value>
+    </customvalue>
+    <customvalue scriptid="val_4028942_5298967_381">
+      <isinactive>F</isinactive>
+      <value>PARKER</value>
+    </customvalue>
+    <customvalue scriptid="val_4028943_5298967_439">
+      <isinactive>F</isinactive>
+      <value>PEGASUS</value>
+    </customvalue>
+    <customvalue scriptid="val_4028944_5298967_819">
+      <isinactive>F</isinactive>
+      <value>SPICER</value>
+    </customvalue>
+    <customvalue scriptid="val_2462646_5298967_sb1_319">
+      <isinactive>F</isinactive>
+      <value>SUZUKI</value>
+    </customvalue>
+    <customvalue scriptid="val_4028945_5298967_203">
+      <isinactive>F</isinactive>
+      <value>TATZA</value>
+    </customvalue>
+    <customvalue scriptid="val_2462258_5298967_sb1_624">
+      <isinactive>F</isinactive>
+      <value>TOYOTA</value>
+    </customvalue>
+    <customvalue scriptid="val_4028946_5298967_573">
+      <isinactive>F</isinactive>
+      <value>TREMEC</value>
+    </customvalue>
+    <customvalue scriptid="val_4028947_5298967_121">
+      <isinactive>F</isinactive>
+      <value>TRYNITY</value>
+    </customvalue>
+    <customvalue scriptid="val_4028948_5298967_752">
+      <isinactive>F</isinactive>
+      <value>VALEO</value>
+    </customvalue>
+    <customvalue scriptid="val_2462280_5298967_sb1_226">
+      <isinactive>F</isinactive>
+      <value>VOLKSWAGEN</value>
+    </customvalue>
+  </customvalues>
+</customlist>

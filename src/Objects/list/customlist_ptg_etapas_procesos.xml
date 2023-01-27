@@ -1,0 +1,24 @@
+<customlist scriptid="customlist_ptg_etapas_procesos">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>PTG - Etapas Procesos</name>
+  <customvalues>
+    <customvalue scriptid="val_2116443_5298967_sb1_791">
+      <isinactive>F</isinactive>
+      <value>Carga</value>
+    </customvalue>
+    <customvalue scriptid="val_2116444_5298967_sb1_129">
+      <isinactive>F</isinactive>
+      <value>Procesado</value>
+    </customvalue>
+    <customvalue scriptid="val_4430751_5298967_774">
+      <isinactive>F</isinactive>
+      <value>Error</value>
+    </customvalue>
+    <customvalue scriptid="val_4931375_5298967_303">
+      <isinactive>F</isinactive>
+      <value>Conciliación</value>
+    </customvalue>
+  </customvalues>
+</customlist>

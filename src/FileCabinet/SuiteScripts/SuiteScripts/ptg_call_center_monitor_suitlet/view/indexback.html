@@ -1,0 +1,2135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Dashboard" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <meta name="keywords" content="Dashboard, clientes, pedidos, potogas">
+    <!-- App favicon -->
+    <link rel="shortcut icon"
+        href="https://5298967-sb1.app.netsuite.com/core/media/media.nl?id=48001&c=5298967_SB1&h=lt7iN1fvAB0TWW1SHidBq6N_3m3bl0qC4RsJ5XXe7D4YCdMx&_xt=.ico">
+
+    <!-- Select 2 -->
+    <link href="https://themesbrand.com/skote/layouts/assets/libs/select2/css/select2.min.css" rel="stylesheet"
+        type="text/css" />
+
+    <!-- Datepicker -->
+    <link href="https://themesbrand.com/skote/layouts/assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css"
+        rel="stylesheet" type="text/css">
+    <link href="https://themesbrand.com/skote/layouts/assets/libs/@chenfengyuan/datepicker/datepicker.min.css"
+        rel="stylesheet">
+
+    <!-- Timepicker -->
+    <link href="https://themesbrand.com/skote/layouts/assets/libs/bootstrap-timepicker/css/bootstrap-timepicker.min.css"
+        rel="stylesheet" type="text/css">
+
+    <!-- DataTables -->
+    <link href="https://themesbrand.com/skote/layouts/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css"
+        rel="stylesheet" type="text/css" />
+    <!-- <link href="./assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />    -->
+
+    <!-- <link rel="stylesheet" href="./assets/libs/@chenfengyuan/datepicker/datepicker.min.css"> -->
+
+    <!-- Bootstrap Css -->
+    <link href="https://themesbrand.com/skote/layouts/assets/css/bootstrap.min.css" id="bootstrap-style"
+        rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <!-- <link href="https://themesbrand.com/skote/layouts/assets/css/icons.min.css" rel="stylesheet" type="text/css" /> -->
+    <!-- App Css-->
+    <link href="https://themesbrand.com/skote/layouts/assets/css/app.min.css" id="app-style" rel="stylesheet"
+        type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html,
+        body {
+            font-family: "Roboto", "Helvetica Neue", sans-serif !important;
+        }
+
+        .pl-0 {
+            padding-left: 0;
+        }
+
+        .pr-0 {
+            padding-right: 0;
+        }
+
+        .btn-flat {
+            border-radius: 0;
+        }
+
+        .btn-header {
+            width: 51px;
+            height: 56px;
+        }
+
+        .bg-primary-cc {
+            background-color: #355da7;
+            color: #ffffff;
+        }
+
+        button.bg-primary-cc:hover {
+            background-color: #456aae;
+            color: #ffffff;
+        }
+
+        .bg-secondary-cc {
+            background-color: #e7792b;
+            color: #ffffff;
+        }
+
+        button.bg-secondary-cc:hover {
+            background-color: #e98640;
+            color: #ffffff;
+        }
+
+        .bg-success-cc {
+            background-color: #2dd36f;
+            color: #ffffff;
+        }
+
+        button.bg-success-cc:hover {
+            background-color: #42d77d;
+            color: #ffffff;
+        }
+
+        .bg-warning-cc {
+            background-color: #ffc409;
+            color: #ffffff;
+        }
+
+        button.bg-warning-cc:hover {
+            background-color: #ffca22;
+            color: #ffffff;
+        }
+
+        .bg-dark-cc {
+            background-color: #222428;
+            color: #ffffff;
+        }
+
+        button.bg-dark-cc:hover {
+            background-color: #222428;
+            color: #ffffff;
+        }
+
+        .bg-danger-cc {
+            background-color: #eb445a;
+            color: #ffffff;
+        }
+
+        button.bg-danger-cc:hover {
+            background-color: #ed576b;
+            color: #ffffff;
+        }
+
+        #header-title {
+            font-size: 28px;
+        }
+
+        .ft-12 {
+            font-size: 12px;
+        }
+
+        .ft-16 {
+            font-size: 16px;
+        }
+
+        .bg-white {
+            background-color: #ffffff;
+        }
+
+        .chip {
+            display: inline-block;
+            padding: 0 25px;
+            height: 30px;
+            font-size: 16px;
+            line-height: 30px;
+            border-radius: 25px;
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        .chip.bg-primary-cc {
+            background-color: rgba(231, 121, 43, 0.08)
+        }
+
+        .chip img {
+            float: left;
+            margin: 0 10px 0 -25px;
+            height: 25px;
+            width: 25px;
+            margin-top: 2.5px;
+            border-radius: 50%;
+        }
+
+        .w-100 {
+            width: 100%;
+        }
+
+        .h-100 {
+            height: calc(100vh - 56px);
+        }
+
+        .form-ptg {
+            font-size: 16px;
+            border: solid 2px #9d9b99;
+            border-radius: 9px;
+            padding-left: 9px;
+            color: #737373;
+            padding-right: 9px;
+            padding-top: 0;
+            padding-bottom: 0;
+            width: 100%;
+            padding-top: 9px;
+            padding-bottom: 9px;
+        }
+
+        select.form-ptg {
+            padding-top: 11.5px;
+            padding-bottom: 11.5px;
+        }
+
+        .form-ptg-primary {
+            border: solid 2px #355da7;
+            color: #355da7;
+        }
+
+        .content-input-primary .form-ptg-primary[type="date"]::-webkit-calendar-picker-indicator {
+            background: url(https://5298967-sb1.app.netsuite.com/core/media/media.nl?id=47999&c=5298967_SB1&h=ap_ChgXBZcGtXt-0cCUgtiAdcQ0GwlDOUwRUbTSXJOVGLBvm) center/80% no-repeat;
+            cursor: pointer;
+        }
+
+        .content-input-primary .form-ptg-primary[type="time"]::-webkit-calendar-picker-indicator {
+            background: url(https://5298967-sb1.app.netsuite.com/core/media/media.nl?id=47998&c=5298967_SB1&h=dTMS58AOq5BNJEv4o7eqLopFTUHTH_RE_0AeE6ronFdNxfIX) center/80% no-repeat;
+            cursor: pointer;
+        }
+
+        .form-search {
+            width: 100%;
+            position: relative;
+        }
+
+        .form-search .form-ptg {
+            padding-left: 45px;
+            padding-right: 45px;
+        }
+
+        .form-search .fa-magnifying-glass {
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: 20px;
+            font-size: 20px;
+            cursor: text;
+        }
+
+        .form-search .fa-xmark {
+            position: absolute;
+            right: 15px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        label {
+            margin: 0;
+        }
+
+        .fw-bold {
+            font-weight: bold;
+        }
+
+        .content-tabs {
+            background-color: rgb(225, 225, 225);
+            ;
+        }
+
+        .content-tabs .tab {
+            padding: 7px 20px;
+            margin: 0px 0;
+            cursor: pointer;
+        }
+
+        .tab.active {
+            background: #ffffff;
+            border-radius: 10px 0;
+            color: #355da7;
+        }
+
+        .modal-header .modal-title {
+            color: #ffffff;
+        }
+
+        .content-input label {
+            color: #9d9b99;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .content-input-primary label {
+            color: #355da7;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .color-primary {
+            color: #355da7;
+        }
+
+        .ft-18 {
+            font-size: 18px;
+        }
+
+        .invisible {
+            visibility: hidden;
+        }
+
+        .ft-24 {
+            font-size: 24px;
+        }
+
+        .table-gen {
+            min-width: 100%;
+        }
+
+        .table-gen .sticky-col {
+            position: -webkit-sticky;
+            position: sticky;
+            left: 0px;
+        }
+
+        .table-gen thead tr th {
+            position: sticky;
+            top: 0;
+        }
+
+        .table-gen thead tr th,
+        .table-gen tbody tr td {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .table-gen-blue thead tr th {
+            background: #355da7;
+            color: #ffffff;
+        }
+
+        .table-gen-blue tbody tr:nth-of-type(odd) td {
+            background-color: #ffffff;
+        }
+
+        .table-gen-blue tbody tr:nth-of-type(even) td {
+            background-color: rgb(225, 225, 225);
+        }
+
+        .ion-text-center {
+            text-align: center;
+        }
+
+        .btn-expand {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            right: -30px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        .btn-expand-down {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .btn-expand .btn,
+        .btn-expand-down .btn {
+            width: 100%;
+            height: 100%;
+            background: #e7792b;
+            border-radius: 100px;
+            cursor: pointer;
+            box-shadow: 5px 2px 20px 6px rgb(0 0 0);
+            position: relative;
+        }
+
+        .btn-expand-down .btn {
+            z-index: 2;
+            position: relative;
+        }
+
+        .btn-expand .btn:hover,
+        .btn-expand-down .btn:hover {
+            background: #e98640;
+        }
+
+        .btn-expand .btn i {
+            position: absolute;
+            left: 0;
+            right: 15px;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            height: 22px;
+            font-size: 22px;
+            color: #ffffff;
+        }
+
+        .btn-expand-down .btn i {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            right: 0;
+            left: 0;
+            margin: auto;
+            font-size: 22px;
+            color: #ffffff;
+        }
+
+        .title-tab {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d4d4d4;
+        }
+
+        .title-tab.active {
+            cursor: pointer;
+            color: #000000;
+        }
+
+        .card {
+            box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .title-ptg {
+            font-size: 24px;
+        }
+
+        .check-ptg {
+            font-size: 20px;
+        }
+
+        /* no global ccs */
+        #clientes-data {
+            background-color: rgb(225, 225, 225);
+            height: 393px;
+            overflow: auto;
+        }
+
+        #historic-data {
+            overflow: auto;
+            height: calc(100vh - 449px);
+        }
+
+        #content-forms {
+            overflow: hidden;
+        }
+
+        .tabs-content {
+            height: calc(100vh - 89px);
+            overflow: auto;
+        }
+
+        #content-forms.no-expand .tabs-content {
+            height: calc(100vh - 324px);
+        }
+
+        #content-avisos {
+            height: calc(100vh - (100vh - 290px) - 56px);
+        }
+
+        .border-bp {
+            border-bottom: 1px solid #355da7;
+        }
+
+        .form-check-input.form-ptg-primary:checked {
+            background-color: #355da7;
+            border-color: #355da7;
+        }
+
+        .border-radius-primary {
+            border: 2px solid #355da7;
+            border-radius: 10px;
+            height: 100%;
+            width: 100%;
+        }
+
+        .modal-body {
+            max-height: calc(100vh - 205px);
+            overflow: auto;
+        }
+        
+    </style>
+</head>
+
+<body data-topbar="dark" data-spy="scroll" data-offset="175" style="overflow: hidden;">
+    <header class="bg-primary-cc">
+        <div class="row align-items-center w-100">
+            <div class="col-auto pr-0">
+                <button id="btnMenu" type="button" class="btn bg-primary-cc btn-flat btn-header"><i
+                        class="fa-solid fa-bars"></i></button>
+                <button id="btnBack" type="button" class="btn bg-primary-cc btn-flat btn-header d-none"><i
+                        class="fa-solid fa-arrow-left"></i></button>
+            </div>
+            <div class="col-auto p-0">
+                <img src="https://5298967-sb1.app.netsuite.com/core/media/media.nl?id=47997&c=5298967_SB1&h=XCM9Qw8SSpqCq4FqTkuyuCCRBX28-Dd5A_4ngS6j8NK6r23B"
+                    alt="" height="56">
+            </div>
+            <div id="header-title" class="col">
+                Call Center
+            </div>
+            <div class="col-auto p-0">
+                <div class="row align-items-center">
+                    <div class="col-auto pr-0 ft-16" id="today">
+                    </div>
+                    <div class="col-auto pr-0 ft-16">
+                        <strong>ROL: </strong><span id="role">Prueba</span>
+                    </div>
+                    <div class="col-auto pr-0 ft-16">
+                        <strong>PLANTA: </strong>
+                    </div>
+                    <div class="col-auto pr-0 ft-16">
+                        <select id="plantas" type="date" style="
+                            width: 190px; 
+                            height: 30px; 
+                            background: #ffffff; 
+                            border-width: 1px; 
+                            border-color: #808080; 
+                            color: #000;">
+                            <option value="p1">PLANTA CARDENAS</option>
+                            <option value="p2">PLANTA CEDRAL</option>
+                        </select>
+                    </div>
+                    <div class="col-auto">
+                        <div class="chip bg-primary-cc">
+                            <img
+                                src="https://5298967-sb1.app.netsuite.com/core/media/media.nl?id=47996&c=5298967_SB1&h=w9FU3tphwpeGh2U7tj_dTBfRy_QKLEEecSPE2ID7uFJinYd8">
+                            <span class="user-name">Alexis Chiw</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <div id="formProductosModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="titleProductoModal"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document" style="width: 400px;">
+            <div class="modal-content " style="border: 0">
+                <div class="modal-header bg-primary-cc">
+                    <h5 class="modal-title" id="titleProductoModal">Agregar producto</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="row pb-2">
+                        <div class="col-6">
+                            <div class="content-input content-input-primary">
+                                <label>Producto</label>
+                                <select id="productoFormProductos" class="form-ptg form-ptg-primary">
+                                    <option value="cilindro">Cilindro</option>
+                                    <option value="estacionario">Estacionario</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6 cilindroFormProductos">
+                            <div class="content-input content-input-primary">
+                                <label>Envase</label>
+                                <input id="envaseFormProductos" type="checkbox" class="form-ptg form-ptg-primary">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-2 cilindroFormProductos">
+                        <div class="col-6">
+                            <div class="content-input content-input-primary">
+                                <label>Capacidad</label>
+                                <select id="capacidadFormProductos" class="form-ptg form-ptg-primary">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="content-input content-input-primary">
+                                <label>Cantidad</label>
+                                <input id="cantidadFormProductos" type="number" class="form-ptg form-ptg-primary">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-2 estacionarioFormProductos d-none">
+                        <div class="col-6">
+                            <div class="content-input content-input-primary">
+                                <label>Litros</label>
+                                <input id="litrosFormProductos" type="number" class="form-ptg form-ptg-primary">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="content-input content-input-primary">
+                                <label>Monto</label>
+                                <input id="montoFormProductos" type="number" class="form-ptg form-ptg-primary">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-2">
+                        <div class="col-6">
+                            <div class="content-input content-input-primary">
+                                <label>Valor</label>
+                                <input id="valorFormProductos" type="number" readonly class="form-ptg form-ptg-primary">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="content-input content-input-primary">
+                                <label>Total</label>
+                                <input id="totalFormProductos" type="number" readonly class="form-ptg form-ptg-primary">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        aria-label="Close">Cancelar</button>
+                    <button id="guardarProductosForm" type="button" data-bs-dismiss="modal" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="formNotasAdicionalesModal" class="modal fade" tabindex="-1" role="dialog"
+        aria-labelledby="titleNotasAdicionalesModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document" style="width: 300px;">
+            <div class="modal-content " style="border: 0">
+                <div class="modal-header bg-primary-cc">
+                    <h5 class="modal-title" id="titleNotasAdicionalesModal">Agregar nota</h5>
+                </div>
+                <div class="modal-body">
+                    <textarea id="notaAdicional" rows="3" placeholder="Nota..."
+                        class="form-ptg form-ptg-primary"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        aria-label="Close">Cancelar</button>
+                    <button id="guardarNotaAdicional" type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="formDireccionesModal" class="modal fade" tabindex="-1" role="dialog"
+        aria-labelledby="titleNotasAdicionalesModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document" style="width: 800px;">
+            <div class="modal-content " style="border: 0">
+                <div class="modal-header bg-primary-cc">
+                    <h5 class="modal-title" id="titleNotasAdicionalesModal">Dirección</h5>
+                </div>
+                <div class="modal-body">
+                    <!-- Se agregó este campo para diferenciar la funcionalidad que tendrá el modal -->
+                    <div class="row pb-2 d-none">
+                        <div class="col-12">
+                            <div class="content-input content-input-primary">
+                                <label>Tipo*</label>
+                                <input class="form-ptg form-ptg-primary" id="tipoAccionDireccion" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-2">
+                        <div class="col-6">
+                            <div class="content-input content-input-primary">
+                                <label>Estado*</label>
+                                <select id="estadoDireccion" class="form-ptg form-ptg-primary">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="content-input content-input-primary">
+                                <label>Municipio*</label>
+                                <select id="municipioDireccion" class="form-ptg form-ptg-primary">
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-2">
+                        <div class="col-6">
+                            <div class="content-input content-input-primary">
+                                <label>Colonia*</label>
+                                <select id="coloniaDireccion" class="form-ptg form-ptg-primary">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="content-input content-input-primary">
+                                <label>C.P.*</label>
+                                <input class="form-ptg form-ptg-primary" id="cpDireccion" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-2">
+                        <div class="col-6">
+                            <div class="content-input content-input-primary">
+                                <label>Calle*</label>
+                                <input class="form-ptg form-ptg-primary" id="calleDireccion">
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="content-input content-input-primary">
+                                <label>Número exterior*</label>
+                                <input class="form-ptg form-ptg-primary" id="exteriorDireccion">
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="content-input content-input-primary">
+                                <label>Número interior</label>
+                                <input class="form-ptg form-ptg-primary" id="interiorDireccion">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-2">
+                        <div class="col-4">
+                            <div class="content-input content-input-primary">
+                                <label>Entre calles 1</label>
+                                <input class="form-ptg form-ptg-primary" id="entre1Direccion">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="content-input content-input-primary">
+                                <label>Entre calle 2</label>
+                                <input class="form-ptg form-ptg-primary" id="entre2Direccion">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="content-input content-input-primary">
+                                <label>Zona de venta*</label>
+                                <input class="form-ptg form-ptg-primary" readonly id="zonaVentaDireccion">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-2">
+                        <div class="col-12">
+                            <div class="content-input content-input-primary">
+                                <label>Ruta*</label>
+                                <input class="form-ptg form-ptg-primary" readonly id="rutaDireccion">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-2 d-none">
+                        <div class="col-12">
+                            <div class="content-input content-input-primary">
+                                <label>Ruta colonia ID*</label>
+                                <input class="form-ptg form-ptg-primary" readonly id="rutaColoniaIdDireccion">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-2 d-none">
+                        <div class="col-12">
+                            <div class="content-input content-input-primary">
+                                <label>Ruta ID*</label>
+                                <input class="form-ptg form-ptg-primary" readonly id="rutaIdDireccion">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-2">
+                        <div class="col-12">
+                            <label class="title-ptg color-primary fw-bold border-bp w-100" style="font-size: 20px;">Programación</label>
+                        </div>
+                    </div>
+                    <div class="row pb-2">
+                        <div class="col">
+                            <div class="content-input content-input-primary">
+                                <label>Tipo de servicio*</label>
+                                <select id="tipoServicioFormCliente" class="form-ptg form-ptg-primary">
+                                    <option value="1">Cilindro</option>
+                                    <option value="2">Estacionario</option>
+                                    <option value="4">Ambos</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="content-input content-input-primary" id="capacidadTipoServicioContent">
+                                <label>Capacidad*</label>
+                                <select id="selectCapacidadTipoServicio" class="form-ptg form-ptg-primary">
+                                    <option value="10">10 lts</option>
+                                    <option value="20">20 lts</option>
+                                    <option value="30">30 lts</option>
+                                </select>
+                                <input id="inputCapacidadTipoServicio" type="number" class="form-ptg form-ptg-primary d-none">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-2">
+                        <div class="col-auto align-self-center">
+                            <label class="title-ptg color-primary" style="font-size: 16px;">Tipo de acción*:</label>
+                        </div>
+                        <div class="col-auto align-self-center">
+                            <div class="form-check check-ptg">
+                                <input class="form-check-input form-ptg-primary" value="1" type="radio"
+                                    name="tipoAccionFormCliente" id="tipoAccionFormClient1" checked>
+                                <label class="form-check-label color-primary" for="tipoAccionFormCliente1">
+                                    Teléfono
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-auto align-self-center">
+                            <div class="form-check check-ptg">
+                                <input class="form-check-input form-ptg-primary" value="2" type="radio"
+                                    name="tipoAccionFormCliente" id="tipoAccionFormClient1">
+                                <label class="form-check-label color-primary" for="tipoAccionFormCliente1">
+                                    Aviso
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-auto align-self-center">
+                            <div class="form-check check-ptg">
+                                <input class="form-check-input form-ptg-primary" value="4" type="radio"
+                                    name="tipoAccionFormCliente" id="tipoAccionFormClient1">
+                                <label class="form-check-label color-primary" for="tipoAccionFormCliente1">
+                                    Programar
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-2 tipo-aviso-programado d-none">
+                        <div class="col-6">
+                            <div class="border-radius-primary p-2">
+                                <label class="title-ptg color-primary" style="font-size: 20px">Frecuencia*</label>
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <label class="title-ptg color-primary"
+                                            style="font-size: 16px;">Cada</label>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="content-input content-input-primary" style="width: 90px;">
+                                            <input id="cadaFormCliente" type="number"
+                                                class="form-ptg form-ptg-primary">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="content-input content-input-primary">
+                                            <select id="frecuenciaFormCliente" class="form-ptg form-ptg-primary">
+                                                <option value="1">día(s)</option>
+                                                <option value="2">Semana(s)</option>
+                                                <option value="3">Mes(es)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="col-6">
+                            <div class="border-radius-primary p-2">
+                                <label class="title-ptg color-primary" style="font-size: 20px">Horario preferifo*</label>
+                                <div class="content-input content-input-primary">
+                                    <label>Entre las</label>
+                                    <input id="entreFormCliente" type="time" class="form-ptg form-ptg-primary">
+                                </div>
+                                <div class="content-input content-input-primary">
+                                    <label>y las</label>
+                                    <input id="lasFormCliente" type="time" class="form-ptg form-ptg-primary">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-2">
+                        <div class="col-6 tipo-aviso-programado d-none">
+                            <div class="border-radius-primary p-2">
+                                <label class="title-ptg color-primary" style="font-size: 20px">Día de la semana*</label>
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <div class="content-input content-input-primary">
+                                            <label>L</label>
+                                            <input id="lunesFormCliente" type="checkbox"
+                                                class="form-ptg form-ptg-primary">
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="content-input content-input-primary">
+                                            <label>M</label>
+                                            <input id="martesFormCliente" type="checkbox"
+                                                class="form-ptg form-ptg-primary">
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="content-input content-input-primary">
+                                            <label>M</label>
+                                            <input id="miercolesFormCliente" type="checkbox"
+                                                class="form-ptg form-ptg-primary">
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="content-input content-input-primary">
+                                            <label>J</label>
+                                            <input id="juevesFormCliente" type="checkbox"
+                                                class="form-ptg form-ptg-primary">
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="content-input content-input-primary">
+                                            <label>V</label>
+                                            <input id="viernesFormCliente" type="checkbox"
+                                                class="form-ptg form-ptg-primary">
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="content-input content-input-primary">
+                                            <label>S</label>
+                                            <input id="sabadoFormCliente" type="checkbox"
+                                                class="form-ptg form-ptg-primary">
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="content-input content-input-primary">
+                                            <label>D</label>
+                                            <input id="domingoFormCliente" type="checkbox"
+                                                class="form-ptg form-ptg-primary">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="content-input content-input-primary">
+                                <label>Observaciones</label>
+                                <textarea placeholder="observaciones" id="indicacionesFormCliente" rows="3"
+                                    class="form-ptg form-ptg-primary"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        aria-label="Close">Cancelar</button>
+                    <button id="guardarDireccion" type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="home-view" class="row w-100 m-0">
+        <div class="col-6 h-100 p-0" style="overflow: hidden; position: relative;">
+            <div class="btn-expand" style="z-index: 2;">
+                <div class="p-rel btn">
+                    <i class="fa-solid fa-caret-right"></i>
+                </div>
+            </div>
+            <div id="clientes-data" class="p-3">
+                <div class="row align-items-center pb-2">
+                    <div class="col pr-0">
+                        <div class="form-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input id="buscarCliente" type="text" class="form-ptg"
+                                placeholder="Teléfono, nombre(s), correo electrónico o colonia">
+                            <i class="fa-solid fa-xmark d-none"></i>
+                        </div>
+                    </div>
+                    <div class="col-auto pr-0">
+                        <button id="agregarCliente" type="button" class="btn bg-secondary-cc"><i
+                                class="fa-solid fa-user-plus"></i> Agregar</button>
+                    </div>
+                    <div class="col-auto">
+                        <button id="editarCliente" type="button" class="btn bg-secondary-cc"><i
+                                class="fa-solid fa-user-pen"></i> Editar</button>
+                    </div>
+                </div>
+                <div class="row align-items-center pb-2">
+                    <div class="col p-0">
+                    </div>
+                    <div class="col-auto pl-0 badgesClientes" id="badgeContrato">
+                        <span class="badge bg-danger-cc ft-12">Contrato</span>
+                    </div>
+                    <div class="col-auto pl-0 badgesClientes" id="badgeActivo">
+                        <span class="badge bg-success-cc ft-12">Activo</span>
+                    </div>
+                    <div class="col-auto pl-0 badgesClientes" id="badgeInactivo">
+                        <span class="badge bg-danger-cc ft-12">Inactivo</span>
+                    </div>
+                    <div class="col-auto pl-0 badgesClientes" id="badgePendientes">
+                        <span class="badge bg-danger-cc ft-12">Tienen pedido(s) pendiente(s)</span>
+                    </div>
+                    <div class="col-auto pl-0 badgesClientes" id="badgeSuspendido">
+                        <span class="badge bg-warning-cc ft-12">No suspendido</span>
+                    </div>
+                </div>
+                <div class="row align-items-center ft-16 pb-2">
+                    <div class="col-2">
+                        <label>Id: <span class="fw-bold" id="idCliente">0</span></label>
+                    </div>
+
+                    <div class="col-2">
+                        <label>Nombre:</label>
+                    </div>
+                    <div class="col">
+                        <label class="fw-bold" id="nombreCliente">Busque un Cliente</label>
+                    </div>
+
+                    <div class="col-2">
+                        <label>Teléfono:</label>
+                    </div>
+                    <div class="col">
+                        <label class="fw-bold" id="telefonoCliente">Sin teléfono</label>
+                    </div>
+                </div>
+                <div class="row align-items-center ft-16 pb-2">
+                    <div class="col-2">
+                        <label>Dirección:</label>
+                    </div>
+
+                    <div class="col pr-0">
+                        <select id="direccionCliente" class="form-ptg">
+                            <option>Sin direcciones</option>
+                        </select>
+                    </div>
+
+                    <div class="col-auto pr-0">
+                        <button id="agregarDireccion" disabled type="button" class="btn bg-secondary-cc"><i
+                                class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <div class="col-auto">
+                        <button id="editarDireccion" type="button" class="btn bg-secondary-cc"><i
+                                class="fa-solid fa-pen-to-square"></i></button>
+                    </div>
+                </div>
+                <div class="row align-items-center ft-16 pb-2">
+                    <div class="col-2">
+                        <label>Giro:</label>
+                    </div>
+                    <div class="col-4">
+                        <label class="fw-bold" id="giroCliente">Sin giro</label>
+                    </div>
+                    <div class="col-2">
+                        <label>Contrato:</label>
+                    </div>
+                    <div class="col-4">
+                        <label class="fw-bold" id="contratoCliente">Pendiente de validar</label>
+                    </div>
+                </div>
+                <div class="row align-items-center ft-16 pb-2">
+                    <div class="col-2">
+                        <label>Zona de venta:</label>
+                    </div>
+                    <div class="col-4">
+                        <label class="fw-bold" id="zonaVentaCliente">Sin Zona de Venta</label>
+                    </div>
+                    <div class="col-2">
+                        <label>Zona de precios:</label>
+                    </div>
+                    <div class="col-4">
+                        <label class="fw-bold" id="zonaPrecioCliente">Sin Zona de Precio</label>
+                    </div>
+                </div>
+                <div class="row align-items-center ft-16 pb-2">
+                    <div class="col-2">
+                        <label>Notas:</label>
+                    </div>
+                    <div class="col-4">
+                        <label class="fw-bold" id="notasCliente">Sin Notas</label>
+                    </div>
+                    <div class="col-2">
+                        <label>Tipo Cliente:</label>
+                    </div>
+                    <div class="col-4">
+                        <label class="fw-bold" id="tipoCliente">Sin tipo Cliente</label>
+                    </div>
+                </div>
+                <div class="row align-items-center ft-16">
+                    <div class="col-2">
+                        <label>Tipo servicio:</label>
+                    </div>
+                    <div class="col-4">
+                        <label class="fw-bold" id="tipoServicioCliente">Sin servicio</label>
+                    </div>
+                    <div class="col-2">
+                        <label>Ruta:</label>
+                    </div>
+                    <div class="col-4">
+                        <label class="fw-bold" id="rutaCliente">Sin ruta</label>
+                    </div>
+                </div>
+            </div>
+            <div id="historic-data">
+                <table class="table-gen table-gen-blue">
+                    <thead>
+                        <tr>
+                            <th style="min-width: 40px; z-index: 1; left: 0;" class="ion-text-center sticky-col">
+                                <ion-button fill="clear"
+                                    style="font-size: 18px; --padding-start: 0; --padding-end: 0; --color: #fff">
+                                    <i class="fa-solid fa-arrow-rotate-right"></i>
+                                </ion-button>
+
+                                <div
+                                    style="position: absolute; right: 0; top: 0; height: 100%; width: 1px; background-color: #000;">
+                                </div>
+                            </th>
+
+                            <th style="min-width: 40px; z-index: 1; left: 40px;" class="ion-text-center sticky-col">
+                                <div
+                                    style="position: absolute; right: 0; top: 0; height: 100%; width: 1px; background-color: #000;">
+                                </div>
+                            </th>
+
+                            <th style="min-width: 40px; z-index: 1; left: 80px;" class="ion-text-center sticky-col">
+                                <div
+                                    style="position: absolute; right: 0; top: 0; height: 100%; width: 1px; background-color: #000;">
+                                </div>
+                            </th>
+
+                            <th style="min-width: 95px" class="ion-text-center">Fecha Solicitud</th>
+                            <th style="min-width: 95px" class="ion-text-center">Fecha Comprometida</th>
+                            <th style="min-width: 95px" class="ion-text-center">Hora Visita</th>
+                            <th style="min-width: 135px" class="ion-text-center">Número de Documento</th>
+                            <th style="min-width: 135px" class="ion-text-center">Número de Caso</th>
+                            <th style="min-width: 135px" class="ion-text-center">Asunto</th>
+                            <th style="min-width: 155px" class="ion-text-center">Nombre del Cliente</th>
+                            <th style="min-width: 155px" class="ion-text-center">Telefono</th>
+                            <th style="min-width: 135px" class="ion-text-center">Agente Call Center</th>
+                            <th style="min-width: 135px" class="ion-text-center">Monitor</th>
+                            <th style="min-width: 265px" class="ion-text-center">Estado</th>
+                            <th style="min-width: 265px" class="ion-text-center">Prioridad</th>
+                            <th style="min-width: 125px" class="ion-text-center">Motivo Cancelación</th>
+                            <th style="min-width: 130px" class="ion-text-center">Cierre Previsto</th>
+                            <th style="min-width: 150px" class="ion-text-center">Hora Cierre</th>
+                            <th style="min-width: 355px" class="ion-text-center">Origen Servicio</th>
+                            <th style="min-width: 355px" class="ion-text-center">Tipo Servicio</th>
+                            <th style="min-width: 355px" class="ion-text-center">Articulo</th>
+                            <th style="min-width: 355px" class="ion-text-center">Fecha Notificacion</th>
+                            <th style="min-width: 355px" class="ion-text-center">Tipo Transaccion</th>
+                            <th style="min-width: 355px" class="ion-text-center">Nota</th>
+                            <th style="min-width: 355px" class="ion-text-center">Tecnico / Conductor Asignado</th>
+                            <th style="min-width: 355px" class="ion-text-center">Método Pago</th>
+                            <th style="min-width: 355px" class="ion-text-center">Nota Rapida</th>
+                            <th style="min-width: 355px" class="ion-text-center">Unidad</th>
+                        </tr>
+                    </thead>
+
+                    <tbody style="text-align: center;" *ngIf="!isLoadingPedidos">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-6 h-100 p-0">
+            <div id="content-forms" class="no-expand" style="position: relative;">
+                <div class="btn-expand-down">
+                    <div class="p-rel btn">
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+                <div class="row content-tabs">
+                    <div class="col-auto p-0">
+                        <div class="tab active" data-tab="pedidos">Pedidos</div>
+                    </div>
+
+                    <div class="col-auto p-0">
+                        <div class="tab" data-tab="fugas-quejas">Fugas/Quejas</div>
+                    </div>
+                </div>
+                <div id="tab-pedidos" class="p-2 tabs-content">
+                    <div class="row pb-2">
+                        <div class="col-4">
+                            <div class="content-input content-input-primary">
+                                <label>Fecha prometida</label>
+                                <input id="fechaPrometidaPedido" type="date" class="form-ptg form-ptg-primary">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="content-input content-input-primary">
+                                <label>Desde</label>
+                                <input id="desdePedido" type="time" class="form-ptg form-ptg-primary">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="content-input content-input-primary">
+                                <label>Hasta</label>
+                                <input id="hastaPedido" type="time" class="form-ptg form-ptg-primary">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-2">
+                        <div class="col-2">
+                        </div>
+                        <div class="col-4">
+                            <div class="content-input content-input-primary">
+                                <label>Origen</label>
+                                <select id="origenPedido" class="form-ptg form-ptg-primary">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="content-input content-input-primary">
+                                <label>Zona de venta</label>
+                                <input id="zonaVentaPedido" readonly type="text" class="form-ptg form-ptg-primary">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-2 align-items-center">
+                        <div class="col">
+                            <label class="color-primary ft-18">Lista de pedido</label>
+                        </div>
+                        <div class="col-auto">
+                            <button id="agregarProducto" type="button" class="btn bg-secondary-cc"><i
+                                    class="fa-solid fa-plus"></i> Agregar producto</button>
+                        </div>
+                    </div>
+                    <div id="sinProductos" style="position: relative; min-height: 90px;">
+                        <div
+                            style="text-align: center; position: absolute; top: 0; bottom: 0; right: 0; left: 0; font-size: 15px; margin: auto; height: 25px;">
+                            <label class="color-primary">Sin productos en el pedido.</label>
+                        </div>
+                    </div>
+                    <div id="productosCilindroPedido" class="d-none pb-2">
+                        <div class="row bg-primary-cc ft-16 pt-3 pb-1">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-3">
+                                        Producto
+                                    </div>
+                                    <div class="col-2">
+                                        Cantidad
+                                    </div>
+                                    <div class="col-3">
+                                        Capacidad
+                                    </div>
+                                    <div class="col-2">
+                                        Valor
+                                    </div>
+                                    <div class="col-2">
+                                        Envase
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fa-solid fa-ellipsis-vertical ft-24 invisible"></i>
+                            </div>
+                        </div>
+                        <div class="content">
+
+                        </div>
+                    </div>
+                    <div id="productosEstacionarioPedido" class="d-none pb-2">
+                        <div class="row bg-primary-cc ft-16 pt-3 pb-1">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-5">
+                                        Producto
+                                    </div>
+                                    <div class="col-3">
+                                        Litros
+                                    </div>
+                                    <div class="col-2">
+                                        Monto
+                                    </div>
+                                    <div class="col-2">
+                                        Total
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fa-solid fa-ellipsis-vertical ft-24 invisible"></i>
+                            </div>
+                        </div>
+                        <div class="content">
+
+                        </div>
+                    </div>
+                    <div class="row pb-2 align-items-center">
+                        <div class="col-4">
+                            <div class="content-input content-input-primary">
+                                <label>Método de pago</label>
+                                <select id="metodoPagoPedido" class="form-ptg form-ptg-primary">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-3 d-none">
+                            <div class="content-input content-input-primary">
+                                <label>Referencia</label>
+                                <input id="referenciaPagoPedido" class="form-ptg form-ptg-primary"> </select>
+                            </div>
+                        </div>
+                        <div class="col-5 d-none">
+                            <div class="content-input content-input-primary">
+                                <label>Folio de autorización</label>
+                                <input id="folioAutorizacionPedido" class="form-ptg form-ptg-primary"> </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-2 align-items-center">
+                        <div class="col-12">
+                            <div class="content-input content-input-primary">
+                                <label>Observaciones</label>
+                                <textarea placeholder="Observaciones" id="observacionesPagoPedido" rows="3"
+                                    class="form-ptg form-ptg-primary"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-2 align-items-center">
+                        <div class="col">
+                        </div>
+                        <div class="col-auto">
+                            <button id="guardarPedido" type="button" class="btn bg-secondary-cc"><i
+                                    class="fa-solid fa-floppy-disk"></i> Guardar pedido</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-fugas-quejas" class="p-2 d-none tabs-content">
+                    <div class="row pb-2">
+                        <div class="col-4">
+                            <div class="content-input content-input-primary">
+                                <label>Tipo de caso</label>
+                                <select id="tipoCasoFugaQueja" class="form-ptg form-ptg-primary">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="content-input content-input-primary">
+                                <label>Concepto</label>
+                                <select id="conceptoFugaQueja" class="form-ptg form-ptg-primary">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="content-input content-input-primary">
+                                <label>Fecha visita</label>
+                                <input id="fechaVisitaFugaQueja" type="date" class="form-ptg form-ptg-primary">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-2">
+                        <div class="col-4">
+                            <div class="content-input content-input-primary">
+                                <label>Horario preferido</label>
+                                <input id="horarioPreferidoFugaQueja" type="time" class="form-ptg form-ptg-primary">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="content-input content-input-primary">
+                                <label>Artículo</label>
+                                <select id="articuloFugaQueja" class="form-ptg form-ptg-primary">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="content-input content-input-primary">
+                                <label>Año</label>
+                                <input id="anioFugaQueja" type="number" class="form-ptg form-ptg-primary">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-2">
+                        <div class="col-4">
+                            <div class="content-input content-input-primary">
+                                <label>Email</label>
+                                <input id="emailFugaQueja" type="email" class="form-ptg form-ptg-primary">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="content-input content-input-primary">
+                                <label>Teléfono</label>
+                                <input id="telefonoFugaQueja" type="text" class="form-ptg form-ptg-primary">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="content-input content-input-primary">
+                                <label>Prioridad</label>
+                                <select id="prioridadFugaQueja" class="form-ptg form-ptg-primary">
+                                    <option>Alta</option>
+                                    <option>Media</option>
+                                    <option>Baja</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-2">
+                        <div class="col-4">
+                            <div class="content-input content-input-primary">
+                                <label>Asociar permiso</label>
+                                <select id="asociarServicioFugaQueja" class="form-ptg form-ptg-primary">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="content-input content-input-primary">
+                                <label>Nota principal</label>
+                                <input id="notaPrincipalFugaQueja" type="text" class="form-ptg form-ptg-primary">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-2">
+                        <div class="col-4">
+                            <div class="row ion-align-items-center">
+                                <div class="col">
+                                    <div class="content-input content-input-primary">
+                                        <label>Notas adicionales</label>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <i id="notasAdicionalesFugaQueja" style="cursor: pointer;"
+                                        class="fa-solid fa-plus color-primary"></i>
+                                </div>
+                            </div>
+                            <table id="notasAdicionales" class="table-gen table-gen-blue">
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-8">
+                            <div class="content-input content-input-primary">
+                                <label>Descripción del cliente</label>
+                                <input id="descripcionClienteFugaQueja" type="text" class="form-ptg form-ptg-primary">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-2 align-items-center">
+                        <div class="col">
+                        </div>
+                        <div class="col-auto">
+                            <button id="guardarPedido" type="button" class="btn bg-secondary-cc"><i
+                                    class="fa-solid fa-floppy-disk"></i> Guardar caso</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="content-avisos">
+                <table class="table-gen table-gen-blue">
+                    <thead>
+                        <tr>
+                            <th style="width: 40px; z-index: 1; left: 0;" class="ion-text-center sticky-col">
+                                <ion-button fill="clear"
+                                    style="font-size: 18px; --padding-start: 0; --padding-end: 0; --color: #fff">
+                                    <i class="fa-solid fa-arrow-rotate-right"></i>
+                                </ion-button>
+
+                                <div
+                                    style="position: absolute; right: 0; top: 0; height: 100%; width: 1px; background-color: #000;">
+                                </div>
+                            </th>
+                            <th style="min-width: 135px" class="ion-text-center">Nombre</th>
+                            <th style="min-width: 135px" class="ion-text-center">Número Documento</th>
+                            <th style="min-width: 135px" class="ion-text-center">Telefono</th>
+                            <th style="min-width: 135px" class="ion-text-center">Tipo de Servicio</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="form-client-view" class="w-100 m-0 d-none">
+        <div class="card m-3">
+            <div class="card-body">
+                <div class="row">
+                    <div onclick="next('inicio')" class="col-auto title-tab active" data-tab="inicio">
+                        Inicio
+                    </div>
+                    <div class="col-auto title-tab">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                    <div onclick="next('contacto')" class="col-auto title-tab" data-tab="contacto">
+                        Contacto
+                    </div>
+                    <div class="col-auto title-tab">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                    <div onclick="next('domicilio')" class="col-auto title-tab" data-tab="domicilio">
+                        Domicilio
+                    </div>
+                    <div class="col-auto title-tab">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                </div>
+
+                <div id="tab-client-inicio" class="row tabs-clientes">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="card mt-4">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-6 text-center">
+                                        <div class="card" style="height: 100%;">
+                                            <div class="card-body">
+                                                <label class="title-ptg mb-3">¿Tipo de cliente?</label>
+                                                <div class="row">
+                                                    <div class="col"></div>
+                                                    <div class="col-auto">
+                                                        <div class="form-check check-ptg">
+                                                            <input class="form-check-input" value="domestico"
+                                                                type="radio" name="tipoRegimen" id="tipoRegimen1"
+                                                                checked>
+                                                            <label class="form-check-label" for="tipoRegimen1">
+                                                                Doméstico
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check check-ptg">
+                                                            <input class="form-check-input" value="comercial"
+                                                                type="radio" name="tipoRegimen" id="tipoRegime2">
+                                                            <label class="form-check-label" for="tipoRegimen2">
+                                                                Comercial
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check check-ptg">
+                                                            <input class="form-check-input" value="industrial"
+                                                                type="radio" name="tipoRegimen" id="tipoRegime3">
+                                                            <label class="form-check-label" for="tipoRegimen3">
+                                                                Industrial
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <div class="card" style="height: 100%;">
+                                            <div class="card-body">
+                                                <label class="title-ptg mb-3">¿Requiere factura?</label>
+                                                <div class="row">
+                                                    <div class="col"></div>
+                                                    <div class="col-auto">
+                                                        <div class="form-check check-ptg">
+                                                            <input class="form-check-input" value="si" type="radio"
+                                                                name="requiereFactura" id="requiereFactura1">
+                                                            <label class="form-check-label" for="requiereFactura1">
+                                                                Si
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check check-ptg">
+                                                            <input class="form-check-input" value="no" type="radio"
+                                                                name="requiereFactura" id="requiereFactura2" checked>
+                                                            <label class="form-check-label" for="requiereFactura2">
+                                                                No
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-input mt-3 d-none">
+                                    <label>Giro del negocio*</label>
+                                    <input id="giroNegocioFormCliente"
+                                        placeholder="Cafetería y venta de té, Industria cultural y creativa, etc"
+                                        type="text" class="form-ptg">
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col"></div>
+                                    <div class="col-auto">
+                                        <button onclick="next('contacto')" type="button"
+                                            class="btn bg-dark-cc">Siguiente</button>
+                                    </div>
+                                    <div class="col"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-client-contacto" class="tabs-clientes d-none">
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col-12 col-xl-10">
+                            <div class="card mt-4">
+                                <div class="card-body">
+                                    <div class="row pb-2">
+                                        <div class="col-5">
+                                            <div class="content-input">
+                                                <label>Nombre*</label>
+                                                <input id="nombreFormCliente" placeholder="Nombre" type="text"
+                                                    class="form-ptg">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="content-input">
+                                                <label>Apellido paterno*</label>
+                                                <input id="apellidoPaternoFormCliente" placeholder="Apellido paterno"
+                                                    type="text" class="form-ptg">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="content-input">
+                                                <label>Apellido materno</label>
+                                                <input id="apellidoMaternoFormCliente" placeholder="Apellido materno"
+                                                    type="text" class="form-ptg">
+                                            </div>
+                                        </div>
+                                        <div class="col d-none">
+                                            <div class="content-input">
+                                                <label>RFC*</label>
+                                                <input id="rfcFormCliente" placeholder="RFC" type="text"
+                                                    class="form-ptg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row pb-2">
+                                        <div class="col-5">
+                                            <div class="content-input">
+                                                <label>Correo electrónica*</label>
+                                                <input id="correoFormCliente" placeholder="email@example.com"
+                                                    type="text" class="form-ptg">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="content-input">
+                                                <label>Teléfono principal*</label>
+                                                <input id="telefonoPrincipalFormCliente" placeholder="555 9636 6699"
+                                                    type="text" class="form-ptg">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="content-input">
+                                                <label>Teléfono alterno</label>
+                                                <input id="telefonoAlternoFormCliente" placeholder="555 9636 6699"
+                                                    type="text" class="form-ptg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row pb-2">
+                                        <div class="col-5">
+                                            <div class="content-input">
+                                                <label>Correo alternativo</label>
+                                                <input id="correoAlternativoFormCliente" placeholder="email@example.com"
+                                                    type="text" class="form-ptg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row pb-2">
+                                        <div class="col-8">
+                                            <div class="content-input">
+                                                <label>Observaciones</label>
+                                                <textarea id="observacionesFormCliente" placeholder="Observaciones..."
+                                                    class="form-ptg"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col"></div>
+                                        <div class="col-auto">
+                                            <button onclick="next('inicio')" type="button"
+                                                class="btn bg-dark-cc">Anterior</button>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button onclick="next('domicilio')" type="button"
+                                                class="btn bg-dark-cc">Siguiente</button>
+                                        </div>
+                                        <div class="col"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                </div>
+                <div id="tab-client-domicilio" class="tabs-clientes d-none">
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col-12 col-xl-10">
+                            <div class="card mt-4">
+                                <div class="card-body">
+                                    <div class="row pb-2">
+                                        <div class="col">
+                                            <label class="title-ptg">Lista de direcciones</label>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button id="agregarDirecciones" type="button" class="btn bg-secondary-cc"><i
+                                                    class="fa-solid fa-plus"></i> Agregar domicilio</button>
+                                        </div>
+                                    </div>
+                                    <div class="card mt-4">
+                                        <div class="card-body">
+                                            <div class="table-responsive">
+                                                <table class="table table-striped table-address">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">Dirección</th>
+                                                            <th scope="col" class="text-center">Entrega</th>
+                                                            <th scope="col" class="text-center">Acciones</th>
+                                                            <!-- <th scope="col">Handle</th> -->
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-center" colspan="3">Sin direcciones</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- <div class="text-center my-5">
+                                                Sin direcciones registradas.
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col"></div>
+                                        <div class="col-auto">
+                                            <button onclick="next('contacto')" type="button"
+                                                class="btn bg-dark-cc">Anterior</button>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" id="guardarCliente"
+                                                class="btn bg-dark-cc">Guardar</button>
+                                        </div>
+                                        <div class="col"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END layout-wrapper -->
+
+    <!-- JAVASCRIPT -->
+    <script src="https://themesbrand.com/skote/layouts/assets/libs/jquery/jquery.min.js"></script>
+    <script src="https://themesbrand.com/skote/layouts/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="assets/libs/simplebar/simplebar.min.js"></script> -->
+    <!-- <script src="assets/libs/jquery.easing/jquery.easing.min.js"></script> -->
+
+    <!-- Datatablets -->
+    <script src="https://themesbrand.com/skote/layouts/assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script
+        src="https://themesbrand.com/skote/layouts/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Datepicker -->
+    <script
+        src="https://themesbrand.com/skote/layouts/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://themesbrand.com/skote/layouts/assets/libs/@chenfengyuan/datepicker/datepicker.min.js"></script>
+
+    <!-- Timepicker -->
+    <script
+        src="https://themesbrand.com/skote/layouts/assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+
+    <!-- Extra -->
+    <script src="https://themesbrand.com/skote/layouts/assets/libs/metismenu/metisMenu.min.js"></script>
+    <!-- <script src="https://themesbrand.com/skote/layouts/assets/libs/simplebar/simplebar.min.js"></script> -->
+    <script src="https://themesbrand.com/skote/layouts/assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- <script src="assets/js/app.js"></script> -->
+    <script src="https://themesbrand.com/skote/layouts/assets/js/app.js"></script>
+
+    <!-- Sweet alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Moment js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Funciones generales -->
+    <script type="text/javascript">
+        userName = '${ds.userName}';
+        userRole = '${ds.userRole}';
+        userSubsidiary =/* '${ds.userSubsidiary}' */ '16';
+        urlPlantas = '${ds.getPlantas}';
+        urlCrearOp = '${ds.createOPP}';
+        urlObtenerPedidos = '${ds.getOPP}';
+        urlObtenerCliente = '${ds.getCustomer}';
+        urlObtenerZona = '${ds.getColoniaZona}';
+        urlObtenerZonas = '${ds.getZone}';
+        urlGuardarCliente = '${ds.postCustomer}';
+        urlObtenerArticulos = '${ds.getItems}';
+        urlCrearPedido = '${ds.createOPP}';
+        getMethodPayments = '${ds.getMethodPayments}';
+        // urlObtenerEstados  = 'https://apisgratis.com/cp/entidades/';
+        // urlObtenerCiudades = 'https://apisgratis.com/cp/ciudades/?estado=SAN%20LUIS%20POTOSI';
+        // urlObtenerColonias = 'https://apisgratis.com/cp/cp/ciudad/?valor=SAN%20LUIS%20POTOSI';
+        urlGetPlaces = '${ds.getCities}';
+        customerGlobal = null;
+        listAddress = [];
+
+        // Limpia los campos del modal direcciones al cerrarse
+        $('body').delegate('div#formDireccionesModal', 'hidden.bs.modal', function () {
+            $(this).find('.form-ptg').val('');
+            $(this).find('.form-ptg').prop('checked', false);
+        });
+
+        function initComponents() {
+            /* Inicia todos los form-search */
+            $(".form-search .fa-magnifying-glass").click(function () {
+                $(this).parent().find("input").focus();
+            });
+            $(".form-search input").keyup(function () {
+                if ($(this).val()) {
+                    $(this).parent().find(".fa-xmark").removeClass('d-none');
+                } else {
+                    $(this).parent().find(".fa-xmark").addClass('d-none');
+                }
+            });
+            $(".form-search .fa-xmark").click(function () {
+                $(this).addClass('d-none');
+                $(this).parent().find("input").val('');
+            });
+
+            $("#metodoPagoPedido").change(function () {
+                if ($(this).val() == "8" || $(this).val() == "2" || $(this).val() == "5" || $(this).val() == "6"){
+                    //$("#referenciaPagoPedido").parent().parent().removeClass("d-none");
+                    $("#folioAutorizacionPedido").parent().parent().removeClass("d-none");
+                } else {
+                    //$("#referenciaPagoPedido").parent().parent().addClass("d-none");
+                    $("#folioAutorizacionPedido").parent().parent().addClass("d-none");
+                }
+            });
+
+            // $("#agregarDirecciones").click(function() {
+            //     $("#formDireccionesModal").modal("show")
+            // });
+
+            $("#agregarProducto").click(function () {
+                $("#envaseFormProductos").prop("checked", false);
+                $("#capacidadFormProductos").val("");
+                $("#cantidadFormProductos").val("0");
+                $("#valorFormProductos").val("0");
+                $("#totalFormProductos").val("0");
+                $("#litrosFormProductos").val("0");
+                $("#montoFormProductos").val("0");
+                if (!$("#sinProductos").hasClass("d-none")) {
+                    $("#productoFormProductos").prop("disabled", false);
+                    $("#productoFormProductos").val("cilindro");
+                } else {
+                    $("#productoFormProductos").prop("disabled", true);
+                    if (!$("#productosCilindroPedido").hasClass("d-none")) {
+                        $("#productoFormProductos").val("cilindro");
+                    } else {
+                        $("#productoFormProductos").val("estacionario");
+                    }
+                }
+                $("#titleProductoModal").html("Agregar producto");
+                $('#formProductosModal').modal('show');
+            });
+
+            $("#productoFormProductos").change(function () {
+                if ($(this).val() == "cilindro") {
+                    $(".cilindroFormProductos").removeClass("d-none");
+                    $(".estacionarioFormProductos").addClass("d-none");
+                } else {
+                    $(".estacionarioFormProductos").removeClass("d-none");
+                    $(".cilindroFormProductos").addClass("d-none");
+                }
+            });
+
+            $(".content-tabs .tab").click(function () {
+                $(".tab").removeClass('active');
+                $(".tabs-content").addClass("d-none");
+                $(this).addClass('active');
+                $("#tab-" + $(this).data("tab")).removeClass("d-none");
+            });
+
+            // $("#agregarDireccion").click(function() {
+            //     $("#formDireccionesModal").modal("show")
+            // });
+
+            $(".btn-expand").click(function () {
+                if ($(this).find("i").hasClass('fa-caret-right')) {
+                    $(this).find(".btn").html('<i class="fa-solid fa-caret-left"></i>');
+                    $("#content-forms").parent().addClass("d-none");
+                    $(this).parent().removeClass("col-6").addClass("col-12");
+                } else {
+                    $(this).find(".btn").html('<i class="fa-solid fa-caret-right"></i>');
+                    $("#content-forms").parent().removeClass("d-none");
+                    $(this).parent().removeClass("col-12").addClass("col-6");
+                }
+            });
+            $(".btn-expand-down").click(function () {
+                if ($(this).find("i").hasClass('fa-caret-down')) {
+                    $(this).find(".btn").html('<i class="fa-solid fa-caret-up"></i>');
+                    $("#content-avisos").addClass("d-none");
+                    $("#content-forms").removeClass("no-expand");
+                } else {
+                    $(this).find(".btn").html('<i class="fa-solid fa-caret-down"></i>');
+                    $("#content-avisos").removeClass("d-none");
+                    $("#content-forms").addClass("no-expand");
+                }
+            });
+
+            $("#notasAdicionalesFugaQueja").click(function () {
+                $("#formNotasAdicionalesModal").modal("show");
+                $("#notaAdicional").val("");
+            });
+
+            $("#guardarNotaAdicional").click(function () {
+                if ($("#notaAdicional").val().trim()) {
+                    $("#notasAdicionales tbody").append(
+                        '<tr class="notasAdicionalesItem">' +
+                        '<td class="p-2">' +
+                        $("#notaAdicional").val().trim() +
+                        '</td>' +
+                        '<td width="50" style="text-align: center;">' +
+                        '<i class="fa-solid fa-trash-can" style="cursor: pointer;" onclick="deleteNota(this)"></i>' +
+                        '</td>' +
+                        '</td>'
+                    );
+                    $("#formNotasAdicionalesModal").modal("hide");
+                } else {
+                    alert("Llena la nota.");
+                }
+
+            });
+
+            $("#agregarCliente").click(function () {
+                $("#home-view, #btnMenu").addClass("d-none");
+                $("#form-client-view, #btnBack").removeClass("d-none");
+                $("#btnBack").data("back", "home-view");
+                $("#btnBack").data("current", "form-client-view");
+                $("#btnBack").data("title-back", "Call Center");
+                $("#header-title").html("Alta de cliente");
+            });
+
+            $("input[name=tipoRegimen]").change(function () {
+                if ($("input[name=tipoRegimen]:checked").val() == "domestico") {
+                    $("#giroNegocioFormCliente").parent().addClass('d-none');
+                } else {
+                    $("#giroNegocioFormCliente").parent().removeClass('d-none');
+                }
+            });
+
+            $("input[name=tipoAccionFormCliente]").change(function () {
+                if ($("input[name=tipoAccionFormCliente]:checked").val() == "1") {
+                    $(".tipo-aviso-programado").addClass('d-none');
+                } else {
+                    $(".tipo-aviso-programado").removeClass('d-none');
+                }
+            });
+
+            $("#tipoServicioFormCliente").change(function () {
+                if($(this).val() == "1") {
+                    $("#capacidadTipoServicioContent").find("input").addClass("d-none");
+                    $("#capacidadTipoServicioContent").find("select").removeClass("d-none");
+                } else {
+                    $("#capacidadTipoServicioContent").find("select").addClass("d-none");
+                    $("#capacidadTipoServicioContent").find("input").removeClass("d-none");
+                }
+            });
+
+            $("#btnBack").click(function () {
+                if ($("#btnBack").data("back") == "home-view") {
+                    $("#btnMenu").removeClass("d-none");
+                    $("#btnBack").addClass("d-none");
+                }
+                $("#" + $("#btnBack").data("current")).addClass("d-none");
+                $("#" + $("#btnBack").data("back")).removeClass("d-none");
+                $("#header-title").html($("#btnBack").data("title-back"));
+            });
+        }
+
+        function next(tab) {
+            let next = true;
+            if (tab == 'contacto') {
+                if ($("input[name=requiereFactura]:checked").val() == "si") {
+                    $("#rfcFormCliente").parent().parent().removeClass("d-none");
+                } else {
+                    $("#rfcFormCliente").parent().parent().addClass("d-none");
+                }
+
+                if (($("input[name=tipoRegimen]:checked").val() == "comercial" || $("input[name=tipoRegimen]:checked").val() == "industrial")) {
+                    if (!$("#giroNegocioFormCliente").val().trim()) {
+                        next = false;
+                    }
+                }
+            } else if (tab == "domicilio") {
+                if (!$("#nombreFormCliente").val().trim() ||
+                    !$("#apellidoPaternoFormCliente").val().trim() ||
+                    ($("input[name=requiereFactura]:checked").val() == "si" && !$("#rfcFormCliente").val().trim()) ||
+                    !$("#correoFormCliente").val().trim() ||
+                    !$("#telefonoPrincipalFormCliente").val().trim()) {
+                    next = false;
+                }
+            }
+
+            if (!next) {
+                alert("Favor de llenar todos los campos con *");
+            } else {
+                $(".tabs-clientes").addClass("d-none");
+                $("#tab-client-" + tab).removeClass("d-none");
+                $("[data-tab=" + tab + "]").addClass('active');
+            }
+
+        }
+
+        function deleteNota(item) {
+            $(item).parent().parent().remove();
+        }
+
+        function dateFormatFromDate(date, format = "1") {
+            if (typeof date == "string") {
+                let aux = date;
+                date = new Date(parseInt(aux.split("-")[0]), parseInt(aux.split("-")[1]) - 1, parseInt(aux.split("-")[2]));
+            }
+
+            let day = date.getDate();
+            let month = date.getMonth();
+            let year = date.getFullYear();
+            let fecha = "";
+            let months = ["Enero", "Febrero", "Marzo", "Abrrl", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+            if (format == "1") {
+                fecha = day + " de " + months[month] + " - " + timeFormatFromDate(date);
+            } else if (format == "2") {
+                if (day < 10) {
+                    day = "0" + day;
+                }
+                month = month + 1;
+                if (month < 10) {
+                    month = "0" + month;
+                }
+                fecha = year + "-" + month + "-" + day;
+            } else if (format == "3") {
+                fecha = day + "/" + month + "/" + year + " " + timeFormatFromDate(date);
+            } else if (format == "4") {
+                if (day < 10) {
+                    day = "0" + day;
+                }
+                month = month + 1;
+                if (month < 10) {
+                    month = "0" + month;
+                }
+                fecha = year + "-" + month + "-" + day + "T" + timeFormatFromDate(date, "2");
+            } else if (format == "5") {
+                if (day < 10) {
+                    day = "0" + day;
+                }
+                month = month + 1;
+                if (month < 10) {
+                    month = "0" + month;
+                }
+                fecha = day + "/" + month + "/" + year;
+            } else if (format == "6") {
+                if (day < 10) {
+                    day = "0" + day;
+                }
+                month = month + 1;
+                if (month < 10) {
+                    month = "0" + month;
+                }
+                fecha = day + "-" + month + "-" + year;
+            } else if (format == "7") {
+                if (day < 10) {
+                    day = "0" + day;
+                }
+                month = month + 1;
+                if (month < 10) {
+                    month = "0" + month;
+                }
+                fecha = day + "/" + month + "/" + year + " " + timeFormatFromDate(date);;
+            }
+
+            return fecha;
+        }
+
+        function timeFormatFromDate(date, format = "1") {
+            date = new Date(date);
+            let hours = date.getHours();
+            let minutes = date.getMinutes();
+            let seconds = date.getSeconds();
+            let period = hours < 12 ? 'a.m.' : 'p.m.';
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+            if (seconds < 10) {
+                seconds = "0" + seconds;
+            }
+            let hora = "";
+            if (format == "1") {
+                hours = (hours + 24) % 12 || 12;
+                if (hours < 10) {
+                    hours = "0" + hours;
+                }
+
+                hora = hours + ":" + minutes + " " + period;
+            } else if (format == "2") {
+                if (hours < 10) {
+                    hours = "0" + hours;
+                }
+
+                hora = hours + ":" + minutes;
+            } else if (format == "3") {
+                if (hours < 10) {
+                    hours = "0" + hours;
+                }
+
+                hora = hours + ":" + minutes + ":" + seconds;
+            }
+            return hora;
+        }
+    </script>
+
+    <script type="text/javascript">
+        let origins = ["WhatsApp", "PotoApp", "FaceBook", "Call center", "Página Web", "Chat", "Buzón"],
+            payment_methods = ["Efectivo", "Vale", "Prepago", "Cortesia", "Tarjeta de crédito", "Tarjeta de débito"];
+        $(document).ready(function () {
+            initComponents();
+            getToday();
+            llenaCampos();
+        });
+
+        function llenaCampos() {
+            origins.forEach((element, i) => {
+                $("#origenPedido").append('<option value="' + element + '">' + element + '</option>');
+            });
+            
+            $.ajax({
+                url: getMethodPayments,
+                method: 'GET',
+                contentType: 'application/json',
+                dataType: 'json',
+                success: function (data) {
+                    console.log('Data: ', data);
+
+                    if ( data.success ) {
+                        data.data.forEach((element, i) => {
+                            $("#metodoPagoPedido").append('<option value="' + element.id + '" '+(i == 0 ? 'selected' : '')+'>' + element.method + '</option>');
+                        });
+                    } else {
+                        infoMsg('error', 'Algo salió mal al obtener los metodos de pago')
+                    }
+
+                }, error: function (xhr, status, error) {
+                    infoMsg('error', 'Algo salió mal al obtener los metodos de pago');
+                    console.log('Error en la consulta', xhr, status, error);
+                }
+            });
+        }
+
+        function getToday() {
+            let $this = this;
+            $("#today").html(dateFormatFromDate(new Date(), "7"));
+            setTimeout(function () {
+                $this.getToday();
+            }, 1000);
+        }
+    </script>
+
+    <!-- Archivo de javascript de Conrado y Christian -->
+    <script
+        src="https://5298967-sb1.app.netsuite.com/core/media/media.nl?id=48000&c=5298967_SB1&h=NdnUdwRduXUwIZT7XVuERyzOKZbJ-_QPY03zg7xKZQRHX1wG&_xt=.js"></script>
+
+    <!-- Archivo para las llamadas de estados, ciudades, colonias y zonas -->
+    <script
+        src="https://5298967-sb1.app.netsuite.com/core/media/media.nl?id=48157&c=5298967_SB1&h=Cxgu5tpk6-yXeCEIqFicKPDbhSY17i5nQ_hHUZoAhEP0TLyA&_xt=.js"></script>
+
+    <!-- Archivo para los métodos y funciones de clientes -->
+    <script
+        src="https://5298967-sb1.app.netsuite.com/core/media/media.nl?id=48282&c=5298967_SB1&h=3R_nDdYVdb7OzqNvcpiI1XbKQXvZjlewuCa-Rp3UAlvw9BZ1&_xt=.js"></script>
+
+    <!-- Archivo para pedidos -->
+    <script
+        src="https://5298967-sb1.app.netsuite.com/core/media/media.nl?id=48294&c=5298967_SB1&h=e4yUeaRx4W4srxQQZvmnIjYsdUwv9zAzd_VYjVHZcssnXtwt&_xt=.js"></script>
+</body>
+
+</html>

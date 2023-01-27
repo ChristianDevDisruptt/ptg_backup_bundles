@@ -1,0 +1,16 @@
+<customlist scriptid="customlistptg_tipo_descuento">
+  <description>Tipo de descuento a seleccionar para el cliente.</description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>PTG - TIPO DE DESCUENTO</name>
+  <customvalues>
+    <customvalue scriptid="val_479703_5298967_sb1_234">
+      <isinactive>F</isinactive>
+      <value>PORCENTAJE ( % )</value>
+    </customvalue>
+    <customvalue scriptid="val_479704_5298967_sb1_353">
+      <isinactive>F</isinactive>
+      <value>PESOS ( $ MXN )</value>
+    </customvalue>
+  </customvalues>
+</customlist>

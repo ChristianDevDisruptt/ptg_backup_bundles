@@ -1,0 +1,24 @@
+<scheduledscript scriptid="customscript_drt_precios_schedule">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>DRT - Precios Schedule</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <scriptfile>[/SuiteScripts/drt_precios_schedule.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_drt_servicios_schedule">
+      <isdeployed>F</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <status>TESTING</status>
+      <title>DRT - Precios Schedule</title>
+      <recurrence>
+        <single>
+          <repeat></repeat>
+          <startdate>2022-07-29</startdate>
+          <starttime>23:00:00Z</starttime>
+        </single>
+      </recurrence>
+    </scriptdeployment>
+  </scriptdeployments>
+</scheduledscript>

@@ -1,0 +1,176 @@
+<customlist scriptid="customlist_ptg_codigomodelo_">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>F</isordered>
+  <name>PTG - Código Modelo</name>
+  <customvalues>
+    <customvalue scriptid="val_2482752_5298967_sb1_353">
+      <isinactive>F</isinactive>
+      <value>C-3500</value>
+    </customvalue>
+    <customvalue scriptid="val_2482754_5298967_sb1_787">
+      <isinactive>F</isinactive>
+      <value>C-3600</value>
+    </customvalue>
+    <customvalue scriptid="val_4029046_5298967_497">
+      <isinactive>F</isinactive>
+      <value>Chevrolet Cheyenne</value>
+    </customvalue>
+    <customvalue scriptid="val_4029047_5298967_250">
+      <isinactive>F</isinactive>
+      <value>Chevrolet Colorado</value>
+    </customvalue>
+    <customvalue scriptid="val_4029048_5298967_472">
+      <isinactive>F</isinactive>
+      <value>Chevrolet Corsa</value>
+    </customvalue>
+    <customvalue scriptid="val_2482755_5298967_sb1_203">
+      <isinactive>F</isinactive>
+      <value>Chevrolet KODIAK</value>
+    </customvalue>
+    <customvalue scriptid="val_4029045_5298967_594">
+      <isinactive>F</isinactive>
+      <value>Chevrolet LUV</value>
+    </customvalue>
+    <customvalue scriptid="val_4029049_5298967_933">
+      <isinactive>F</isinactive>
+      <value>Chevrolet Matiz</value>
+    </customvalue>
+    <customvalue scriptid="val_4029050_5298967_653">
+      <isinactive>F</isinactive>
+      <value>Chevrolet Micro</value>
+    </customvalue>
+    <customvalue scriptid="val_3981653_5298967_778">
+      <isinactive>F</isinactive>
+      <value>Chevrolet Silverado</value>
+    </customvalue>
+    <customvalue scriptid="val_4029052_5298967_242">
+      <isinactive>F</isinactive>
+      <value>Chevrolet Tornado</value>
+    </customvalue>
+    <customvalue scriptid="val_4029053_5298967_852">
+      <isinactive>F</isinactive>
+      <value>Chevrolet Van Express</value>
+    </customvalue>
+    <customvalue scriptid="val_4029058_5298967_639">
+      <isinactive>F</isinactive>
+      <value>Courier</value>
+    </customvalue>
+    <customvalue scriptid="val_4029068_5298967_415">
+      <isinactive>F</isinactive>
+      <value>DINA 431</value>
+    </customvalue>
+    <customvalue scriptid="val_2482758_5298967_sb1_703">
+      <isinactive>F</isinactive>
+      <value>ESTAQUITA</value>
+    </customvalue>
+    <customvalue scriptid="val_2482759_5298967_sb1_278">
+      <isinactive>F</isinactive>
+      <value>FL-70</value>
+    </customvalue>
+    <customvalue scriptid="val_2482764_5298967_sb1_945">
+      <isinactive>F</isinactive>
+      <value>H-100</value>
+    </customvalue>
+    <customvalue scriptid="val_2482751_5298967_sb1_515">
+      <isinactive>F</isinactive>
+      <value>HD</value>
+    </customvalue>
+    <customvalue scriptid="val_2482767_5298967_sb1_985">
+      <isinactive>F</isinactive>
+      <value>HILUX</value>
+    </customvalue>
+    <customvalue scriptid="val_4029060_5298967_890">
+      <isinactive>F</isinactive>
+      <value>Honda Cargo CG 125</value>
+    </customvalue>
+    <customvalue scriptid="val_4029061_5298967_504">
+      <isinactive>F</isinactive>
+      <value>Honda Invicta CB 150</value>
+    </customvalue>
+    <customvalue scriptid="val_4029062_5298967_723">
+      <isinactive>F</isinactive>
+      <value>Honda Titan 150</value>
+    </customvalue>
+    <customvalue scriptid="val_4029063_5298967_424">
+      <isinactive>F</isinactive>
+      <value>Honda Twister 250</value>
+    </customvalue>
+    <customvalue scriptid="val_4029064_5298967_215">
+      <isinactive>F</isinactive>
+      <value>Honda Unicorn 150</value>
+    </customvalue>
+    <customvalue scriptid="val_4029055_5298967_802">
+      <isinactive>F</isinactive>
+      <value>ISUZU - 200</value>
+    </customvalue>
+    <customvalue scriptid="val_4029056_5298967_595">
+      <isinactive>F</isinactive>
+      <value>Isuzu 300</value>
+    </customvalue>
+    <customvalue scriptid="val_2482756_5298967_sb1_802">
+      <isinactive>F</isinactive>
+      <value>ISUZU 400</value>
+    </customvalue>
+    <customvalue scriptid="val_2482748_5298967_sb1_333">
+      <isinactive>F</isinactive>
+      <value>ISUZU 450</value>
+    </customvalue>
+    <customvalue scriptid="val_2482750_5298967_sb1_217">
+      <isinactive>F</isinactive>
+      <value>ISUZU 500</value>
+    </customvalue>
+    <customvalue scriptid="val_4029059_5298967_612">
+      <isinactive>F</isinactive>
+      <value>Jetta</value>
+    </customvalue>
+    <customvalue scriptid="val_2482753_5298967_sb1_136">
+      <isinactive>F</isinactive>
+      <value>Mercedes Benz 1417</value>
+    </customvalue>
+    <customvalue scriptid="val_4029057_5298967_390">
+      <isinactive>F</isinactive>
+      <value>Merces Benz Sprinter</value>
+    </customvalue>
+    <customvalue scriptid="val_4029054_5298967_746">
+      <isinactive>F</isinactive>
+      <value>RAM 1500</value>
+    </customvalue>
+    <customvalue scriptid="val_2482757_5298967_sb1_428">
+      <isinactive>F</isinactive>
+      <value>RAM 4000</value>
+    </customvalue>
+    <customvalue scriptid="val_2482760_5298967_sb1_901">
+      <isinactive>F</isinactive>
+      <value>RAM 4001</value>
+    </customvalue>
+    <customvalue scriptid="val_2482761_5298967_sb1_266">
+      <isinactive>F</isinactive>
+      <value>RAM 4002</value>
+    </customvalue>
+    <customvalue scriptid="val_2482762_5298967_sb1_157">
+      <isinactive>F</isinactive>
+      <value>RAM 4003</value>
+    </customvalue>
+    <customvalue scriptid="val_2482763_5298967_sb1_148">
+      <isinactive>F</isinactive>
+      <value>RAM 4004</value>
+    </customvalue>
+    <customvalue scriptid="val_4029067_5298967_720">
+      <isinactive>F</isinactive>
+      <value>Remolque</value>
+    </customvalue>
+    <customvalue scriptid="val_4029065_5298967_137">
+      <isinactive>F</isinactive>
+      <value>Sentra</value>
+    </customvalue>
+    <customvalue scriptid="val_4029066_5298967_588">
+      <isinactive>F</isinactive>
+      <value>Suzuki TU 250</value>
+    </customvalue>
+    <customvalue scriptid="val_2482749_5298967_sb1_835">
+      <isinactive>F</isinactive>
+      <value>VW 5500</value>
+    </customvalue>
+  </customvalues>
+</customlist>

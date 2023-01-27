@@ -1,0 +1,28 @@
+<customlist scriptid="customlist_ptg_estatus_tabladeviajes_">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>PTG - Estatus Tabla de viaje</name>
+  <customvalues>
+    <customvalue scriptid="val_379929_5298967_sb1_816">
+      <isinactive>F</isinactive>
+      <value>Concluido</value>
+    </customvalue>
+    <customvalue scriptid="val_379930_5298967_sb1_592">
+      <isinactive>F</isinactive>
+      <value>Cancelado</value>
+    </customvalue>
+    <customvalue scriptid="val_379931_5298967_sb1_920">
+      <isinactive>F</isinactive>
+      <value>En curso</value>
+    </customvalue>
+    <customvalue scriptid="val_2116348_5298967_sb1_881">
+      <isinactive>F</isinactive>
+      <value>No iniciado</value>
+    </customvalue>
+    <customvalue scriptid="val_2477450_5298967_sb1_265">
+      <isinactive>T</isinactive>
+      <value>2494</value>
+    </customvalue>
+  </customvalues>
+</customlist>

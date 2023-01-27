@@ -1,0 +1,32 @@
+<customlist scriptid="customlist_ptg_condicion_equipo_">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>PTG - Condición Equipo</name>
+  <customvalues>
+    <customvalue scriptid="val_2462241_5298967_sb1_553">
+      <isinactive>F</isinactive>
+      <value>Buena</value>
+    </customvalue>
+    <customvalue scriptid="val_2462242_5298967_sb1_264">
+      <isinactive>F</isinactive>
+      <value>Excelente</value>
+    </customvalue>
+    <customvalue scriptid="val_2462243_5298967_sb1_361">
+      <isinactive>F</isinactive>
+      <value>Nueva</value>
+    </customvalue>
+    <customvalue scriptid="val_2462640_5298967_sb1_447">
+      <isinactive>F</isinactive>
+      <value>Regular</value>
+    </customvalue>
+    <customvalue scriptid="val_3981534_5298967_934">
+      <isinactive>F</isinactive>
+      <value>Cambio a Pipa</value>
+    </customvalue>
+    <customvalue scriptid="val_3981539_5298967_828">
+      <isinactive>F</isinactive>
+      <value>Recien Preparado</value>
+    </customvalue>
+  </customvalues>
+</customlist>

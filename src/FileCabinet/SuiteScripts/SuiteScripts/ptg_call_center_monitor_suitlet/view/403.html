@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Dashboard" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <meta name="keywords" content="Dashboard, clientes, pedidos, potogas">
+    <!-- App favicon -->
+    <link rel="shortcut icon"
+        href="https://5298967-sb1.app.netsuite.com/core/media/media.nl?id=108997&c=5298967_SB1&h=MqKO6RyzbmQKiMqwc6-9rA2wJSTQZ0yi96oPgnj9KQwozioR&_xt=.ico">
+
+    <!-- Select 2 -->
+    <link href="https://themesbrand.com/skote/layouts/assets/libs/select2/css/select2.min.css" rel="stylesheet"
+        type="text/css" />
+
+    <!-- Datepicker -->
+    <link href="https://themesbrand.com/skote/layouts/assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css"
+        rel="stylesheet" type="text/css">
+    <link href="https://themesbrand.com/skote/layouts/assets/libs/@chenfengyuan/datepicker/datepicker.min.css"
+        rel="stylesheet">
+
+    <!-- Timepicker -->
+    <link href="https://themesbrand.com/skote/layouts/assets/libs/bootstrap-timepicker/css/bootstrap-timepicker.min.css"
+        rel="stylesheet" type="text/css">
+
+    <!-- DataTables -->
+    <link href="https://themesbrand.com/skote/layouts/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css"
+        rel="stylesheet" type="text/css" />
+    <!-- <link href="./assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />    -->
+
+    <!-- <link rel="stylesheet" href="./assets/libs/@chenfengyuan/datepicker/datepicker.min.css"> -->
+
+    <!-- Bootstrap Css -->
+    <link href="https://themesbrand.com/skote/layouts/assets/css/bootstrap.min.css" id="bootstrap-style"
+        rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <!-- <link href="https://themesbrand.com/skote/layouts/assets/css/icons.min.css" rel="stylesheet" type="text/css" /> -->
+    <!-- App Css-->
+    <link href="https://themesbrand.com/skote/layouts/assets/css/app.min.css" id="app-style" rel="stylesheet"
+        type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html,
+        body {
+            font-family: "Roboto", "Helvetica Neue", sans-serif !important;
+        }
+
+        .pl-0 {
+            padding-left: 0;
+        }
+
+        .pr-0 {
+            padding-right: 0;
+        }
+
+        .btn-flat {
+            border-radius: 0;
+        }
+
+        .btn-header {
+            width: 51px;
+            height: 56px;
+        }
+
+        .bg-primary-cc {
+            background-color: #355da7;
+            color: #ffffff;
+        }
+
+        button.bg-primary-cc:hover {
+            background-color: #456aae;
+            color: #ffffff;
+        }
+
+        .bg-secondary-cc {
+            background-color: #e7792b;
+            color: #ffffff;
+        }
+
+        button.bg-secondary-cc:hover {
+            background-color: #e98640;
+            color: #ffffff;
+        }
+
+        .bg-success-cc {
+            background-color: #2dd36f;
+            color: #ffffff;
+        }
+
+        button.bg-success-cc:hover {
+            background-color: #42d77d;
+            color: #ffffff;
+        }
+
+        .bg-warning-cc {
+            background-color: #ffc409;
+            color: #ffffff;
+        }
+
+        button.bg-warning-cc:hover {
+            background-color: #ffca22;
+            color: #ffffff;
+        }
+
+        .bg-dark-cc {
+            background-color: #222428;
+            color: #ffffff;
+        }
+
+        button.bg-dark-cc:hover {
+            background-color: #222428;
+            color: #ffffff;
+        }
+
+        .bg-danger-cc {
+            background-color: #eb445a;
+            color: #ffffff;
+        }
+
+        button.bg-danger-cc:hover {
+            background-color: #ed576b;
+            color: #ffffff;
+        }
+
+        #header-title {
+            font-size: 28px;
+        }
+
+        .ft-12 {
+            font-size: 12px;
+        }
+
+        .ft-16 {
+            font-size: 16px;
+        }
+
+        .bg-white {
+            background-color: #ffffff;
+        }
+
+        .chip {
+            display: inline-block;
+            padding: 0 25px;
+            height: 30px;
+            font-size: 16px;
+            line-height: 30px;
+            border-radius: 25px;
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        .chip.bg-primary-cc {
+            background-color: rgba(231, 121, 43, 0.08)
+        }
+
+        .chip img {
+            float: left;
+            margin: 0 10px 0 -25px;
+            height: 25px;
+            width: 25px;
+            margin-top: 2.5px;
+            border-radius: 50%;
+        }
+
+        .w-100 {
+            width: 100%;
+        }
+
+        .h-100 {
+            height: calc(100vh - 56px);
+        }
+
+        .form-ptg {
+            font-size: 16px;
+            border: solid 2px #9d9b99;
+            border-radius: 9px;
+            padding-left: 9px;
+            color: #737373;
+            padding-right: 9px;
+            padding-top: 0;
+            padding-bottom: 0;
+            width: 100%;
+            padding-top: 9px;
+            padding-bottom: 9px;
+        }
+
+        select.form-ptg {
+            padding-top: 11.5px;
+            padding-bottom: 11.5px;
+        }
+
+        .form-ptg-primary {
+            border: solid 2px #355da7;
+            color: #355da7;
+        }
+
+        .content-input-primary .form-ptg-primary[type="date"]::-webkit-calendar-picker-indicator {
+            background: url(https://5298967-sb1.app.netsuite.com/core/media/media.nl?id=108994&c=5298967_SB1&h=TZdf2C4l2Y6fG6GOHYfluLN8kg0dvo3J-bUwrhd1rbdlhL_3) center/80% no-repeat;
+            cursor: pointer;
+        }
+
+        .content-input-primary .form-ptg-primary[type="time"]::-webkit-calendar-picker-indicator {
+            background: url(https://5298967-sb1.app.netsuite.com/core/media/media.nl?id=109002&c=5298967_SB1&h=8T8_xbgLaXGq57So_VQ-KoCwOPoyvxXLL-O9cpcfxC44F6Do) center/80% no-repeat;
+            cursor: pointer;
+        }
+
+        .form-search {
+            width: 100%;
+            position: relative;
+        }
+
+        .form-search .form-ptg {
+            padding-left: 45px;
+            padding-right: 45px;
+        }
+
+        .form-search .fa-magnifying-glass {
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: 20px;
+            font-size: 20px;
+            cursor: text;
+        }
+
+        .form-search .fa-xmark {
+            position: absolute;
+            right: 15px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        label {
+            margin: 0;
+        }
+
+        .fw-bold {
+            font-weight: bold;
+        }
+
+        .content-tabs {
+            background-color: rgb(225, 225, 225);
+            ;
+        }
+
+        .content-tabs .tab {
+            padding: 7px 20px;
+            margin: 0px 0;
+            cursor: pointer;
+        }
+
+        .tab.active {
+            background: #ffffff;
+            border-radius: 10px 0;
+            color: #355da7;
+        }
+
+        .modal-header .modal-title {
+            color: #ffffff;
+        }
+
+        .content-input label {
+            color: #9d9b99;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .content-input-primary label {
+            color: #355da7;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .color-primary {
+            color: #355da7;
+        }
+
+        .ft-18 {
+            font-size: 18px;
+        }
+
+        .invisible {
+            visibility: hidden;
+        }
+
+        .ft-24 {
+            font-size: 24px;
+        }
+
+        .table-gen {
+            min-width: 100%;
+        }
+
+        .table-gen .sticky-col {
+            position: -webkit-sticky;
+            position: sticky;
+            left: 0px;
+        }
+
+        .table-gen thead tr th {
+            position: sticky;
+            top: 0;
+        }
+
+        .table-gen thead tr th,
+        .table-gen tbody tr td {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .table-gen-blue thead tr th {
+            background: #355da7;
+            color: #ffffff;
+        }
+
+        .table-gen-blue tbody tr:nth-of-type(odd) td {
+            background-color: #ffffff;
+        }
+
+        .table-gen-blue tbody tr:nth-of-type(even) td {
+            background-color: rgb(225, 225, 225);
+        }
+
+        .ion-text-center {
+            text-align: center;
+        }
+
+        .btn-expand {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            right: -30px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        .btn-expand-down {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .btn-expand .btn,
+        .btn-expand-down .btn {
+            width: 100%;
+            height: 100%;
+            background: #e7792b;
+            border-radius: 100px;
+            cursor: pointer;
+            box-shadow: 5px 2px 20px 6px rgb(0 0 0);
+            position: relative;
+        }
+
+        .btn-expand-down .btn {
+            z-index: 2;
+            position: relative;
+        }
+
+        .btn-expand .btn:hover,
+        .btn-expand-down .btn:hover {
+            background: #e98640;
+        }
+
+        .btn-expand .btn i {
+            position: absolute;
+            left: 0;
+            right: 15px;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            height: 22px;
+            font-size: 22px;
+            color: #ffffff;
+        }
+
+        .btn-expand-down .btn i {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            right: 0;
+            left: 0;
+            margin: auto;
+            font-size: 22px;
+            color: #ffffff;
+        }
+
+        .title-tab {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d4d4d4;
+        }
+
+        .title-tab.active {
+            cursor: pointer;
+            color: #000000;
+        }
+
+        .card {
+            box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .title-ptg {
+            font-size: 24px;
+        }
+
+        .check-ptg {
+            font-size: 20px;
+        }
+
+        /* no global ccs */
+        #clientes-data {
+            background-color: rgb(225, 225, 225);
+            height: 393px;
+            overflow: auto;
+        }
+
+        #historic-data {
+            overflow: auto;
+            height: calc(100vh - 449px);
+        }
+
+        #content-forms {
+            overflow: hidden;
+        }
+
+        .tabs-content {
+            height: calc(100vh - 89px);
+            overflow: auto;
+        }
+
+        #content-forms.no-expand .tabs-content {
+            height: calc(100vh - 324px);
+        }
+
+        #content-avisos {
+            height: calc(100vh - (100vh - 290px) - 56px);
+        }
+
+        .border-bp {
+            border-bottom: 1px solid #355da7;
+        }
+
+        .form-check-input.form-ptg-primary:checked {
+            background-color: #355da7;
+            border-color: #355da7;
+        }
+
+        .border-radius-primary {
+            border: 2px solid #355da7;
+            border-radius: 10px;
+            height: 100%;
+            width: 100%;
+        }
+
+        .modal-body {
+            max-height: calc(100vh - 205px);
+            overflow: auto;
+        }
+        
+    </style>
+</head>
+
+<body data-topbar="dark" data-spy="scroll" data-offset="175" style="overflow: hidden;">
+    <div class="text-center msg" style="padding-top: 20%;">
+    	<h2>
+    		<span style="color: orange; font-size: 30px;"><i class="fa-solid fa-3x fa-triangle-exclamation"></i></span>
+    		<br>
+    		Actualmente su rol no tiene permiso adecuado para ingresar a este sitio. 
+    		Contacte a su administrador para mayor información.
+    	</h2>
+    </div>
+    <!-- END layout-wrapper -->
+
+    <!-- JAVASCRIPT -->
+    <script src="https://themesbrand.com/skote/layouts/assets/libs/jquery/jquery.min.js"></script>
+    <script src="https://themesbrand.com/skote/layouts/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="assets/libs/simplebar/simplebar.min.js"></script> -->
+    <!-- <script src="assets/libs/jquery.easing/jquery.easing.min.js"></script> -->
+
+    <!-- Datatablets -->
+    <script src="https://themesbrand.com/skote/layouts/assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script
+        src="https://themesbrand.com/skote/layouts/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Datepicker -->
+    <script
+        src="https://themesbrand.com/skote/layouts/assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://themesbrand.com/skote/layouts/assets/libs/@chenfengyuan/datepicker/datepicker.min.js"></script>
+
+    <!-- Timepicker -->
+    <script
+        src="https://themesbrand.com/skote/layouts/assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+
+    <!-- Extra -->
+    <script src="https://themesbrand.com/skote/layouts/assets/libs/metismenu/metisMenu.min.js"></script>
+    <!-- <script src="https://themesbrand.com/skote/layouts/assets/libs/simplebar/simplebar.min.js"></script> -->
+    <script src="https://themesbrand.com/skote/layouts/assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- <script src="assets/js/app.js"></script> -->
+    <script src="https://themesbrand.com/skote/layouts/assets/js/app.js"></script>
+
+    <!-- Sweet alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Moment js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Funciones generales -->
+    <script type="text/javascript">
+        userName = '${ds.userName}';
+        userRole = '${ds.userRole}';
+        userSubsidiary =/* '${ds.userSubsidiary}' */ '16';
+        urlPlantas = '${ds.getPlantas}';
+        urlCrearOp = '${ds.createOPP}';
+        urlObtenerPedidos = '${ds.getOPP}';
+        urlObtenerCliente = '${ds.getCustomer}';
+        urlObtenerZona = '${ds.getColoniaZona}';
+        urlObtenerZonas = '${ds.getZone}';
+        urlGuardarCliente = '${ds.postCustomer}';
+        urlObtenerArticulos = '${ds.getItems}';
+        urlCrearPedido = '${ds.createOPP}';
+        getMethodPayments = '${ds.getMethodPayments}';
+        // urlObtenerEstados  = 'https://apisgratis.com/cp/entidades/';
+        // urlObtenerCiudades = 'https://apisgratis.com/cp/ciudades/?estado=SAN%20LUIS%20POTOSI';
+        // urlObtenerColonias = 'https://apisgratis.com/cp/cp/ciudad/?valor=SAN%20LUIS%20POTOSI';
+        urlGetPlaces = '${ds.getCities}';
+        customerGlobal = null;
+
+        // Limpia los campos del modal direcciones al cerrarse
+        $('body').delegate('div#formDireccionesModal', 'hidden.bs.modal', function () {
+            $(this).find('.form-ptg').val('');
+            $(this).find('.form-ptg').prop('checked', false);
+        });
+
+        function initComponents() {
+            /* Inicia todos los form-search */
+            $(".form-search .fa-magnifying-glass").click(function () {
+                $(this).parent().find("input").focus();
+            });
+            $(".form-search input").keyup(function () {
+                if ($(this).val()) {
+                    $(this).parent().find(".fa-xmark").removeClass('d-none');
+                } else {
+                    $(this).parent().find(".fa-xmark").addClass('d-none');
+                }
+            });
+            $(".form-search .fa-xmark").click(function () {
+                $(this).addClass('d-none');
+                $(this).parent().find("input").val('');
+            });
+
+            $("#metodoPagoPedido").change(function () {
+                if ($(this).val() == "8" || $(this).val() == "2" || $(this).val() == "5" || $(this).val() == "6"){
+                    //$("#referenciaPagoPedido").parent().parent().removeClass("d-none");
+                    $("#folioAutorizacionPedido").parent().parent().removeClass("d-none");
+                } else {
+                    //$("#referenciaPagoPedido").parent().parent().addClass("d-none");
+                    $("#folioAutorizacionPedido").parent().parent().addClass("d-none");
+                }
+            });
+
+            // $("#agregarDirecciones").click(function() {
+            //     $("#formDireccionesModal").modal("show")
+            // });
+
+            $("#agregarProducto").click(function () {
+                $("#envaseFormProductos").prop("checked", false);
+                $("#capacidadFormProductos").val("");
+                $("#cantidadFormProductos").val("0");
+                $("#valorFormProductos").val("0");
+                $("#totalFormProductos").val("0");
+                $("#litrosFormProductos").val("0");
+                $("#montoFormProductos").val("0");
+                if (!$("#sinProductos").hasClass("d-none")) {
+                    $("#productoFormProductos").prop("disabled", false);
+                    $("#productoFormProductos").val("cilindro");
+                } else {
+                    $("#productoFormProductos").prop("disabled", true);
+                    if (!$("#productosCilindroPedido").hasClass("d-none")) {
+                        $("#productoFormProductos").val("cilindro");
+                    } else {
+                        $("#productoFormProductos").val("estacionario");
+                    }
+                }
+                $("#titleProductoModal").html("Agregar producto");
+                $('#formProductosModal').modal('show');
+            });
+
+            $("#productoFormProductos").change(function () {
+                if ($(this).val() == "cilindro") {
+                    $(".cilindroFormProductos").removeClass("d-none");
+                    $(".estacionarioFormProductos").addClass("d-none");
+                } else {
+                    $(".estacionarioFormProductos").removeClass("d-none");
+                    $(".cilindroFormProductos").addClass("d-none");
+                }
+            });
+
+            $(".content-tabs .tab").click(function () {
+                $(".tab").removeClass('active');
+                $(".tabs-content").addClass("d-none");
+                $(this).addClass('active');
+                $("#tab-" + $(this).data("tab")).removeClass("d-none");
+            });
+
+            // $("#agregarDireccion").click(function() {
+            //     $("#formDireccionesModal").modal("show")
+            // });
+
+            $(".btn-expand").click(function () {
+                if ($(this).find("i").hasClass('fa-caret-right')) {
+                    $(this).find(".btn").html('<i class="fa-solid fa-caret-left"></i>');
+                    $("#content-forms").parent().addClass("d-none");
+                    $(this).parent().removeClass("col-6").addClass("col-12");
+                } else {
+                    $(this).find(".btn").html('<i class="fa-solid fa-caret-right"></i>');
+                    $("#content-forms").parent().removeClass("d-none");
+                    $(this).parent().removeClass("col-12").addClass("col-6");
+                }
+            });
+            $(".btn-expand-down").click(function () {
+                if ($(this).find("i").hasClass('fa-caret-down')) {
+                    $(this).find(".btn").html('<i class="fa-solid fa-caret-up"></i>');
+                    $("#content-avisos").addClass("d-none");
+                    $("#content-forms").removeClass("no-expand");
+                } else {
+                    $(this).find(".btn").html('<i class="fa-solid fa-caret-down"></i>');
+                    $("#content-avisos").removeClass("d-none");
+                    $("#content-forms").addClass("no-expand");
+                }
+            });
+
+            $("#notasAdicionalesFugaQueja").click(function () {
+                $("#formNotasAdicionalesModal").modal("show");
+                $("#notaAdicional").val("");
+            });
+
+            $("#guardarNotaAdicional").click(function () {
+                if ($("#notaAdicional").val().trim()) {
+                    $("#notasAdicionales tbody").append(
+                        '<tr class="notasAdicionalesItem">' +
+                        '<td class="p-2">' +
+                        $("#notaAdicional").val().trim() +
+                        '</td>' +
+                        '<td width="50" style="text-align: center;">' +
+                        '<i class="fa-solid fa-trash-can" style="cursor: pointer;" onclick="deleteNota(this)"></i>' +
+                        '</td>' +
+                        '</td>'
+                    );
+                    $("#formNotasAdicionalesModal").modal("hide");
+                } else {
+                    alert("Llena la nota.");
+                }
+
+            });
+
+            $("#agregarCliente").click(function () {
+                $("#home-view, #btnMenu").addClass("d-none");
+                $("#form-client-view, #btnBack").removeClass("d-none");
+                $("#btnBack").data("back", "home-view");
+                $("#btnBack").data("current", "form-client-view");
+                $("#btnBack").data("title-back", "Call Center");
+                $("#header-title").html("Alta de cliente");
+            });
+
+            $("input[name=tipoRegimen]").change(function () {
+                if ($("input[name=tipoRegimen]:checked").val() == "domestico") {
+                    $("#giroNegocioFormCliente").parent().addClass('d-none');
+                } else {
+                    $("#giroNegocioFormCliente").parent().removeClass('d-none');
+                }
+            });
+
+            $("input[name=tipoAccionFormCliente]").change(function () {
+                if ($("input[name=tipoAccionFormCliente]:checked").val() == "1") {
+                    $(".tipo-aviso-programado").addClass('d-none');
+                } else {
+                    $(".tipo-aviso-programado").removeClass('d-none');
+                }
+            });
+
+            $("#tipoServicioFormCliente").change(function () {
+                if($(this).val() == "1") {
+                    $("#capacidadTipoServicioContent").find("input").addClass("d-none");
+                    $("#capacidadTipoServicioContent").find("select").removeClass("d-none");
+                } else {
+                    $("#capacidadTipoServicioContent").find("select").addClass("d-none");
+                    $("#capacidadTipoServicioContent").find("input").removeClass("d-none");
+                }
+            });
+
+            $("#btnBack").click(function () {
+                if ($("#btnBack").data("back") == "home-view") {
+                    $("#btnMenu").removeClass("d-none");
+                    $("#btnBack").addClass("d-none");
+                }
+                $("#" + $("#btnBack").data("current")).addClass("d-none");
+                $("#" + $("#btnBack").data("back")).removeClass("d-none");
+                $("#header-title").html($("#btnBack").data("title-back"));
+            });
+        }
+
+        function next(tab) {
+            let next = true;
+            if (tab == 'contacto') {
+                if ($("input[name=requiereFactura]:checked").val() == "si") {
+                    $("#rfcFormCliente").parent().parent().removeClass("d-none");
+                } else {
+                    $("#rfcFormCliente").parent().parent().addClass("d-none");
+                }
+
+                if (($("input[name=tipoRegimen]:checked").val() == "comercial" || $("input[name=tipoRegimen]:checked").val() == "industrial")) {
+                    if (!$("#giroNegocioFormCliente").val().trim()) {
+                        next = false;
+                    }
+                }
+            } else if (tab == "domicilio") {
+                if (!$("#nombreFormCliente").val().trim() ||
+                    !$("#apellidoPaternoFormCliente").val().trim() ||
+                    ($("input[name=requiereFactura]:checked").val() == "si" && !$("#rfcFormCliente").val().trim()) ||
+                    !$("#correoFormCliente").val().trim() ||
+                    !$("#telefonoPrincipalFormCliente").val().trim()) {
+                    next = false;
+                }
+            }
+
+            if (!next) {
+                alert("Favor de llenar todos los campos con *");
+            } else {
+                $(".tabs-clientes").addClass("d-none");
+                $("#tab-client-" + tab).removeClass("d-none");
+                $("[data-tab=" + tab + "]").addClass('active');
+            }
+
+        }
+
+        function deleteNota(item) {
+            $(item).parent().parent().remove();
+        }
+
+        function dateFormatFromDate(date, format = "1") {
+            if (typeof date == "string") {
+                let aux = date;
+                date = new Date(parseInt(aux.split("-")[0]), parseInt(aux.split("-")[1]) - 1, parseInt(aux.split("-")[2]));
+            }
+
+            let day = date.getDate();
+            let month = date.getMonth();
+            let year = date.getFullYear();
+            let fecha = "";
+            let months = ["Enero", "Febrero", "Marzo", "Abrrl", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+            if (format == "1") {
+                fecha = day + " de " + months[month] + " - " + timeFormatFromDate(date);
+            } else if (format == "2") {
+                if (day < 10) {
+                    day = "0" + day;
+                }
+                month = month + 1;
+                if (month < 10) {
+                    month = "0" + month;
+                }
+                fecha = year + "-" + month + "-" + day;
+            } else if (format == "3") {
+                fecha = day + "/" + month + "/" + year + " " + timeFormatFromDate(date);
+            } else if (format == "4") {
+                if (day < 10) {
+                    day = "0" + day;
+                }
+                month = month + 1;
+                if (month < 10) {
+                    month = "0" + month;
+                }
+                fecha = year + "-" + month + "-" + day + "T" + timeFormatFromDate(date, "2");
+            } else if (format == "5") {
+                if (day < 10) {
+                    day = "0" + day;
+                }
+                month = month + 1;
+                if (month < 10) {
+                    month = "0" + month;
+                }
+                fecha = day + "/" + month + "/" + year;
+            } else if (format == "6") {
+                if (day < 10) {
+                    day = "0" + day;
+                }
+                month = month + 1;
+                if (month < 10) {
+                    month = "0" + month;
+                }
+                fecha = day + "-" + month + "-" + year;
+            } else if (format == "7") {
+                if (day < 10) {
+                    day = "0" + day;
+                }
+                month = month + 1;
+                if (month < 10) {
+                    month = "0" + month;
+                }
+                fecha = day + "/" + month + "/" + year + " " + timeFormatFromDate(date);;
+            }
+
+            return fecha;
+        }
+
+        function timeFormatFromDate(date, format = "1") {
+            date = new Date(date);
+            let hours = date.getHours();
+            let minutes = date.getMinutes();
+            let seconds = date.getSeconds();
+            let period = hours < 12 ? 'a.m.' : 'p.m.';
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+            if (seconds < 10) {
+                seconds = "0" + seconds;
+            }
+            let hora = "";
+            if (format == "1") {
+                hours = (hours + 24) % 12 || 12;
+                if (hours < 10) {
+                    hours = "0" + hours;
+                }
+
+                hora = hours + ":" + minutes + " " + period;
+            } else if (format == "2") {
+                if (hours < 10) {
+                    hours = "0" + hours;
+                }
+
+                hora = hours + ":" + minutes;
+            } else if (format == "3") {
+                if (hours < 10) {
+                    hours = "0" + hours;
+                }
+
+                hora = hours + ":" + minutes + ":" + seconds;
+            }
+            return hora;
+        }
+    </script>
+
+    <script type="text/javascript">
+        let origins = ["WhatsApp", "PotoApp", "FaceBook", "Call center", "Página Web", "Chat", "Buzón"],
+            payment_methods = ["Efectivo", "Vale", "Prepago", "Cortesia", "Tarjeta de crédito", "Tarjeta de débito"];
+        $(document).ready(function () {
+            initComponents();
+            getToday();
+            llenaCampos();
+        });
+
+        function llenaCampos() {
+            origins.forEach((element, i) => {
+                $("#origenPedido").append('<option value="' + element + '">' + element + '</option>');
+            });
+            
+            $.ajax({
+                url: getMethodPayments,
+                method: 'GET',
+                contentType: 'application/json',
+                dataType: 'json',
+                success: function (data) {
+                    console.log('Data: ', data);
+
+                    if ( data.success ) {
+                        data.data.forEach((element, i) => {
+                            $("#metodoPagoPedido").append('<option value="' + element.id + '" '+(i == 0 ? 'selected' : '')+'>' + element.method + '</option>');
+                        });
+                    } else {
+                        infoMsg('error', 'Algo salió mal al obtener los metodos de pago')
+                    }
+
+                }, error: function (xhr, status, error) {
+                    infoMsg('error', 'Algo salió mal al obtener los metodos de pago');
+                    console.log('Error en la consulta', xhr, status, error);
+                }
+            });
+        }
+
+        function getToday() {
+            let $this = this;
+            $("#today").html(dateFormatFromDate(new Date(), "7"));
+            setTimeout(function () {
+                $this.getToday();
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>

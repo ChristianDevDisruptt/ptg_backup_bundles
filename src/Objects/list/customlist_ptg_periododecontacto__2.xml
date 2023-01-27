@@ -1,0 +1,32 @@
+<customlist scriptid="customlist_ptg_periododecontacto__2">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>PTG - Periodo de contacto</name>
+  <customvalues>
+    <customvalue scriptid="val_415820_5298967_sb1_576">
+      <isinactive>F</isinactive>
+      <value>Días</value>
+    </customvalue>
+    <customvalue scriptid="val_4029755_5298967_694">
+      <isinactive>F</isinactive>
+      <value>Diario</value>
+    </customvalue>
+    <customvalue scriptid="val_415821_5298967_sb1_950">
+      <isinactive>F</isinactive>
+      <value>Semanas</value>
+    </customvalue>
+    <customvalue scriptid="val_415822_5298967_sb1_227">
+      <isinactive>F</isinactive>
+      <value>Semanal</value>
+    </customvalue>
+    <customvalue scriptid="val_2504217_5298967_sb1_524">
+      <isinactive>F</isinactive>
+      <value>Meses</value>
+    </customvalue>
+    <customvalue scriptid="val_2504218_5298967_sb1_576">
+      <isinactive>F</isinactive>
+      <value>Mensual</value>
+    </customvalue>
+  </customvalues>
+</customlist>

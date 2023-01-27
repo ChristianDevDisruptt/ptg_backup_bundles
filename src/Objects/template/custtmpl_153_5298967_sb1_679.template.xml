@@ -1,0 +1,546 @@
+<?xml version="1.0"?><!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd">
+<#setting locale="es_MX">
+<pdf>
+<#assign "certData" = ''>
+<#if custom?has_content && custom.certData?has_content>
+	<#assign "certData" = custom.certData>
+<#else>
+	<#assign "certData" = record>
+</#if>
+<#assign "calleSubsidiaria" = ''>
+<#assign "coloniaSubsidiaria" = ''>
+<#assign "ciudadSubsidiaria" = ''>
+<#assign "estadoSubsidiaria" = ''>
+<#if record.subsidiary?has_content && record.subsidiary?contains("DISTRIBUIDORA")>
+	<#assign "calleSubsidiaria" = 'PERIFERICO PTE #KM 36+205'>
+	<#assign "coloniaSubsidiaria" = 'LAS JULIAS'>
+    <#assign "ciudadSubsidiaria" = 'SAN LUIS POTOSI'>
+    <#assign "estadoSubsidiaria" = 'San Luis Potosí'>
+<#elseif record.subsidiary?has_content && record.subsidiary?contains("CORPO")>
+	<#assign "calleSubsidiaria" = 'CARR. CEDRAL KM. 20 + 400 #S/N'>
+	<#assign "coloniaSubsidiaria" = 'CENTRO'>
+    <#assign "ciudadSubsidiaria" = 'SAN LUIS POTOSI'>
+    <#assign "estadoSubsidiaria" = 'San Luis Potosí'>
+<#elseif record.subsidiary?has_content && record.subsidiary?contains("SAN LUIS")>
+	<#assign "calleSubsidiaria" = 'EJE 126 #110'>
+	<#assign "coloniaSubsidiaria" = 'ZONA INDUSTRIAL'>
+    <#assign "ciudadSubsidiaria" = 'SAN LUIS POTOSI'>
+    <#assign "estadoSubsidiaria" = 'San Luis Potosí'>
+</#if>
+<#assign "callePlanta" = ''>
+<#assign "coloniaPlanta" = ''>
+<#assign "ciudadPlanta" = ''>
+<#if record.transferlocation?has_content && record.transferlocation?starts_with("02")>
+	<#assign "callePlanta" = 'PERIFERICO PONIENTE #KM 36+205'>
+	<#assign "coloniaPlanta" = 'LAS JULIAS'>
+    <#assign "ciudadPlanta" = 'SAN LUIS POTOSÍ'>
+<#elseif record.transferlocation?has_content && record.transferlocation?starts_with("03")>
+	<#assign "callePlanta" = 'LIBRAMIENTO SAN LUIS -TAMPICO,EJIDO TAMPAYA #KM.3 + 800'>
+	<#assign "coloniaPlanta" = 'BELLAVISTA'>
+    <#assign "ciudadPlanta" = 'CD. VALLES'>
+<#elseif record.transferlocation?has_content && record.transferlocation?starts_with("04")>
+	<#assign "callePlanta" = 'CARRETERA RIOVERDE-VALLES #KM. 5 + 300'>
+	<#assign "coloniaPlanta" = 'RIOVERDE CENTRO'>
+    <#assign "ciudadPlanta" = 'RIOVERDE'>
+<#elseif record.transferlocation?has_content && record.transferlocation?starts_with("05")>
+	<#assign "callePlanta" = 'EL NARANJO'>
+	<#assign "coloniaPlanta" = ''>
+    <#assign "ciudadPlanta" = ''>
+<#elseif record.transferlocation?has_content && record.transferlocation?starts_with("06")>
+	<#assign "callePlanta" = 'CARRETERA CARDENAS - RAYON #KM. 0.950'>
+	<#assign "coloniaPlanta" = 'CARDENAS CENTRO'>
+    <#assign "ciudadPlanta" = 'CARDENAS'>
+<#elseif record.transferlocation?has_content && record.transferlocation?starts_with("07")>
+	<#assign "callePlanta" = 'CARRETERA A ESTACION LOS CHARCOS #KM. 1.5'>
+	<#assign "coloniaPlanta" = ''>
+    <#assign "ciudadPlanta" = 'CHARCAS'>
+<#elseif record.transferlocation?has_content && record.transferlocation?starts_with("08")>
+	<#assign "callePlanta" = 'CARRETERA SAN LUIS-TORREON #KM. 98.5'>
+	<#assign "coloniaPlanta" = ''>
+   <#assign "ciudadPlanta" = 'SALINAS DE HIDALGO'>
+<#elseif record.transferlocation?has_content && record.transferlocation?starts_with("09")>
+	<#assign "callePlanta" = 'CARRETERA CENTRAL #KM. 619.5'>
+	<#assign "coloniaPlanta" = 'AVIACION'>
+    <#assign "ciudadPlanta" = 'MATEHUALA'>
+<#elseif record.transferlocation?has_content && record.transferlocation?starts_with("10")>
+	<#assign "callePlanta" = 'CARRETERA CEDRAL #KM. 20 + 400'>
+	<#assign "coloniaPlanta" = 'CEDRAL CENTRO'>
+   <#assign "ciudadPlanta" = 'CEDRAL'>
+<#elseif record.transferlocation?has_content && record.transferlocation?starts_with("11")>
+	<#assign "callePlanta" = 'PERIFERICO PONIENTE, TRAMO MORALES SAUCITO #KM. 36 + 205'>
+	<#assign "coloniaPlanta" = 'LAS JULIAS'>
+    <#assign "ciudadPlanta" = 'SAN LUIS POTOSÍ'>
+</#if>
+<#assign custbody_mx_cfdi_sat_serial=''>
+<#assign custbody_mx_cfdi_issuer_serial=''>
+<#assign custbody_mx_cfdi_signature=''>
+<#assign custbody_mx_cfdi_sat_signature=''>
+<#assign custbody_mx_cfdi_cadena_original=''>
+<#assign custbody_mx_cfdi_qr_code=''>
+<#if record.custbody_drt_cp_pdf_data?has_content>
+    <#assign objSAT=record.custbody_drt_cp_pdf_data?eval>
+    <#list objSAT as myCFDI>
+      	<#assign custbody_mx_cfdi_sat_serial=myCFDI.custbody_mx_cfdi_sat_serial>
+        <#assign custbody_mx_cfdi_issuer_serial=myCFDI.custbody_mx_cfdi_issuer_serial>
+        <#assign custbody_mx_cfdi_signature=myCFDI.custbody_mx_cfdi_signature>
+        <#assign custbody_mx_cfdi_sat_signature=myCFDI.custbody_mx_cfdi_sat_signature>
+        <#assign custbody_mx_cfdi_cadena_original=myCFDI.custbody_mx_cfdi_cadena_original>
+        <#assign custbody_mx_cfdi_qr_code=myCFDI.custbody_mx_cfdi_qr_code>
+    </#list>
+</#if>
+<head>
+	<link name="NotoSans" type="font" subtype="truetype" src="${nsfont.NotoSans_Regular}" src-bold="${nsfont.NotoSans_Bold}" src-italic="${nsfont.NotoSans_Italic}" src-bolditalic="${nsfont.NotoSans_BoldItalic}" bytes="2" />
+	<#if .locale == "zh_CN">
+		<link name="NotoSansCJKsc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKsc_Regular}" src-bold="${nsfont.NotoSansCJKsc_Bold}" bytes="2" />
+	<#elseif .locale == "zh_TW">
+		<link name="NotoSansCJKtc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKtc_Regular}" src-bold="${nsfont.NotoSansCJKtc_Bold}" bytes="2" />
+	<#elseif .locale == "ja_JP">
+		<link name="NotoSansCJKjp" type="font" subtype="opentype" src="${nsfont.NotoSansCJKjp_Regular}" src-bold="${nsfont.NotoSansCJKjp_Bold}" bytes="2" />
+	<#elseif .locale == "ko_KR">
+		<link name="NotoSansCJKkr" type="font" subtype="opentype" src="${nsfont.NotoSansCJKkr_Regular}" src-bold="${nsfont.NotoSansCJKkr_Bold}" bytes="2" />
+	<#elseif .locale == "th_TH">
+		<link name="NotoSansThai" type="font" subtype="opentype" src="${nsfont.NotoSansThai_Regular}" src-bold="${nsfont.NotoSansThai_Bold}" bytes="2" />
+	</#if>
+    <macrolist>
+        <macro id="nlheader">
+          <table cellpadding="1" cellspacing="1" style="width:100%;"><tr>
+            <td align="center" colspan="2" style="vertical-align:middle;"><#if subsidiary.logo?length != 0><img src="${subsidiary.logo@url}" style="width:50%; height:50%;" /><#else><#if companyInformation.logoUrl?length != 0><img class="imgtest" src="${companyInformation.logoUrl}" style="width:50%; height:50%;" /></#if></#if></td>
+            <td align="left" colspan="8" style="vertical-align:middle;"><table style="width:100%;">
+              <tr><td align="left"><span style="font-size:11px;"><strong>${subsidiary.name?upper_case}</strong></span></td></tr>
+              <tr><td align="left"><span style="font-size:11px;"><strong>R.F.C: ${subsidiary.federalidnumber?upper_case}</strong></span></td></tr>
+              <tr><td align="left"><span style="font-size:11px;"><strong>DIRECCION:</strong> ${calleSubsidiaria} COL: ${coloniaSubsidiaria} C.P: ${subsidiary.zip?upper_case}</span></td></tr>
+              <tr><td align="left"><span style="font-size:11px;"><strong>CIUDAD:</strong>${ciudadSubsidiaria}, ${estadoSubsidiaria}</span></td></tr>
+              <tr><td align="left"><span style="font-size:11px;"><strong>SUCURSAL:</strong>${callePlanta?upper_case} COL: ${coloniaPlanta?upper_case} C.P: ${record.shipzip}</span></td></tr>
+              <tr><td align="left"><span style="font-size:11px;"><strong>REGIMEN FISCAL:</strong> General de Ley Personas Morales</span></td></tr>
+              </table>
+            </td>
+            </tr>
+          </table>
+        </macro>
+        <macro id="nlfooter">
+            <table class="footer"><tr><#if preferences.PRINT_BARCODES>
+	<td><barcode codetype="code128" showtext="true" value="${record.tranid}"/></td>
+	</#if>
+	<td align="right"><pagenumber/> of <totalpages/></td>
+	</tr></table>
+        </macro>
+    </macrolist>
+    <style type="text/css">* {
+		<#if .locale == "zh_CN">
+			font-family: NotoSans, NotoSansCJKsc, sans-serif;
+		<#elseif .locale == "zh_TW">
+			font-family: NotoSans, NotoSansCJKtc, sans-serif;
+		<#elseif .locale == "ja_JP">
+			font-family: NotoSans, NotoSansCJKjp, sans-serif;
+		<#elseif .locale == "ko_KR">
+			font-family: NotoSans, NotoSansCJKkr, sans-serif;
+		<#elseif .locale == "th_TH">
+			font-family: NotoSans, NotoSansThai, sans-serif;
+		<#else>
+			font-family: NotoSans, sans-serif;
+		</#if>
+		}
+		table {
+			font-size: 9pt;
+			table-layout: fixed;
+		}
+        th {
+            font-weight: bold;
+            font-size: 8pt;
+            vertical-align: middle;
+            padding: 5px 6px 3px;
+            background-color: #e3e3e3;
+            color: #333333;
+        }
+        td {
+            padding: 4px 6px;
+        }
+		td p { align:left }
+        b {
+            font-weight: bold;
+            color: #333333;
+        }
+        table.header td {
+            padding: 0;
+            font-size: 10pt;
+        }
+        table.footer td {
+            padding: 0;
+            font-size: 8pt;
+        }
+        table.itemtable th {
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+        table.body td {
+            padding-top: 2px;
+        }
+        td.addressheader {
+            font-size: 8pt;
+            font-weight: bold;
+            padding-top: 6px;
+            padding-bottom: 2px;
+        }
+        td.address {
+            padding-top: 0;
+        }
+        span.title {
+            font-size: 28pt;
+        }
+        span.number {
+            font-size: 16pt;
+        }
+        span.itemname {
+            font-weight: bold;
+            line-height: 150%;
+        }
+        div.returnform {
+            width: 100%;
+            /* To ensure minimal height of return form */
+            height: 200pt;
+            page-break-inside: avoid;
+            page-break-after: avoid;
+        }
+        hr {
+            border-top: 1px dashed #d3d3d3;
+            width: 100%;
+            color: #ffffff;
+            background-color: #ffffff;
+            height: 1px;
+        }
+</style>
+</head>
+<body header="nlheader" header-height="13%" footer="nlfooter" footer-height="20pt" padding="0.2in 0.5in 0.2in 0.5in" size="Letter">
+    <table width="100%">
+    	<tr>
+      		<th style="font-size:18px; font-weight: bold; border: 1px solid #000000;" align="center" colspan="2">CARTA PORTE DE TRASLADO</th>
+		</tr>
+	</table>
+	<table width="100%">
+     	<tr>
+      		<td style="font-size:14px; font-weight: bold; padding-top:10px; padding-bottom:10px;" align="center" colspan="2">I N F O R M A C I Ó N &nbsp;C O M P R O B A N T E</td>
+		</tr>
+	</table>
+<table width="100%">
+    <tr>
+      <th style="font-size:10px; font-weight: bold; border: 1px solid #000000;" align="center"> FOLIO FISCAL </th>
+      <th style="font-size:10px; font-weight: bold; border: 1px solid #000000;" align="center"> TIPO COMPROBANTE </th>
+	</tr>
+  </table>
+<table width="100%">
+    <tr>
+      <td style="font-size:10px; border: 1px solid #000000; " align="center">${record.custbody_mx_cfdi_uuid}</td>
+      <td style="font-size:10px; border: 1px solid #000000; " align="center">Traslado</td>
+	</tr>
+</table>
+<table width="100%">
+    <tr>
+      <th style="font-size:1px; font-weight: bold; color: #000000; background-color: #fffffff; " align="center">&nbsp;</th>
+	</tr>
+</table>  
+<table width="100%">
+    <tr>
+      <th style="font-size:9px; font-weight: bold; border: 1px solid #000000;" align="center">FECHA Y HORA DE EXPEDICIÓN</th>
+      <th style="font-size:9px; font-weight: bold; border: 1px solid #000000;" align="center">LUGAR DE EXPEDICIÓN</th>
+      <th style="font-size:9px; font-weight: bold; border: 1px solid #000000;" align="center">NO SERIE DEL CERTIFICADO SAT</th>
+      <th style="font-size:9px; font-weight: bold; border: 1px solid #000000;" align="center">CERTIFICADO DEL EMISOR</th>
+	</tr>
+    <tr>
+      <td style="font-size:10px; border: 1px solid #000000; " align="center">${record.trandate}</td>
+      <td style="font-size:10px; border: 1px solid #000000; " align="center">${ciudadPlanta?upper_case}</td>
+      <td style="font-size:10px; border: 1px solid #000000; " align="center">${custbody_mx_cfdi_sat_serial}</td>
+      <td style="font-size:10px; border: 1px solid #000000; " align="center">${custbody_mx_cfdi_issuer_serial}</td>
+	</tr>
+  </table>
+<table width="100%">
+    <tr>
+      <th style="font-size:1px; font-weight: bold; color: #000000; background-color: #fffffff; " align="center">&nbsp;</th>
+	</tr>
+</table>
+<table width="100%">
+    <tr>
+      <th style="font-size:10px; font-weight: bold; border: 1px solid #000000; " align="center"> SERIE </th>
+      <th style="font-size:10px; font-weight: bold; border: 1px solid #000000; " align="center"> FOLIO </th>
+      <th style="font-size:10px; font-weight: bold; border: 1px solid #000000; " align="center"> FECHA Y HORA DE EXPEDICIÓN </th>
+	</tr>
+    <tr>
+      <td style="font-size:10px; border: 1px solid #000000; " align="center">${record.custbody_mx_cfdi_serie}</td>
+      <td style="font-size:10px; border: 1px solid #000000; " align="center">${record.custbody_mx_cfdi_folio}</td>
+      <td style="font-size:10px; border: 1px solid #000000; " align="center">${record.custbody_mx_cfdi_certify_timestamp}</td>
+	</tr>
+  </table>
+<table width="100%">
+  	<tr>
+    	<td style="font-size:14px; font-weight: bold; padding-top:10px; padding-bottom:10px;" align="center" colspan="2">A U T O T R A N S P O R T E</td>
+	</tr>
+</table>
+<#if record.custbody_ptg_cp_json_figura_transporte?has_content>
+    <#assign objTransportes=record.custbody_ptg_cp_json_figura_transporte?eval>
+    <#list objTransportes as transporte>
+	<table width="100%">
+    <tr>
+      <th colspan="2" style="font-size:10px; font-weight: bold; border: 1px solid #000000; " align="center">CLAVE DE TRANSPORTE</th>
+      <th colspan="2" style="font-size:10px; font-weight: bold; border: 1px solid #000000; " align="center">CONFIGURACIÓN VEHICULAR</th>
+      <th colspan="2" style="font-size:10px; font-weight: bold; border: 1px solid #000000; " align="center">PERMISO SCT</th>
+      <th colspan="2" style="font-size:10px; font-weight: bold; border: 1px solid #000000; " align="center">NÚMERO DE PERMISO SCT</th>
+	</tr>
+    <tr>
+      <td colspan="2" style="font-size:10px; border: 1px solid #000000; " align="center">${transporte.tipoTransporte}</td>
+      <td colspan="2" style="font-size:10px; border: 1px solid #000000; " align="center">${transporte.configVehicular}</td>
+      <td colspan="2" style="font-size:10px; border: 1px solid #000000; " align="center">${transporte.permSCT}</td>
+      <td colspan="2" style="font-size:10px; border: 1px solid #000000; " align="center">${transporte.numPermisoSCT}</td>
+	</tr>
+    <tr>
+      <td colspan="8" style="font-size:1px;" align="center">&nbsp;</td>
+	</tr>
+    <tr>
+      <th style="font-size:10px; font-weight: bold; border: 1px solid #000000;" align="center">MODELO</th>
+      <th style="font-size:10px; font-weight: bold; border: 1px solid #000000;" align="center">PLACAS</th>
+      <th colspan="4" style="font-size:10px; font-weight: bold; border: 1px solid #000000;" align="center">ASEGURADORA RESP. CIVIL </th>
+      <th colspan="2" style="font-size:10px; font-weight: bold; border: 1px solid #000000;" align="center">NO. POLIZA DE RESP. CIVIL </th>
+	</tr>
+    <tr>
+      <td style="font-size:10px;border: 1px solid #000000;" align="center">${transporte.anioModeloVM}</td>
+      <td style="font-size:10px;border: 1px solid #000000;" align="center">${transporte.placaVM}</td>
+      <td colspan="4" style="font-size:10px;border: 1px solid #000000;" align="center">${transporte.aseguraRespCivil}</td>
+      <td colspan="2" style="font-size:10px;border: 1px solid #000000;" align="center">${transporte.polizaRespCivil}</td>
+	</tr>
+     <tr>
+      <td colspan="8" style="font-size:1px;" align="center">&nbsp;</td>
+	</tr>
+    <tr>
+      <th colspan="2" style="font-size:10px;border: 1px solid #000000;" align="center">ASEGURADORA MEDIO AMBIENTE</th>
+      <th colspan="2" style="font-size:10px;border: 1px solid #000000;" align="center">NO. POLIZA DE MEDIO AMBIENTE</th>
+      <th colspan="2" style="font-size:10px;border: 1px solid #000000;" align="center">TRANSPORTE INTERNACIONAL</th>
+      <th colspan="2" style="font-size:10px;border: 1px solid #000000;" align="center">UNIDAD</th>
+	</tr>
+    <tr>
+      <td colspan="2" style="font-size:10px;border: 1px solid #000000;" align="center">${transporte.aseguraMedAmbiente}</td>
+      <td colspan="2" style="font-size:10px;border: 1px solid #000000;" align="center">${transporte.polizaMedAmbiente}</td>
+      <td colspan="2" style="font-size:10px;border: 1px solid #000000;" align="center">No</td>
+      <td colspan="2" style="font-size:10px;border: 1px solid #000000;" align="center">${record.custbody_ptg_cp_transporte}</td>
+	</tr>
+  </table>
+  </#list>
+</#if>
+  <table width="100%">
+  	<tr>
+    	<td style="font-size:14px; font-weight: bold; padding-top:10px; padding-bottom:10px;" align="center" colspan="2">U B I C A C I O N E S&nbsp;&nbsp;D E&nbsp;&nbsp;O R I G E N&nbsp;&nbsp;Y&nbsp;&nbsp;D E S T I N O</td>
+	</tr>
+</table>
+  <#if record.custbody_ptg_cp_json_ubicacion?has_content>
+    <#assign objUbicaciones=record.custbody_ptg_cp_json_ubicacion?eval>
+      <table width="100%">
+        <tr>
+          <th style="font-size:10px;border: 1px solid #000000;" align="center">DISTANCIA</th>
+          <th style="font-size:10px;border: 1px solid #000000;" align="center">RFC</th>
+          <th colspan="2" style="font-size:10px;border: 1px solid #000000;" align="center">NOMBRE</th>
+          <th colspan="2" style="font-size:10px;border: 1px solid #000000;" align="center">FECHA/HORA SAL</th>
+          <th colspan="2" style="font-size:10px;border: 1px solid #000000;" align="center">DIRECCIÓN</th>
+        </tr>
+        <#list objUbicaciones as ubicacion>
+          <tr>
+            <td style="font-size:10px;border-left: 1px solid #000000;border-bottom: 1px solid #000000;" align="center">${ubicacion.tipoUbicacion} <#if ubicacion.tipoUbicacion == "Origen">0 KMS<#else>90 KMS</#if></td>
+            <td style="font-size:10px; border-bottom: 1px solid #000000; " align="center">${subsidiary.federalidnumber}</td>
+            <td colspan="2" style="font-size:10px; border-bottom: 1px solid #000000; " align="center">${subsidiary.name}</td>
+            <td colspan="2" style="font-size:10px; border-bottom: 1px solid #000000; " align="center"> ${record.custbody_mx_cfdi_certify_timestamp}</td>
+            <td colspan="2" style="font-size:10px;border-right: 1px solid #000000;border-bottom: 1px solid #000000;" align="left">Calle:${callePlanta?upper_case}<BR/>Col: ${coloniaPlanta?upper_case} Cd: ${ciudadPlanta}<BR/>Edo: SLP Pais: MX CP: ${record.shipzip?upper_case}</td>
+          </tr>
+          </#list>
+      </table>
+  </#if>
+<table width="100%">
+  	<tr>
+    	<td style="font-size:14px; font-weight: bold; padding-top:10px; padding-bottom:10px;" align="center" colspan="2">F I G U R A&nbsp;&nbsp;DE&nbsp;&nbsp;T R A N S P O R T E</td>
+	</tr>
+</table>
+<#if record.custbody_ptg_cp_json_figura?has_content>
+    <#assign objFiguras=record.custbody_ptg_cp_json_figura?eval>
+    <#list objFiguras as figura>
+<table width="100%">
+    <tr>
+      <th style="font-size:10px;border: 1px solid #000000; " align="center">TIPO FIGURA</th>
+      <th colspan="2" style="font-size:10px;border: 1px solid #000000; " align="center">NOMBRE</th>
+      <th style="font-size:10px;border: 1px solid #000000; " align="center">RFC</th>
+      <th colspan="2" style="font-size:10px;border: 1px solid #000000; " align="center">NÚMERO DE LICENCIA</th>
+	</tr>
+    <tr>
+      <td style="font-size:10px;border: 1px solid #000000; " align="center">${figura.tipoFigura}</td>
+      <td colspan="2" style="font-size:10px;border: 1px solid #000000; " align="center">${record.custbody_ptg_cp_figuratransporte}</td>
+      <td style="font-size:10px;border: 1px solid #000000; " align="center">${record.custbody_ptg_cp_figuratransporte.custentity_mx_rfc}</td>
+      <td colspan="2" style="font-size:10px;border: 1px solid #000000; " align="center">${figura.numlicencia}</td>
+	</tr>
+  </table>
+  </#list>
+</#if>
+<table width="100%">
+  	<tr>
+    	<td style="font-size:14px; font-weight: bold; padding-top:10px; padding-bottom:10px;" align="center" colspan="2">M E R C A N C I A S</td>
+	</tr>
+</table>
+<#if record.item?has_content>
+<table class="itemtable" style="width: 100%;">
+<!-- start items --><#list record.item as item>
+  <#if item.unitsdisplay?upper_case?contains("LTR")>
+    	<#assign units="LTR">
+        <#assign satcode="15111510">
+        <#assign units2="LTS">
+        <#assign cantidad=item.quantity>
+        <#assign peso=(item.quantity)*0.54>
+  <#elseif item.unitsdisplay?upper_case?contains("CIL")>
+    	<#assign units="LTR">
+        <#assign satcode="15111510">
+        <#assign units2="LTS">
+        <#assign cantidadreal = (((item.unitsdisplay?keep_after(" "))?keep_before(" "))?trim)?number>
+        <#assign cantidad=item.quantity*cantidadreal?number>
+        <#assign peso=(item.quantity*cantidadreal?number)*0.54>
+  <#else>
+    	<#assign units="PZ">
+        <#assign satcode="">
+        <#assign units2="H87">
+        <#assign cantidad=item.quantity>
+        <#assign peso='N/A'>
+  </#if>
+  <#if item_index==0>
+<thead>
+    <tr>
+      <th style="font-size:10PX; border: 1px solid #000000; " align="center">CANTIDAD</th>
+      <th style="font-size:10PX; border: 1px solid #000000; " align="center">UNIDAD</th>
+      <th colspan="2"  style="font-size:10PX; border: 1px solid #000000; " align="center">DESCRIPCIÓN</th>
+      <th colspan="2"  style="font-size:10PX; border: 1px solid #000000; " align="center">BIENES TRANSPORTADOS</th>
+      <th style="font-size:10PX; border: 1px solid #000000; " align="center">MATERIAL PELIGROSO</th>
+      <th style="font-size:10PX; border: 1px solid #000000; " align="center">PESO EN KG</th>
+	</tr>
+  </thead>
+</#if>
+    <tr>
+      <td style="font-size:10px; border: 1px solid #000000;" align="center">${cantidad?string["0.##"]}</td>
+      <td style="font-size:10px; border: 1px solid #000000;" align="center"> ${units}</td>
+      <td colspan="2"  style="font-size:10px; border: 1px solid #000000;" align="center"> ${item.item}</td>
+      <td colspan="2"  style="font-size:10px; border: 1px solid #000000;" align="center"> ${satcode}</td>
+      <td style="font-size:10px; border: 1px solid #000000;" align="center">Si </td>
+      <td style="font-size:10px; border: 1px solid #000000;" align="center">${peso?string["0.##"]}</td>
+	</tr>
+</#list><!-- end items --></table>
+</#if>
+<table width="100%">
+  	<tr>
+    	<td style="font-size:14px; font-weight: bold; padding-top:10px; padding-bottom:10px;" align="center" colspan="2">I M P O R T E S&nbsp;&nbsp;Y&nsbp;&nbsp;V A L O R E S</td>
+	</tr>
+</table>
+<#if record.item?has_content>
+<table class="itemtable" style="width: 100%;"><!-- start items --><#list record.item as item>
+<#if item.unitsdisplay?upper_case?contains("LTR")>
+    	<#assign units="LTR">
+        <#assign satcode="15111510">
+        <#assign units2="LTS">
+        <#assign cantidad=item.quantity>
+        <#assign peso=item.quantity*0.54>
+  <#elseif item.unitsdisplay?upper_case?contains("CIL")>
+    	<#assign units="LTR">
+        <#assign satcode="15111510">
+        <#assign units2="LTS">
+        <#assign cantidadreal = (((item.unitsdisplay?keep_after(" "))?keep_before(" "))?trim)?number>
+        <#assign cantidad=item.quantity*cantidadreal?number>
+        <#assign peso=item.quantity*0.54*cantidadreal?number>
+  <#else>
+    	<#assign units="PZ">
+        <#assign satcode="">
+        <#assign units2="H87">
+        <#assign cantidad=item.quantity>
+        <#assign peso='N/A'>
+  </#if>
+<#if item_index==0>
+<thead>
+    <tr>
+      <th style="font-size:10px; border: 1px solid #000000; " align="center">CODIGO</th>
+      <th style="font-size:10px; border: 1px solid #000000; " align="center">UM</th>
+      <th colspan="2" style="font-size:10px; border: 1px solid #000000; " align="center">DESCRIPCIÓN</th>
+      <th style="font-size:10px; border: 1px solid #000000; " align="center">CANTIDAD</th>
+      <th style="font-size:10px; border: 1px solid #000000; " align="center">P. UNITARIO</th>
+      <th style="font-size:10px; border: 1px solid #000000; " align="center">IMPORTE</th>
+	</tr>
+    </thead>
+</#if>
+    <tr>
+      <td style="font-size:10px; border: 1px solid #000000;" align="center">${satcode}</td>
+      <td style="font-size:10px; border: 1px solid #000000;" align="center">${units2}</td>
+      <td colspan="2" style="font-size:10px; border: 1px solid #000000;" align="center"> ${item.item}</td>
+      <td style="font-size:10px; border: 1px solid #000000;" align="center">${cantidad?string["0.##"]}</td>
+      <td style="font-size:10px; border: 1px solid #000000;" align="center">0.00</td>
+      <td style="font-size:10px; border: 1px solid #000000;" align="center">0.00</td>
+	</tr>
+ </#list><!-- end items --></table>
+</#if>
+<table width="100%">
+  <tr>
+    <td width="75%"><table width="100%">
+    <tr>
+      <th style="font-size:10px; border: 1px solid #000000;" align="left"> Cantidad con letra: </th>
+      <td colspan="3" style="font-size:10px;" align="left">&nbsp;</td>
+    </tr>
+    <tr>
+      <td style="font-size:10px;" align="left">--00/100 M.N.--</td>
+      <td colspan="3" style="font-size:10px;" align="left">&nbsp;</td>
+	</tr>
+     <tr>
+      <td colspan="4" style="font-size:10px;" align="left">&nbsp;</td>
+	</tr>
+    <tr>
+      <th style="font-size:10px; border: 1px solid #000000;" align="left">Sello Digital del CFDI:</th>
+      <td colspan="3" style="font-size:10px;" align="left">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="4" style="font-size:10px;" align="left">${custbody_mx_cfdi_signature}</td>
+    </tr>
+    <tr>
+      <td colspan="4" style="font-size:10px;" align="left">&nbsp;</td>
+	</tr>
+    <tr>
+      <th style="font-size:10px; border: 1px solid #000000;" align="left">Sello Digital del SAT:</th>
+      <td colspan="3" style="font-size:10px;" align="left">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="4" style="font-size:10px;" align="left">${custbody_mx_cfdi_sat_signature}</td>
+    </tr>
+    <tr>
+      <td colspan="4" style="font-size:10px;" align="left">&nbsp;</td>
+	</tr>
+    <tr>
+      <th colspan="3" style="font-size:10px; border: 1px solid #000000; " align="left"> Cadena Original del complemento de certificación digital del SAT:</th>
+      <td style="font-size:10px;" align="left">&nbsp;</td>
+    </tr>
+   <tr>
+      <td colspan="4" style="font-size:10px;" align="left">${custbody_mx_cfdi_cadena_original}</td>
+	</tr>     
+</table>
+    </td>
+<td width="25%"><table width="100%">
+    <tr>
+      <th colspan="2" style="font-size:10px; border: 1px solid #000000; " align="center"> IMPORTE </th>
+    </tr>
+  <tr>
+      <td style="font-size:10px;" align="left">Subtotal:</td>
+      <td style="font-size:10px;" align="right">0.00</td>
+    </tr>
+  <tr>
+      <td style="font-size:10px;" align="left">Descuento:</td>
+      <td style="font-size:10px;" align="right">0.00</td>
+    </tr>
+  <tr>
+      <td colspan="2" style="font-size:10px; border-bottom: 2px solid #000000;" align="left">&nbsp;</td>
+    </tr>
+  <tr>
+      <td style="font-size:10px;" align="left">Total:</td>
+      <td style="font-size:10px;" align="right">0.00</td>
+    </tr>
+  <tr>
+    <td align="center" colspan="2" rowspan="5" style="border: 0px solid #F2F2F2;"><#if custbody_mx_cfdi_qr_code??><#assign qrcodeImage = "data:image/png;base64, " + custbody_mx_cfdi_qr_code ><img src="${qrcodeImage}" style="width: 120px;height:120px" /></#if></td>
+  </tr>
+</table>
+  </td>
+  </tr>
+</table>
+ 
+</body>
+</pdf>
